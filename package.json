@@ -29,7 +29,8 @@
     "babel-preset-es2015-node5": "^1.1.1",
     "commitizen": "^2.5.0",
     "cz-conventional-changelog": "^1.1.5",
-    "eslint": "^1.10.3"
+    "eslint": "^1.10.3",
+    "eslint-config-google": "^0.3.0"
   },
   "dependencies": {
     "meow": "^3.7.0"
