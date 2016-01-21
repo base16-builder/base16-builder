@@ -2,6 +2,7 @@
   "name": "base16-builder",
   "version": "0.0.1",
   "description": "",
+  "repository": "alexbooker/base16-builder",
   "main": "dist/index.js",
   "bin": "dist/cli.js",
   "scripts": {
