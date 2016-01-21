@@ -1,0 +1,41 @@
+{
+  "name": "base16-builder",
+  "version": "0.0.1",
+  "description": "",
+  "main": "dist/index.js",
+  "bin": "dist/cli.js",
+  "scripts": {
+    "prebuild": "rm -rf dist && mkdir dist",
+    "test": "ava source/test.js --require babel-register",
+    "build": "babel source --out-dir dist",
+    "prepublish": "npm run build"
+  },
+  "keywords": [
+    "base16"
+  ],
+  "author": {
+    "name": "Alex Booker",
+    "email": "alexbooker@fastmail.im",
+    "url": "booker.codes"
+  },
+  "engines": {
+    "node": ">=5"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "ava": "^0.10.0",
+    "babel-cli": "^6.4.0",
+    "babel-preset-es2015-node5": "^1.1.1",
+    "commitizen": "^2.5.0",
+    "cz-conventional-changelog": "^1.1.5",
+    "eslint": "^1.10.3"
+  },
+  "dependencies": {
+    "meow": "^3.7.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
