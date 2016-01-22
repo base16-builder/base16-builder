@@ -1,9 +1,9 @@
-import sut from './';
+import sut from '../lib';
 import test from 'ava';
 
 test('sut exports an object', function(t) {
   const actual = typeof (sut);
-  const expected = 'object';
+  const expected = 'objexct';
 
   t.is(actual, expected);
 });
