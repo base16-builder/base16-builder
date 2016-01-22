@@ -33,7 +33,9 @@
     "eslint-config-google": "^0.3.0"
   },
   "dependencies": {
-    "meow": "^3.7.0"
+    "js-yaml": "^3.5.2",
+    "meow": "^3.7.0",
+    "nunjucks": "^2.3.0"
   },
   "config": {
     "commitizen": {
