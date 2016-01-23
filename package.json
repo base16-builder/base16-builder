@@ -7,7 +7,7 @@
   "bin": "dist/cli.js",
   "scripts": {
     "prebuild": "rm -rf dist && mkdir dist && cp -r db/ dist/",
-    "test": "ava test/test.js --require babel-register",
+    "test": "ava tests/tests.js --require babel-register",
     "build": "babel lib --out-dir dist",
     "prepublish": "npm run build"
   },
