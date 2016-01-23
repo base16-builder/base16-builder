@@ -3,7 +3,7 @@ import test from 'ava';
 
 test('sut exports an object', function(t) {
   const actual = typeof (sut);
-  const expected = 'objexct';
+  const expected = 'object';
 
   t.is(actual, expected);
 });
