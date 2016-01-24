@@ -8,6 +8,7 @@
   "scripts": {
     "prebuild": "rm -rf dist && mkdir dist && cp -r db/ dist/",
     "test": "ava tests --require babel-register",
+    "pretest": "npm run build && chmod +x dist/cli.js",
     "build": "babel lib --out-dir dist",
     "prepublish": "npm run build"
   },
