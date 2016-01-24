@@ -36,8 +36,10 @@
     "execa": "^0.2.2"
   },
   "dependencies": {
+    "fs-promise": "^0.3.1",
     "js-yaml": "^3.5.2",
     "meow": "^3.7.0",
+    "mkdirp-promise": "^1.0.3",
     "nunjucks": "^2.3.0"
   },
   "config": {
