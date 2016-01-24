@@ -1,9 +1,9 @@
-import sut from '../lib';
+import {buildTheme} from '../lib';
 import test from 'ava';
 
-test('sut exports an object', function(t) {
-  const actual = typeof (sut);
-  const expected = 'object';
+test('sut exports a function', function(t) {
+  const actual = typeof (buildTheme);
+  const expected = 'function';
 
   t.is(actual, expected);
 });
@@ -70,6 +70,6 @@ test('buildTemplate returns correct result', function(t) {
     AB7967
   `;
 
-  const actual = sut.buildTheme(scheme, template);
+  const actual = buildTheme(scheme, template);
   t.is(actual, expected);
 });
