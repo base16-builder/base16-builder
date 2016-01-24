@@ -5,12 +5,14 @@ import rimraf from 'rimraf-promise';
 
 const cmd = '../dist/cli.js';
 
-test('given "help" arg program returns man page', async function (t) {
-  const { stdout: output } = await execa(cmd, ['--help'])
+test('given "help" arg program returns man page', async function(t) {
+  const {
+    stdout: output
+  } = await execa(cmd, ['--help'])
   t.ok(output.match(/man/i));
 });
 
-test('given \"theme\" and \"scheme\" names program writes output file', async function (t) {
+test('given \"theme\" and \"scheme\" names program writes output file', async function(t) {
   const schemeName = 'oceanicnext';
   const templName = 'i3wm';
   const args = ['-s', schemeName, '-t', templName];
