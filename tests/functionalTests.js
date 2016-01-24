@@ -1,6 +1,7 @@
 import execa from 'execa';
 import test from 'ava';
 import fs from 'fs-promise';
+import rimraf from 'rimraf-promise';
 
 const cmd = '../dist/cli.js';
 
@@ -18,9 +19,11 @@ test('given \"theme\" and \"scheme\" names program writes output file', async fu
 
   try {
     const actual =
-      await fs.readFile(`../dist/output/${templName}/${schemeName}`, 'utf8');
+      await fs.readFile(`output/${templName}/${schemeName}`, 'utf8');
     t.ok(/set \$base00 1B2B34/.test(actual));
   } catch (err) {
     t.fail(err);
+  } finally {
+    await rimraf('output');
   }
 })
