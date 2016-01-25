@@ -9,7 +9,9 @@ test('given "help" arg program returns man page', async function(t) {
   const {
     stdout: output
   } = await execa(cmd, ['--help'])
-  t.ok(output.match(/man/i));
+  t.ok(output.match(/Usage/, 'expected man to contain "Usage"'));
+  t.ok(output.match(/Options/, 'expected man to contain "Options"'));
+  t.ok(output.match(/Example/, 'expected man to contain "Example"'));
 });
 
 test('given \"theme\" and \"scheme\" short names program writes output file', async function(t) {
