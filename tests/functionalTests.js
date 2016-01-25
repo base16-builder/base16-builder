@@ -5,6 +5,45 @@ import rimraf from 'rimraf-promise';
 
 const cmd = '../dist/cli.js';
 
+const invalidTemplNames = [
+  'wobble-wibble',
+  'schemes',
+  'templates',
+];
+invalidTemplNames.forEach(function(invalidTemplName) {
+  test('given a non-existent template, the program writes an accurate error to the console', async function(t) {
+    const schemeName = 'oceanicnext';
+    const templName = invalidTemplName
+    const args = ['-s', schemeName, '-t', templName];
+
+    const {
+      stderr: actual
+    } = await execa(cmd, args);
+
+    t.ok(new RegExp(`Could not find a template called "${templName}"`).test(actual));
+    t.ok(/https:\/\/goo.gl\/fhm4Ct/.test(actual));
+  });
+})
+
+const invalidSchemeNames = [
+  'wibble-wobble',
+  'templates',
+  'schemes'
+];
+invalidSchemeNames.forEach(function(invalidSchemeName) {
+  test('given a non-existent scheme, the program writes an accurate error to the console ', async function(t) {
+    const schemeName = invalidSchemeName;
+    const templName = 'i3wm';
+    const args = ['-s', schemeName, '-t', templName];
+
+    const {
+      stderr: actual
+    } = await execa(cmd, args);
+
+    t.ok(new RegExp(`Could not find a scheme called "${schemeName}"`).test(actual));
+  });
+});
+
 test('given "help" arg program returns man page', async function(t) {
   const {
     stdout: output
