@@ -48,3 +48,22 @@ test('given \"theme\" and \"scheme\" long names program writes output file', asy
     await rimraf('output');
   }
 })
+
+const invalidArgs = [
+  [],
+  ['-t', 'i3wm'],
+  ['-s', 'oceanicnext'],
+  ['--template', 'i3wm'],
+  ['--scheme', 'oceanicnext'],
+];
+invalidArgs.forEach(function(invalidArg) {
+  test('given invalid argument program writes error to stderr', async function(t) {
+    const {
+      stderr
+    } = await execa(cmd, invalidArg);
+
+    t.ok(stderr, 'expected error to be written to stderr but stderr is "undefined".')
+    t.ok(/^fatal: /.test(stderr, 'expected error to start wtih "fatal:"'));
+    t.ok(/https:\/\/goo\.gl\/JwwX13/.test(stderr, "expected error to contain docs url"));
+  })
+})
