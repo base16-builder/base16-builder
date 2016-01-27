@@ -104,8 +104,11 @@ invalidArgs.forEach(function(invalidArg) {
       stderr
     } = await execa(cmd, invalidArg);
 
-    t.ok(stderr, 'expected error to be written to stderr but stderr is "undefined".');
-    t.ok(/^fatal: /.test(stderr, 'expected error to start wtih "fatal:"'));
-    t.ok(/https:\/\/goo\.gl\/JwwX13/.test(stderr, 'expected error to contain docs url'));
+    const expected = `fatal: You need to specify *both* a template and a scheme name e.g.:
+  base16-builder -t i3wm -s oceanicnext
+
+If you are still having trouble, please refer to the documentation for guidance: https://goo.gl/JwwX13.`;
+
+    t.is(stderr, expected);
   });
 });
