@@ -5,7 +5,7 @@ from '../lib';
 import test from 'ava';
 
 test('sut exports a function', function(t) {
-  const actual = typeof(buildTheme);
+  const actual = typeof (buildTheme);
   const expected = 'function';
 
   t.is(actual, expected);
