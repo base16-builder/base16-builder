@@ -1,114 +1,106 @@
 /* eslint-disable max-len */
 
-import execa from 'execa';
 import test from 'ava';
+import execute from 'execa';
 import fs from 'fs-promise';
-import rimraf from 'rimraf-promise';
+import removeDir from 'rimraf-promise';
 
-const cmd = '../dist/cli.js';
+const command = '../dist/cli.js';
 
-const invalidTemplNames = [
-  'wobble-wibble',
-  'schemes',
-  'templates'
-];
-invalidTemplNames.forEach(function(invalidTemplName) {
-  test('given a non-existent template, the program writes an accurate error to the console', async function(t) {
-    const schemeName = 'oceanicnext';
-    const templName = invalidTemplName;
-    const args = ['-s', schemeName, '-t', templName];
-
-    const {
-      stderr: actual
-    } = await execa(cmd, args);
-
-    t.ok(new RegExp(`Could not find a template called "${templName}"`).test(actual));
-    t.ok(/https:\/\/goo.gl\/fhm4Ct/.test(actual));
-  });
+test.afterEach(async function() {
+  await removeDir('output');
 });
 
-const invalidSchemeNames = [
-  'wibble-wobble',
-  'templates',
-  'schemes'
-];
-invalidSchemeNames.forEach(function(invalidSchemeName) {
-  test('given a non-existent scheme, the program writes an accurate error to the console ', async function(t) {
-    const schemeName = invalidSchemeName;
-    const templName = 'i3wm';
-    const args = ['-s', schemeName, '-t', templName];
+test('non-existent template should cause error', async (t) => {
+  const commandArguments = ['-s', 'monokai', '-t', 'foo'];
+  const {stderr: actual} = await execute(command, commandArguments);
 
-    const {
-      stderr: actual
-    } = await execa(cmd, args);
-
-    t.ok(new RegExp(`Could not find a scheme called "${schemeName}"`).test(actual));
-  });
+  t.ok(/^Could not find a template called/.test(actual));
+  t.ok(/goo.gl\/6c8djV$/.test(actual));
 });
 
-test('given "help" arg program returns man page', async function(t) {
-  const {
-    stdout: output
-  } = await execa(cmd, ['--help']);
-  t.ok(output.match(/Usage/, 'expected man to contain "Usage"'));
-  t.ok(output.match(/Options/, 'expected man to contain "Options"'));
-  t.ok(output.match(/Example/, 'expected man to contain "Example"'));
-});
+test('templates with special name should cause error', async (t) => {
+  const templs = ['schemes', 'templates'];
+  for (const templ of templs) {
+    const commandArguments = ['-s', 'monokai', '-t', templ];
+    const {stderr: actual} = await execute(command, commandArguments);
 
-test('given \"theme\" and \"scheme\" short names program writes output file', async function(t) {
-  const schemeName = 'oceanicnext';
-  const templName = 'i3wm';
-  const args = ['-s', schemeName, '-t', templName];
-
-  await execa(cmd, args);
-
-  try {
-    const actual =
-      await fs.readFile(`output/${templName}/${schemeName}`, 'utf8');
-    t.ok(/set \$base00 1B2B34/.test(actual));
-  } catch (err) {
-    t.fail(err);
-  } finally {
-    await rimraf('output');
+    t.ok(/^Could not find a template called/.test(actual));
+    t.ok(/goo.gl\/6c8djV$/.test(actual));
   }
 });
 
-test('given \"theme\" and \"scheme\" long names program writes output file', async function(t) {
-  const schemeName = 'oceanicnext';
-  const templName = 'i3wm';
-  const args = ['--scheme', schemeName, '--template', templName];
+test('non-existent scheme should cause error', async (t) => {
+  const commandArguments = ['-s', 'bar', '-t', 'i3wm'];
+  const {stderr: actual} = await execute(command, commandArguments);
 
-  await execa(cmd, args);
+  t.ok(/^Could not find a scheme called/.test(actual));
+  t.ok(/goo.gl\/ntnS1I$/.test(actual));
+});
 
-  try {
-    const actual =
-      await fs.readFile(`output/${templName}/${schemeName}`, 'utf8');
-    t.ok(/set \$base00 1B2B34/.test(actual));
-  } catch (err) {
-    t.fail(err);
-  } finally {
-    await rimraf('output');
+test('schemes with special name should cause error', async (t) => {
+  const schemes = ['schemes', 'templates'];
+  for (const scheme of schemes) {
+    const commandArguments = ['-s', scheme, '-t', 'i3wm'];
+    const {stderr: actual} = await execute(command, commandArguments);
+
+    t.ok(actual.match(/^Could not find a scheme called/));
+    t.ok(actual.match(/goo.gl\/ntnS1I$/));
   }
 });
 
-const invalidArgs = [
-  [],
-  ['-t', 'i3wm'],
-  ['-s', 'oceanicnext'],
-  ['--template', 'i3wm'],
-  ['--scheme', 'oceanicnext']
-];
-invalidArgs.forEach(function(invalidArg) {
-  test('given invalid argument program writes error to stderr', async function(t) {
-    const {
-      stderr
-    } = await execa(cmd, invalidArg);
+test('invalid command arguments should cause error', async (t) => {
+  const invalidCommandArguments = [
+    [],
+    ['-t', 'i3wm'],
+    ['-s', 'oceanicnext'],
+    ['--template', 'i3wm'],
+    ['--scheme', 'oceanicnext']
+  ];
+  for (const commandArguments of invalidCommandArguments) {
+    const {stderr: actual} = await execute(command, commandArguments);
 
-    const expected = `fatal: You need to specify *both* a template and a scheme name e.g.:
-  base16-builder -t i3wm -s oceanicnext
+    t.ok(actual.match(/^fatal: You need to specify \*both\* a template/));
+    t.ok(actual.match(/goo.gl\/JwwX13\.$/));
+  }
+});
 
-If you are still having trouble, please refer to the documentation for guidance: https://goo.gl/JwwX13.`;
+test('help arguments should cause help to be output', async (t) => {
+  const {stdout: actual} = await execute(command, ['--help']);
 
-    t.is(stderr, expected);
-  });
+  t.ok(actual.match(/Usage/));
+  t.ok(actual.match(/Options/));
+  t.ok(actual.match(/Example/));
+});
+
+test('valid arguments cause output file to be written', async (t) => {
+  const scheme = 'oceanicnext';
+  const templ = 'i3wm';
+  const commandArguments = ['-s', scheme, '-t', templ];
+  await execute(command, commandArguments);
+
+  try {
+    const path = `output/${templ}/${scheme}`;
+    const actual = await fs.readFile(path, 'utf8');
+
+    t.ok(/set \$base00 1B2B34/.test(actual));
+  } catch (error) {
+    t.fail(error);
+  }
+});
+
+test('with aliases, valid arguments cause output file to be written', async (t) => {
+  const scheme = 'oceanicnext';
+  const templ = 'i3wm';
+  const commandArguments = ['--scheme', scheme, '--template', templ];
+  await execute(command, commandArguments);
+
+  try {
+    const path = `output/${templ}/${scheme}`;
+    const actual = await fs.readFile(path, 'utf8');
+
+    t.ok(/set \$base00 1B2B34/.test(actual));
+  } catch (error) {
+    t.fail(error);
+  }
 });
