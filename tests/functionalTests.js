@@ -11,7 +11,7 @@ test.afterEach(async function() {
   await removeDir('output');
 });
 
-test('non-existent template should cause error', async (t) => {
+test('non-existent template should cause error', async function (t) {
   const commandArguments = ['-s', 'monokai', '-t', 'foo'];
   const {stderr: actual} = await execute(command, commandArguments);
 
@@ -19,7 +19,7 @@ test('non-existent template should cause error', async (t) => {
   t.ok(/goo.gl\/6c8djV$/.test(actual));
 });
 
-test('templates with special name should cause error', async (t) => {
+test('templates with special name should cause error', async function (t) {
   const templs = ['schemes', 'templates'];
   for (const templ of templs) {
     const commandArguments = ['-s', 'monokai', '-t', templ];
@@ -30,7 +30,7 @@ test('templates with special name should cause error', async (t) => {
   }
 });
 
-test('non-existent scheme should cause error', async (t) => {
+test('non-existent scheme should cause error', async function (t) {
   const commandArguments = ['-s', 'bar', '-t', 'i3wm'];
   const {stderr: actual} = await execute(command, commandArguments);
 
@@ -38,7 +38,7 @@ test('non-existent scheme should cause error', async (t) => {
   t.ok(/goo.gl\/ntnS1I$/.test(actual));
 });
 
-test('schemes with special name should cause error', async (t) => {
+test('schemes with special name should cause error', async function (t) {
   const schemes = ['schemes', 'templates'];
   for (const scheme of schemes) {
     const commandArguments = ['-s', scheme, '-t', 'i3wm'];
@@ -49,7 +49,7 @@ test('schemes with special name should cause error', async (t) => {
   }
 });
 
-test('invalid command arguments should cause error', async (t) => {
+test('invalid command arguments should cause error', async function (t) {
   const invalidCommandArguments = [
     [],
     ['-t', 'i3wm'],
@@ -65,7 +65,7 @@ test('invalid command arguments should cause error', async (t) => {
   }
 });
 
-test('help arguments should cause help to be output', async (t) => {
+test('help arguments should cause help to be output', async function (t) {
   const {stdout: actual} = await execute(command, ['--help']);
 
   t.ok(actual.match(/Usage/));
@@ -73,7 +73,7 @@ test('help arguments should cause help to be output', async (t) => {
   t.ok(actual.match(/Example/));
 });
 
-test('valid arguments cause output file to be written', async (t) => {
+test('valid arguments cause output file to be written', async function (t) {
   const scheme = 'oceanicnext';
   const templ = 'i3wm';
   const commandArguments = ['-s', scheme, '-t', templ];
@@ -89,7 +89,7 @@ test('valid arguments cause output file to be written', async (t) => {
   }
 });
 
-test('with aliases, valid arguments cause output file to be written', async (t) => {
+test('with aliases, valid arguments cause output file to be written', async function (t) {
   const scheme = 'oceanicnext';
   const templ = 'i3wm';
   const commandArguments = ['--scheme', scheme, '--template', templ];
