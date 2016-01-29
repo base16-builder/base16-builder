@@ -101,6 +101,7 @@ test('with aliases, valid arguments cause output file to be written', async func
   const scheme = 'oceanicnext';
   const templ = 'i3wm';
   const commandArguments = ['--scheme', scheme, '--template', templ];
+
   await execute(command, commandArguments);
 
   try {
@@ -111,4 +112,16 @@ test('with aliases, valid arguments cause output file to be written', async func
   } catch (error) {
     t.fail(error);
   }
+});
+
+test('valid arguments cause success output message', async function (t) {
+  const scheme = 'oceanicnext';
+  const templ = 'i3wm';
+  const commandArguments = ['-s', scheme, '-t', templ];
+
+  const {stdout: actual} = await execute(command, commandArguments);
+
+  const path = `output/${templ}/${scheme}`;
+  const expected = `Successfully built theme. You can find the theme at ${path}`;
+  t.is(actual, expected);
 });
