@@ -60,8 +60,7 @@ test('invalid command arguments should cause error', async function (t) {
   for (const commandArguments of invalidCommandArguments) {
     const {stderr: actual} = await execute(command, commandArguments);
 
-    t.ok(actual.match(/^fatal: You need to specify \*both\* a template/));
-    t.ok(actual.match(/goo.gl\/JwwX13\.$/));
+    t.ok(actual.match(/^fatal: Could not recognize one or more arguments. See 'base16-builder --help'\./));
   }
 });
 
