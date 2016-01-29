@@ -8,6 +8,7 @@
   "scripts": {
     "prebuild": "rm -rf dist && mkdir dist && cp -r db/ dist/",
     "test": "ava tests --require babel-register",
+    "testw": "nodemon --watch lib --exec npm run test",
     "pretest": "npm run build && chmod +x dist/cli.js",
     "build": "babel lib --out-dir dist",
     "prepublish": "npm run build"
@@ -35,6 +36,7 @@
     "eslint": "^1.10.3",
     "eslint-config-google": "^0.3.0",
     "execa": "^0.2.2",
+    "nodemon": "^1.8.1",
     "rimraf-promise": "^2.0.0"
   },
   "dependencies": {
