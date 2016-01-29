@@ -1,0 +1,22 @@
+# Based on the original and current Tomorrow themes by Chris Kempson
+# [1] tomorrow.yml
+# [2] https://github.com/chriskempson/tomorrow-theme
+# [3] ocean.yml
+scheme: "Yesterday Bright"
+author: "FroZnShiva (https://github.com/FroZnShiva)"
+base00: "343d46" # [3] Gray1
+base01: "4f5b66" # [3] Gray2
+base02: "65737e" # [3] Gray3
+base03: "a7adba" # [3] Gray4
+base04: "c0c5ce" # [3] Gray5
+base05: "dfe1e8" # [3] Gray6
+base06: "eff1f5" # [3] Gray7
+base07: "ffffff" # [1] Gray7
+base08: "d54e53" # [2] Red
+base09: "e78c45" # [2] Orange
+base0A: "e7c547" # [2] Yellow
+base0B: "b9ca4a" # [2] Green
+base0C: "70c0b1" # [2] Aqua
+base0D: "7aa6da" # [2] Blue
+base0E: "c397d8" # [2] Purple
+base0F: "9a806d" #     Brown: 0xa3685a - ( 0xd54e53 - 0xcc6666 )

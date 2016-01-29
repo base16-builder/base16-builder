@@ -1,0 +1,21 @@
+# Based on the original and current Tomorrow themes by Chris Kempson
+# [1] tomorrow.yml
+# [2] https://github.com/chriskempson/tomorrow-theme
+scheme: "Yesterday"
+author: "FroZnShiva (https://github.com/FroZnShiva)"
+base00: "1d1f21" # [1]   Gray0
+base01: "282a2e" # [1]   Gray1
+base02: "4d4d4c" # [2]   Foreground
+base03: "969896" # [1]   Gray3
+base04: "8e908c" # [2]   Comment
+base05: "d6d6d6" # [2]   Selection
+base06: "efefef" # [2]   Current Line
+base07: "ffffff" # [1,2] Gray7, Background
+base08: "c82829" # [2]   Red
+base09: "f5871f" # [2]   Orange
+base0A: "eab700" # [2]   Yellow
+base0B: "718c00" # [2]   Green
+base0C: "3e999f" # [2]   Aqua
+base0D: "4271ae" # [2]   Blue
+base0E: "8959a8" # [2]   Purple
+base0F: "7f2a1d" #       Brown:  0xa3+0xc8-0xcc-0x20 . 0x68+0x28-0x66 . 0x5a+0x29-0x66

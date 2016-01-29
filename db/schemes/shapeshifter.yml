@@ -1,0 +1,19 @@
+# Shapeshifter scheme for the Base16 Builder (https://github.com/chriskempson/base16-builder)
+scheme: "shapeshifter"
+author: "Tyler Benziger (http://tybenz.com)"
+base00: "000000" #  ----
+base01: "040404" #  ---
+base02: "102015" #  --
+base03: "343434" #  -
+base04: "555555" #  +
+base05: "ababab" #  ++
+base06: "e0e0e0" #  +++
+base07: "f9f9f9" #  ++++
+base08: "e92f2f" #	red
+base09: "e09448" #	orange
+base0A: "dddd13" #	yellow
+base0B: "0ed839" #	green
+base0C: "23edda" #	aqua
+base0D: "3b48e3" #	blue
+base0E: "f996e2" #	purple
+base0F: "69542d" #	brown

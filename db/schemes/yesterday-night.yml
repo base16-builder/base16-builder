@@ -1,0 +1,22 @@
+# Based on the Tomorrow and Ocean themes by Chris Kempson
+# [1] tomorrow.yml
+# [2] ocean.yml
+# Tomorrow is based on the original Tomorrow Night theme, hence the Name
+scheme: "Yesterday Night"
+author: "FroZnShiva (https://github.com/FroZnShiva)"
+base00: "343d46" # [2] Gray1
+base01: "4f5b66" # [2] Gray2
+base02: "65737e" # [2] Gray3
+base03: "a7adba" # [2] Gray4
+base04: "c0c5ce" # [2] Gray5
+base05: "dfe1e8" # [2] Gray6
+base06: "eff1f5" # [2] Gray7
+base07: "ffffff" # [1] Foreground
+base08: "cc6666" # [1] Red
+base09: "de935f" # [1] Orange
+base0A: "f0c674" # [1] Yellow
+base0B: "b5bd68" # [1] Green
+base0C: "8abeb7" # [1] Aqua
+base0D: "81a2be" # [1] Blue
+base0E: "b294bb" # [1] Purple
+base0F: "a3685a" # [1] Brown
