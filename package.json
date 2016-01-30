@@ -40,6 +40,7 @@
     "rimraf-promise": "^2.0.0"
   },
   "dependencies": {
+    "chalk": "^1.1.1",
     "fs-promise": "^0.3.1",
     "js-yaml": "^3.5.2",
     "meow": "^3.7.0",
