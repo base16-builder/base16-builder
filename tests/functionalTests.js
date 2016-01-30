@@ -35,7 +35,7 @@ test('non-existent scheme should cause error', async function (t) {
   const {stderr: actual} = await execute(command, commandArguments);
 
   t.ok(/^Could not find a scheme called/.test(actual));
-  t.ok(/goo.gl\/ntnS1I$/.test(actual));
+  t.ok(/goo\.gl\/qMu3R5$/.test(actual));
 });
 
 test('schemes with special name should cause error', async function (t) {
@@ -45,7 +45,7 @@ test('schemes with special name should cause error', async function (t) {
     const {stderr: actual} = await execute(command, commandArguments);
 
     t.ok(actual.match(/^Could not find a scheme called/));
-    t.ok(actual.match(/goo.gl\/ntnS1I$/));
+    t.ok(/goo\.gl\/qMu3R5$/.test(actual));
   }
 });
 
