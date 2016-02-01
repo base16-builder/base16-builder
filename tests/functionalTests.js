@@ -149,3 +149,25 @@ test('scheme list is sorted alphabetically', async function (t) {
 
   t.is(actual, expected);
 });
+
+test('template list contains all templates', async function (t) {
+  const {stdout: output} = await execute(command, ['ls-templates']);
+  const actual = countLines(output);
+
+  const expected = (await fs.readdir('../db/templates')).length;
+  t.is(actual, expected);
+});
+
+test('no templates in template list end with ".nunjucks"', async function (t) {
+  const {stdout: actual} = await execute(command, ['ls-templates']);
+
+  t.false(/\.nunjucks$/.test(actual));
+});
+
+test('template list is sorted alphabetically', async function (t) {
+  const {stdout: actual} = await execute(command, ['ls-templates']);
+
+  const expected = actual.split('\n').sort().join('\n');
+
+  t.is(actual, expected);
+});
