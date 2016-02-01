@@ -139,3 +139,11 @@ test('no schemes in scheme list end with ".yml"', async function (t) {
 
   t.false(/\.yml$/.test(actual));
 });
+
+test('scheme list is sorted alphabetically', async function (t) {
+  const {stdout: actual} = await execute(command, ['ls-schemes']);
+
+  const expected = actual.split('\n').sort().join('\n');
+
+  t.is(actual, expected);
+});
