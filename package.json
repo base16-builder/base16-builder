@@ -36,6 +36,7 @@
     "eslint": "^1.10.3",
     "eslint-config-google": "^0.3.0",
     "execa": "^0.2.2",
+    "line-count": "^0.1.0",
     "nodemon": "^1.8.1",
     "rimraf-promise": "^2.0.0"
   },

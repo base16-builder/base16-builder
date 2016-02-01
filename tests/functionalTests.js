@@ -4,6 +4,7 @@ import test from 'ava';
 import execute from 'execa';
 import fs from 'fs-promise';
 import removeDir from 'rimraf-promise';
+import countLines from 'line-count';
 
 const command = '../dist/cli.js';
 
@@ -123,4 +124,18 @@ test('valid arguments cause success output message', async function (t) {
   const path = `output/${templ}/${scheme}`;
   const expected = `Successfully built theme. You can find the theme at ${path}`;
   t.is(actual, expected);
+});
+
+test('scheme list contains all schemes', async function (t) {
+  const {stdout: output} = await execute(command, ['ls-schemes']);
+  const actual = countLines(output);
+
+  const expected = (await fs.readdir('../db/schemes')).length;
+  t.is(actual, expected);
+});
+
+test('no schemes in scheme list end with ".yml"', async function (t) {
+  const {stdout: actual} = await execute(command, ['ls-schemes']);
+
+  t.false(/\.yml$/.test(actual));
 });
