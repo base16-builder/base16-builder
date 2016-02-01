@@ -37,15 +37,13 @@
     "eslint-config-google": "^0.3.0",
     "execa": "^0.2.2",
     "line-count": "^0.1.0",
-    "nodemon": "^1.8.1",
-    "rimraf-promise": "^2.0.0"
+    "nodemon": "^1.8.1"
   },
   "dependencies": {
-    "chalk": "^1.1.1",
     "fs-promise": "^0.3.1",
+    "chalk": "^1.1.1",
     "js-yaml": "^3.5.2",
     "meow": "^3.7.0",
-    "mkdirp-promise": "^1.0.3",
     "nunjucks": "^2.3.0"
   },
   "config": {

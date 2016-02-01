@@ -3,14 +3,9 @@
 import test from 'ava';
 import execute from 'execa';
 import fs from 'fs-promise';
-import removeDir from 'rimraf-promise';
 import countLines from 'line-count';
 
 const command = '../dist/cli.js';
-
-test.afterEach(async function() {
-  await removeDir('output');
-});
 
 test('non-existent template should cause error', async function (t) {
   const commandArguments = ['-s', 'monokai', '-t', 'foo'];
@@ -83,49 +78,24 @@ test('with alias help arguments should cause help to be output', async function 
   t.ok(actual.match(/Example/));
 });
 
-test('valid arguments cause output file to be written', async function (t) {
-  const scheme = 'oceanicnext';
-  const templ = 'i3wm';
-  const commandArguments = ['-s', scheme, '-t', templ];
-  await execute(command, commandArguments);
-
-  try {
-    const path = `output/${templ}/${scheme}`;
-    const actual = await fs.readFile(path, 'utf8');
-
-    t.ok(/set \$base00 1B2B34/.test(actual));
-  } catch (error) {
-    t.fail(error);
-  }
-});
-
-test('with aliases, valid arguments cause output file to be written', async function (t) {
-  const scheme = 'oceanicnext';
-  const templ = 'i3wm';
-  const commandArguments = ['--scheme', scheme, '--template', templ];
-
-  await execute(command, commandArguments);
-
-  try {
-    const path = `output/${templ}/${scheme}`;
-    const actual = await fs.readFile(path, 'utf8');
-
-    t.ok(/set \$base00 1B2B34/.test(actual));
-  } catch (error) {
-    t.fail(error);
-  }
-});
-
-test('valid arguments cause success output message', async function (t) {
+test('valid arguments cause output file to be written to console', async function (t) {
   const scheme = 'oceanicnext';
   const templ = 'i3wm';
   const commandArguments = ['-s', scheme, '-t', templ];
 
   const {stdout: actual} = await execute(command, commandArguments);
 
-  const path = `output/${templ}/${scheme}`;
-  const expected = `Successfully built theme. You can find the theme at ${path}`;
-  t.is(actual, expected);
+  t.ok(/set \$base00 1B2B34/.test(actual));
+});
+
+test('with aliases, valid arguments cause output file to be written to console', async function (t) {
+  const scheme = 'oceanicnext';
+  const templ = 'i3wm';
+  const commandArguments = ['--scheme', scheme, '--template', templ];
+
+  const {stdout: actual} = await execute(command, commandArguments);
+
+  t.ok(/set \$base00 1B2B34/.test(actual));
 });
 
 test('scheme list contains all schemes', async function (t) {
