@@ -8,11 +8,13 @@ import countLines from 'line-count';
 const command = '../dist/cli.js';
 
 test('non-existent template should cause error', async function (t) {
-  const commandArguments = ['-s', 'monokai', '-t', 'foo'];
+  const templ = 'foo';
+  const commandArguments = ['-s', 'monokai', '-t', templ];
   const {stderr: actual} = await execute(command, commandArguments);
 
-  t.ok(/^Could not find a template called/.test(actual));
-  t.ok(/goo.gl\/6c8djV$/.test(actual));
+  const expected = `fatal: Could not find a template called '${templ}'.
+See \'base16-builder ls-templates\' for a list of available templates.`;
+  t.is(actual, expected);
 });
 
 test('templates with special name should cause error', async function (t) {
@@ -21,17 +23,20 @@ test('templates with special name should cause error', async function (t) {
     const commandArguments = ['-s', 'monokai', '-t', templ];
     const {stderr: actual} = await execute(command, commandArguments);
 
-    t.ok(/^Could not find a template called/.test(actual));
-    t.ok(/goo.gl\/6c8djV$/.test(actual));
+    const expected = `fatal: Could not find a template called '${templ}'.
+See \'base16-builder ls-templates\' for a list of available templates.`;
+    t.is(actual, expected);
   }
 });
 
 test('non-existent scheme should cause error', async function (t) {
-  const commandArguments = ['-s', 'bar', '-t', 'i3wm'];
+  const scheme = 'bar';
+  const commandArguments = ['-s', scheme, '-t', 'i3wm'];
   const {stderr: actual} = await execute(command, commandArguments);
 
-  t.ok(/^Could not find a scheme called/.test(actual));
-  t.ok(/goo\.gl\/qMu3R5$/.test(actual));
+  const expected = `fatal: Could not find a scheme called '${scheme}'.
+See \'base16-builder ls-schemes\' for a list of available schemes.`;
+  t.is(actual, expected);
 });
 
 test('schemes with special name should cause error', async function (t) {
@@ -40,8 +45,9 @@ test('schemes with special name should cause error', async function (t) {
     const commandArguments = ['-s', scheme, '-t', 'i3wm'];
     const {stderr: actual} = await execute(command, commandArguments);
 
-    t.ok(actual.match(/^Could not find a scheme called/));
-    t.ok(/goo\.gl\/qMu3R5$/.test(actual));
+    const expected = `fatal: Could not find a scheme called '${scheme}'.
+See \'base16-builder ls-schemes\' for a list of available schemes.`;
+    t.is(actual, expected);
   }
 });
 
