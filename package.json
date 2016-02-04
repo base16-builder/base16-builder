@@ -11,7 +11,8 @@
     "testw": "nodemon --watch lib --exec npm run test",
     "pretest": "npm run build && chmod +x dist/cli.js",
     "build": "babel lib --out-dir dist",
-    "prepublish": "npm run build"
+    "prepublish": "npm run build",
+    "commit": "git-cz"
   },
   "keywords": [
     "base16"
