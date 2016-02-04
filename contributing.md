@@ -15,11 +15,15 @@ Please do the following:
 ### Development
 
 1. Run `npm install`
-- Run `npm run test`. _All tests should pass_
+- Run `npm test`. All tests should pass
 - **Write some awesome code**
-- Run `npm run test`. _All tests should still pass :wink:_
+- Run `npm test`. All tests should _still_ pass :wink:
 - Run `git add -A .`
-- Run `npm run commit` and follow the prompt
+- Run `npm run commit` and follow the prompt. Please do **not** use `git commit` unless you want to manually emulate the commit message convention.
 
+If you want to run the cli module locally for manual testing:
+
+1. Run `npm run build`
+- Run `./dist/cli <arguments>` e.g. `./dist/cli -t i3wm -s gooey`
 
 <sub>Attribution for `contributing.md` template: [angular-formly](https://github.com/formly-js/angular-formly/blob/master/CONTRIBUTING.md).</sub>
