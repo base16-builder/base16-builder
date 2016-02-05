@@ -1,0 +1,52 @@
+! Base16 <%= @scheme %>
+! Scheme: <%= @author %>
+
+! URxvt*tintColor:                      color
+! URxvt*fadeColor:                      color
+
+URxvt*background:                     #<%= @base["00"]["hex"] %>
+URxvt*foreground:                     #<%= @base["05"]["hex"] %>
+URxvt*cursorColor:                    #<%= @base["05"]["hex"] %>
+
+! URxvt*colorBD:                        color
+! URxvt*colorIT:                        color
+! URxvt*colorUL:                        color
+! URxvt*colorRV:                        color
+! URxvt*underlineColor:                 color
+URxvt*scrollColor:                    #<%= @base["05"]["hex"] %>
+! URxvt*troughColor:                    color
+URxvt*highlightColor:                 #<%= @base["02"]["hex"] %>
+URxvt*highlightTextColor:             #<%= @base["04"]["hex"] %>
+! URxvt*cursorColor2:                   color
+! URxvt*pointerColor:                   color
+! URxvt*pointerColor2:                  color
+! URxvt*borderColor:                    color
+! URxvt*tab-bg:                         colour
+! URxvt*tab-fg:                         colour
+! URxvt*tabbar-bg:                      colour
+! URxvt*tabbar-fg:                      colour
+
+URxvt*color0:                         #<%= @base["00"]["hex"] %>
+URxvt*color1:                         #<%= @base["08"]["hex"] %>
+URxvt*color2:                         #<%= @base["0B"]["hex"] %>
+URxvt*color3:                         #<%= @base["0A"]["hex"] %>
+URxvt*color4:                         #<%= @base["0D"]["hex"] %>
+URxvt*color5:                         #<%= @base["0E"]["hex"] %>
+URxvt*color6:                         #<%= @base["0C"]["hex"] %>
+URxvt*color7:                         #<%= @base["05"]["hex"] %>
+URxvt*color8:                         #<%= @base["03"]["hex"] %>
+URxvt*color9:                         #<%= @base["08"]["hex"] %>
+URxvt*color10:                        #<%= @base["0B"]["hex"] %>
+URxvt*color11:                        #<%= @base["0A"]["hex"] %>
+URxvt*color12:                        #<%= @base["0D"]["hex"] %>
+URxvt*color13:                        #<%= @base["0E"]["hex"] %>
+URxvt*color14:                        #<%= @base["0C"]["hex"] %>
+URxvt*color15:                        #<%= @base["07"]["hex"] %>
+
+! 256 color space
+URxvt*color16:                        #<%= @base["09"]["hex"] %>
+URxvt*color17:                        #<%= @base["0F"]["hex"] %>
+URxvt*color18:                        #<%= @base["01"]["hex"] %>
+URxvt*color19:                        #<%= @base["02"]["hex"] %>
+URxvt*color20:                        #<%= @base["04"]["hex"] %>
+URxvt*color21:                        #<%= @base["06"]["hex"] %>

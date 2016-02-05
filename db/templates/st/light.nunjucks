@@ -1,0 +1,49 @@
+<%
+# st - simple terminal Color Setup Template (st.suckless.org)
+# Vlad Grigorescu
+%>
+
+// Base16 <%= @scheme %> light - simple terminal color setup
+// <%= @author %>
+static const char *colorname[] = {
+	/* Normal colors */
+	"#<%= @base["00"]["hex"] %>", /*  0: Base 00 - Black   */
+	"#<%= @base["08"]["hex"] %>", /*  1: Base 08 - Red     */
+	"#<%= @base["0B"]["hex"] %>", /*  2: Base 0B - Green   */
+	"#<%= @base["0A"]["hex"] %>", /*  3: Base 0A - Yellow  */
+	"#<%= @base["0D"]["hex"] %>", /*  4: Base 0D - Blue    */
+	"#<%= @base["0E"]["hex"] %>", /*  5: Base 0E - Magenta */
+	"#<%= @base["0C"]["hex"] %>", /*  6: Base 0C - Cyan    */
+	"#<%= @base["05"]["hex"] %>", /*  7: Base 05 - White   */
+
+	/* Bright colors */
+	"#<%= @base["03"]["hex"] %>", /*  8: Base 03 - Bright Black */
+	"#<%= @base["08"]["hex"] %>", /*  9: Base 08 - Red          */
+	"#<%= @base["0B"]["hex"] %>", /* 10: Base 0B - Green        */
+	"#<%= @base["0A"]["hex"] %>", /* 11: Base 0A - Yellow       */
+	"#<%= @base["0D"]["hex"] %>", /* 12: Base 0D - Blue         */
+	"#<%= @base["0E"]["hex"] %>", /* 13: Base 0E - Magenta      */
+	"#<%= @base["0C"]["hex"] %>", /* 14: Base 0C - Cyan         */
+	"#<%= @base["07"]["hex"] %>", /* 15: Base 05 - Bright White */
+
+	/* A few more colors */
+
+	"#<%= @base["09"]["hex"] %>", /* 16: Base 09 */
+	"#<%= @base["0F"]["hex"] %>", /* 17: Base 0F */
+	"#<%= @base["01"]["hex"] %>", /* 18: Base 01 */
+	"#<%= @base["02"]["hex"] %>", /* 19: Base 02 */
+	"#<%= @base["04"]["hex"] %>", /* 20: Base 04 */
+	"#<%= @base["06"]["hex"] %>", /* 21: Base 06 */
+
+	[255] = 0,
+
+	[256] = "#<%= @base["02"]["hex"] %>", /* default fg: Base 02 */
+	[257] = "#<%= @base["07"]["hex"] %>", /* default bg: Base 07 */	
+};
+
+// Foreground, background and cursor
+static unsigned int defaultfg = 256;
+static unsigned int defaultbg = 257;
+static unsigned int defaultcs = 256;
+
+

@@ -1,0 +1,6 @@
+# dmenu template
+# Base16 <%= @scheme %> Dark, by <%= @author %>
+# template by Matt Parnell, @parnmatt
+
+# add this as an alias, or however you wish to run dmenu
+dmenu -nb '<%= @base["00"]["hex"] %>' -nf '<%= @base["03"]["hex"] %>' -sb '<%= @base["0D"]["hex"] %>' -sf '<%= @base["00"]["hex"] %>'

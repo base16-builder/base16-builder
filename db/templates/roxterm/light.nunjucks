@@ -1,0 +1,26 @@
+<%
+@ratio = 10
+def to_48bit_hex(rgb)
+  '%02x%02x%02x%02x%02x%02x' % [rgb[0], rgb[0], rgb[1], rgb[1], rgb[2], rgb[2]]
+end
+%>[roxterm colour scheme]
+foreground=#<%= to_48bit_hex(@base["00"]["rgb"]) %>
+background=#<%= to_48bit_hex(@base["07"]["rgb"]) %>
+palette_size = 16
+0=#<%= to_48bit_hex(@base["00"]["rgb"]) %><%# Black %>
+1=#<%= to_48bit_hex(@base["08"]["rgb"]) %><%# Red %>
+2=#<%= to_48bit_hex(@base["0B"]["rgb"]) %><%# Green %>
+3=#<%= to_48bit_hex(@base["0A"]["rgb"]) %><%# Yellow %>
+4=#<%= to_48bit_hex(@base["0D"]["rgb"]) %><%# Blue %>
+5=#<%= to_48bit_hex(@base["0E"]["rgb"]) %><%# Magenta %>
+6=#<%= to_48bit_hex(@base["0C"]["rgb"]) %><%# Cyan %>
+7=#<%= to_48bit_hex(@base["03"]["rgb"]) %><%# White %>
+8=#<%= to_48bit_hex(shade(@base["00"]["rgb"], @ratio)) %><%# Black %>
+9=#<%= to_48bit_hex(shade(@base["08"]["rgb"], @ratio)) %><%# Red %>
+10=#<%= to_48bit_hex(shade(@base["0B"]["rgb"], @ratio)) %><%# Green %>
+11=#<%= to_48bit_hex(shade(@base["0A"]["rgb"], @ratio)) %><%# Yellow %>
+12=#<%= to_48bit_hex(shade(@base["0D"]["rgb"], @ratio)) %><%# Blue %>
+13=#<%= to_48bit_hex(shade(@base["0E"]["rgb"], @ratio)) %><%# Magenta %>
+14=#<%= to_48bit_hex(shade(@base["0C"]["rgb"], @ratio)) %><%# Cyan %>
+15=#<%= to_48bit_hex(shade(@base["03"]["rgb"], @ratio)) %><%# White %>
+bold=#<%= to_48bit_hex(shade(@base["03"]["rgb"], @ratio)) %>

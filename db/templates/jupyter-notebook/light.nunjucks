@@ -1,0 +1,81 @@
+/*
+
+    Name:       Base16 <%= @scheme %> Light
+    Author:     <%= @author %>
+
+    CodeMirror template adapted for IPython Notebook by Nikhil Sonnad (https://github.com/nsonnad/base16-ipython-notebook)
+    CodeMirror template by Jan T. Sott (https://github.com/idleberg/base16-chrome-devtools)
+    Original Base16 color scheme by Chris Kempson (https://github.com/chriskempson/base16)
+
+*/
+
+/*
+    Jupyter GLOBALS
+*/
+
+div.cell.edit_mode {
+  border: thin #<%= @base["0B"]["hex"] %> solid !important;
+}
+
+.edit_mode div.cell.selected{
+  border-color: #<%= @base["0A"]["hex"] %>;
+}
+
+.CodeMirror pre {
+  font-family: 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 12px;
+}
+
+div.cell.selected {
+  border-color: #<%= @base["0C"]["hex"] %>;
+}
+
+div.input_prompt {
+  color: #<%= @base["0D"]["hex"] %>;
+}
+
+div.output_prompt {
+  color: #<%= @base["08"]["hex"] %>;
+}
+
+/*
+     GLOBALS
+*/
+
+span.ansiblack {color: #<%= @base["01"]["hex"] %>;}
+span.ansiblue {color: #<%= @base["0C"]["hex"] %>;}
+span.ansigray {color: #<%= @base["04"]["hex"] %>;}
+span.ansigreen {color: #<%= @base["0B"]["hex"] %>;}
+span.ansipurple {color: #<%= @base["0E"]["hex"] %>;}
+span.ansired {color: #<%= @base["08"]["hex"] %>;}
+span.ansiyellow {color: #<%= @base["0A"]["hex"] %>;}
+
+div.output_stderr {background-color: #<%= @base["08"]["hex"] %>;}
+div.output_stderr pre {color: #<%= @base["06"]["hex"] %>;}
+
+.cm-s-ipython.CodeMirror {background: #<%= @base["07"]["hex"] %>; color: #<%= @base["01"]["hex"] %>;}
+.cm-s-ipython div.CodeMirror-selected {background: #<%= @base["06"]["hex"] %> !important;}
+.cm-s-ipython .CodeMirror-gutters {background: #<%= @base["07"]["hex"] %>; border-right: 0px;}
+.cm-s-ipython .CodeMirror-linenumber {color: #<%= @base["04"]["hex"] %>;}
+.cm-s-ipython .CodeMirror-cursor {border-left: 1px solid #<%= @base["03"]["hex"] %> !important;}
+
+.cm-s-ipython span.cm-comment {color: #<%= @base["03"]["hex"] %>;}
+.cm-s-ipython span.cm-atom {color: #<%= @base["0E"]["hex"] %>;}
+.cm-s-ipython span.cm-number {color: #<%= @base["09"]["hex"] %>;}
+
+.cm-s-ipython span.cm-property, .cm-s-ipython span.cm-attribute {color: #<%= @base["0B"]["hex"] %>;}
+.cm-s-ipython span.cm-keyword {color: #<%= @base["0E"]["hex"] %>;}
+.cm-s-ipython span.cm-string {color: #<%= @base["0B"]["hex"] %>;}
+.cm-s-ipython span.cm-operator {color: #<%= @base["01"]["hex"] %>;}
+.cm-s-ipython span.cm-builtin {color: #<%= @base["0E"]["hex"] %>;}
+
+.cm-s-ipython span.cm-variable {color: #<%= @base["02"]["hex"] %>;}
+.cm-s-ipython span.cm-variable-2 {color: #<%= @base["0D"]["hex"] %>;}
+.cm-s-ipython span.cm-def {color: #<%= @base["09"]["hex"] %>;}
+.cm-s-ipython span.cm-error {background: #<%= @base["08"]["hex"] %>; color: #<%= @base["03"]["hex"] %>;}
+.cm-s-ipython span.cm-bracket {color: #<%= @base["02"]["hex"] %>;}
+.cm-s-ipython span.cm-tag {color: #<%= @base["08"]["hex"] %>;}
+.cm-s-ipython span.cm-link {color: #<%= @base["0E"]["hex"] %>;}
+.cm-s-ipython span.cm-meta {color: #<%= @base["08"]["hex"] %>;}
+
+.cm-s-ipython .CodeMirror-matchingbracket { text-decoration: underline; color: #<%= @base["01"]["hex"] %> !important;}

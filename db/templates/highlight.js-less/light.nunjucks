@@ -1,0 +1,116 @@
+/*
+
+    Name:       Base16 <%= @scheme %> Light
+    Author:     <%= @author %>
+
+    highlight.js v8.0 template by Jan T. Sott (https://github.com/idleberg/base16-highlight.js)
+    Original Base16 color scheme by Chris Kempson (https://github.com/chriskempson/base16)
+
+*/
+
+@base00: #<%= @base["00"]["hex"] %>;
+@base01: #<%= @base["01"]["hex"] %>;
+@base02: #<%= @base["02"]["hex"] %>;
+@base03: #<%= @base["03"]["hex"] %>;
+@base04: #<%= @base["04"]["hex"] %>;
+@base05: #<%= @base["05"]["hex"] %>;
+@base06: #<%= @base["06"]["hex"] %>;
+@base07: #<%= @base["07"]["hex"] %>;
+@base08: #<%= @base["08"]["hex"] %>;
+@base09: #<%= @base["09"]["hex"] %>;
+@base0a: #<%= @base["0A"]["hex"] %>;
+@base0b: #<%= @base["0B"]["hex"] %>;
+@base0c: #<%= @base["0C"]["hex"] %>;
+@base0d: #<%= @base["0D"]["hex"] %>;
+@base0e: #<%= @base["0E"]["hex"] %>;
+@base0f: #<%= @base["0F"]["hex"] %>;
+
+// <%= @scheme %> Comment
+.hljs-comment {
+  color: @base03;
+}
+
+// <%= @scheme %> Red
+.hljs-variable,
+.hljs-attribute,
+.hljs-tag,
+.hljs-regexp,
+.ruby .hljs-constant,
+.xml .hljs-tag .hljs-title,
+.xml .hljs-pi,
+.xml .hljs-doctype,
+.html .hljs-doctype,
+.css .hljs-id,
+.css .hljs-class,
+.css .hljs-pseudo {
+  color: @base08;
+}
+
+// <%= @scheme %> Orange
+.hljs-number,
+.hljs-preprocessor,
+.hljs-built_in,
+.hljs-literal,
+.hljs-params,
+.hljs-constant {
+  color: @base09;
+}
+
+// <%= @scheme %> Yellow
+.ruby .hljs-class .hljs-title,
+.css .hljs-rules .hljs-attribute {
+  color: @base0A;
+}
+
+// <%= @scheme %> Green
+.hljs-string,
+.hljs-value,
+.hljs-inheritance,
+.hljs-header,
+.ruby .hljs-symbol,
+.xml .hljs-cdata {
+  color: @base0B;
+}
+
+// <%= @scheme %> Aqua
+.hljs-title,
+.css .hljs-hexcolor {
+  color: @base0C;
+}
+
+// <%= @scheme %> Blue
+.hljs-function,
+.python .hljs-decorator,
+.python .hljs-title,
+.ruby .hljs-function .hljs-title,
+.ruby .hljs-title .hljs-keyword,
+.perl .hljs-sub,
+.javascript .hljs-title,
+.coffeescript .hljs-title {
+  color: @base0D;
+}
+
+// <%= @scheme %> Purple
+.hljs-keyword,
+.javascript .hljs-function {
+  color: @base0E;
+}
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  background: @base07;
+  color: @base02;
+  padding: 0.5em;
+  -webkit-text-size-adjust: none;
+}
+
+.coffeescript .javascript,
+.javascript .xml,
+.tex .hljs-formula,
+.xml .javascript,
+.xml .vbscript,
+.xml .css,
+.xml .hljs-cdata {
+  opacity: 0.5;
+}
