@@ -4,7 +4,7 @@
 
 :warning: If you would like to add functionality, please submit [an issue](https://github.com/alexbooker/base16-builder/issues) first to make sure it's a direction we want to take.
 
-:warning: Please follow our commit message conventions even if you're making a small change! This repository uses a tool called [Commitizen](https://github.com/commitizen/cz-cli) to generate conventional commit messages.
+:warning: Please follow our commit message conventions even if you're making a small change! This repository uses a tool called [Commitizen](https://github.com/commitizen/cz-cli) to generate conventional commit messages. See this [document](https://github.com/stevemao/conventional-changelog-angular/blob/master/convention.md) to learn more about the commit message conventions.
 
 Please do the following:
 
