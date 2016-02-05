@@ -185,3 +185,24 @@ test('hexbgr', function(t) {
   t.is(actual.base['0E'].hexbgr, 'C594C5');
   t.is(actual.base['0F'].hexbgr, '6779AB');
 });
+
+test('dhex', function(t) {
+  const actual = generateContext(scheme);
+
+  t.is(actual.base['00'].dhex, '1B1B2B2B3434');
+  t.is(actual.base['01'].dhex, '34343D3D4646');
+  t.is(actual.base['02'].dhex, '4F4F5B5B6666');
+  t.is(actual.base['03'].dhex, '656573737E7E');
+  t.is(actual.base['04'].dhex, 'A7A7ADADBABA');
+  t.is(actual.base['05'].dhex, 'C0C0C5C5CECE');
+  t.is(actual.base['06'].dhex, 'CDCDD3D3DEDE');
+  t.is(actual.base['07'].dhex, 'D8D8DEDEE9E9');
+  t.is(actual.base['08'].dhex, 'ECEC5f5f6767');
+  t.is(actual.base['09'].dhex, 'F9F991915757');
+  t.is(actual.base['0A'].dhex, 'FAFAC8C86363');
+  t.is(actual.base['0B'].dhex, '9999C7C79494');
+  t.is(actual.base['0C'].dhex, '5F5FB3B3B3B3');
+  t.is(actual.base['0D'].dhex, '66669999CCCC');
+  t.is(actual.base['0E'].dhex, 'C5C59494C5C5');
+  t.is(actual.base['0F'].dhex, 'ABAB79796767');
+});
