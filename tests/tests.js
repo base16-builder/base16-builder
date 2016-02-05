@@ -143,3 +143,24 @@ test('srgb', function(t) {
   t.same(actual.base['0E'].srgb, [0.7725490196078432, 0.5803921568627451, 0.7725490196078432]);
   t.same(actual.base['0F'].srgb, [0.6705882352941176, 0.4745098039215686, 0.403921568627451]);
 });
+
+test('rgb', function(t) {
+  const actual = generateContext(scheme);
+
+  t.same(actual.base['00'].rgb, [27, 43, 52]);
+  t.same(actual.base['01'].rgb, [52, 61, 70]);
+  t.same(actual.base['02'].rgb, [79, 91, 102]);
+  t.same(actual.base['03'].rgb, [101, 115, 126]);
+  t.same(actual.base['04'].rgb, [167, 173, 186]);
+  t.same(actual.base['05'].rgb, [192, 197, 206]);
+  t.same(actual.base['06'].rgb, [205, 211, 222]);
+  t.same(actual.base['07'].rgb, [216, 222, 233]);
+  t.same(actual.base['08'].rgb, [236, 95, 103]);
+  t.same(actual.base['09'].rgb, [249, 145, 87]);
+  t.same(actual.base['0A'].rgb, [250, 200, 99]);
+  t.same(actual.base['0B'].rgb, [153, 199, 148]);
+  t.same(actual.base['0C'].rgb, [95, 179, 179]);
+  t.same(actual.base['0D'].rgb, [102, 153, 204]);
+  t.same(actual.base['0E'].rgb, [197, 148, 197]);
+  t.same(actual.base['0F'].rgb, [171, 121, 103]);
+});
