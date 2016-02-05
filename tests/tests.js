@@ -164,3 +164,24 @@ test('rgb', function(t) {
   t.same(actual.base['0E'].rgb, [197, 148, 197]);
   t.same(actual.base['0F'].rgb, [171, 121, 103]);
 });
+
+test('hexbgr', function(t) {
+  const actual = generateContext(scheme);
+
+  t.is(actual.base['00'].hexbgr, '342B1B');
+  t.is(actual.base['01'].hexbgr, '463D34');
+  t.is(actual.base['02'].hexbgr, '665B4F');
+  t.is(actual.base['03'].hexbgr, '7E7365');
+  t.is(actual.base['04'].hexbgr, 'BAADA7');
+  t.is(actual.base['05'].hexbgr, 'CEC5C0');
+  t.is(actual.base['06'].hexbgr, 'DED3CD');
+  t.is(actual.base['07'].hexbgr, 'E9DED8');
+  t.is(actual.base['08'].hexbgr, '675fEC');
+  t.is(actual.base['09'].hexbgr, '5791F9');
+  t.is(actual.base['0A'].hexbgr, '63C8FA');
+  t.is(actual.base['0B'].hexbgr, '94C799');
+  t.is(actual.base['0C'].hexbgr, 'B3B35F');
+  t.is(actual.base['0D'].hexbgr, 'CC9966');
+  t.is(actual.base['0E'].hexbgr, 'C594C5');
+  t.is(actual.base['0F'].hexbgr, '6779AB');
+});
