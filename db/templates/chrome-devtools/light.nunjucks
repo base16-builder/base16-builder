@@ -1,7 +1,7 @@
 /*
 
-    Name:       Base16 <%= @scheme %> Light
-    Author:     <%= @author %>
+    Name:       Base16 {{ scheme }} Light
+    Author:     {{ author }}
 
     Chrome Developer Tools template by Jan T. Sott
     Based on a Gist by Ben Truyman
@@ -11,33 +11,33 @@
 
 */
 #-webkit-web-inspector #main {
-  background-color: #<%= @base["07"]["hex"] %> !important;
+  background-color: #{{ base["07"]["hex"] }} !important;
 }
 #-webkit-web-inspector tr {
-  color: #<%= @base["02"]["hex"] %>;
+  color: #{{ base["02"]["hex"] }};
 }
 #-webkit-web-inspector ::selection {
   background: #888;
   opacity: 1;
 }
 #-webkit-web-inspector.compact #toolbar {
-  background: -webkit-linear-gradient(#<%= @base["04"]["hex"] %>, #<%= @base["06"]["hex"] %>) !important;
-  border-top: 5px solid #<%= @base["0C"]["hex"] %> !important;
-  border-bottom: 1px solid #<%= @base["05"]["hex"] %> !important;
+  background: -webkit-linear-gradient(#{{ base["04"]["hex"] }}, #{{ base["06"]["hex"] }}) !important;
+  border-top: 5px solid #{{ base["0C"]["hex"] }} !important;
+  border-bottom: 1px solid #{{ base["05"]["hex"] }} !important;
   padding-top: 0 !important;
   height: 50px !important;
 }
 #-webkit-web-inspector.compact #toolbar .toolbar-label {
-  color: #<%= @base["00"]["hex"] %> !important;
+  color: #{{ base["00"]["hex"] }} !important;
 }
 #-webkit-web-inspector.compact #toolbar .toggled-on .toolbar-label {
-  color: #<%= @base["00"]["hex"] %> !important;
+  color: #{{ base["00"]["hex"] }} !important;
 }
 #-webkit-web-inspector.compact #toolbar .toolbar-item {
   padding: 10px 15px !important;
 }
 #-webkit-web-inspector.compact #toolbar .toolbar-item.toggleable.toggled-on {
-  background: -webkit-linear-gradient(#<%= @base["05"]["hex"] %>, #<%= @base["06"]["hex"] %>) !important;
+  background: -webkit-linear-gradient(#{{ base["05"]["hex"] }}, #{{ base["06"]["hex"] }}) !important;
   padding: 10px 13px !important;
 }
 #-webkit-web-inspector.compact .toolbar-item.close-left {
@@ -57,17 +57,17 @@
   text-shadow: none !important;
 }
 #-webkit-web-inspector.compact #search {
-  background: #<%= @base["07"]["hex"] %> !important;
+  background: #{{ base["07"]["hex"] }} !important;
 }
 #-webkit-web-inspector .crumbs .crumb {
   display: none;
 }
 #-webkit-web-inspector .status-bar {
-  border-color: #<%= @base["05"]["hex"] %> !important;
-  background: #<%= @base["07"]["hex"] %> !important;
+  border-color: #{{ base["05"]["hex"] }} !important;
+  background: #{{ base["07"]["hex"] }} !important;
 }
 #-webkit-web-inspector .status-bar-item {
-  border-color: #<%= @base["05"]["hex"] %> !important;
+  border-color: #{{ base["05"]["hex"] }} !important;
   -webkit-filter: grayscale(0.75);
   color: #000000 !important;
   text-shadow: none !important;
@@ -107,14 +107,14 @@
   font-family: 'DejaVu Sans Mono', 'DroidSansMono', Menlo, monospace !important;
 }
 #-webkit-web-inspector .selector-matches {
-  color: #<%= @base["0E"]["hex"] %> !important;
+  color: #{{ base["0E"]["hex"] }} !important;
 }
 #-webkit-web-inspector body.inactive .sidebar {
   background-color: #dcdcdc !important;
 }
 #-webkit-web-inspector .sidebar {
-  background-color: #<%= @base["07"]["hex"] %> !important;
-  color: #<%= @base["02"]["hex"] %>;
+  background-color: #{{ base["07"]["hex"] }} !important;
+  color: #{{ base["02"]["hex"] }};
 }
 #-webkit-web-inspector .base-storage-tree-element-subtitle {
   color: #3d3d3d !important;
@@ -125,7 +125,7 @@
   text-shadow: black 0 0 0 !important;
 }
 #-webkit-web-inspector .editing {
-  color: #<%= @base["00"]["hex"] %> !important;
+  color: #{{ base["00"]["hex"] }} !important;
   background-color: #000 !important;
 }
 #-webkit-web-inspector .styles-section.read-only {
@@ -175,20 +175,20 @@
   content: url(chrome-devtools://devtools/Images/treeDownTriangleWhite.png) !important;
 }
 #-webkit-web-inspector .child-editing {
-  color: #<%= @base["00"]["hex"] %> !important;
+  color: #{{ base["00"]["hex"] }} !important;
 }
 #-webkit-web-inspector .section .properties .name,
 #-webkit-web-inspector .event-properties .name {
-  color: #<%= @base["0A"]["hex"] %> !important;
+  color: #{{ base["0A"]["hex"] }} !important;
 }
 #-webkit-web-inspector .styles-selector {
-  color: #<%= @base["0B"]["hex"] %> !important;
+  color: #{{ base["0B"]["hex"] }} !important;
 }
 #-webkit-web-inspector .section .header {
   color: #CCC !important;
 }
 #-webkit-web-inspector .properties .value {
-  color: #<%= @base["0C"]["hex"] %> !important;
+  color: #{{ base["0C"]["hex"] }} !important;
 }
 #-webkit-web-inspector .metrics {
   color: #333 !important;
@@ -202,7 +202,7 @@
 }
 #-webkit-web-inspector #console-messages {
   font-family: 'DejaVu Sans Mono', 'DroidSansMono', Menlo, monospace !important;
-  background: #<%= @base["07"]["hex"] %>;
+  background: #{{ base["07"]["hex"] }};
 }
 #-webkit-web-inspector #console-messages a {
   color: #666 !important;
@@ -221,19 +221,19 @@
   color: #C4C7C6 !important;
 }
 #-webkit-web-inspector .console-formatted-number {
-  color: #<%= @base["09"]["hex"] %> !important;
+  color: #{{ base["09"]["hex"] }} !important;
 }
 #-webkit-web-inspector .console-formatted-string {
-  color: #<%= @base["09"]["hex"] %> !important;
+  color: #{{ base["09"]["hex"] }} !important;
 }
 #-webkit-web-inspector .console-formatted-object {
   color: #7C7C7C !important;
 }
 #-webkit-web-inspector .console-formatted-function {
-  color: #<%= @base["00"]["hex"] %> !important;
+  color: #{{ base["00"]["hex"] }} !important;
 }
 #-webkit-web-inspector .console-formatted-regexp {
-  color: #<%= @base["0E"]["hex"] %> !important;
+  color: #{{ base["0E"]["hex"] }} !important;
 }
 #-webkit-web-inspector .console-group-messages .section .header .title {
   color: #F1F1F1 !important;
@@ -258,7 +258,7 @@
   }
 }
 #-webkit-web-inspector .console-message-text {
-  color: #<%= @base["00"]["hex"] %>;
+  color: #{{ base["00"]["hex"] }};
 }
 #-webkit-web-inspector .console-error-level .console-message-text .title {
   color: #f66 !important;
@@ -275,13 +275,13 @@
 }
 #-webkit-web-inspector #console-prompt::before {
   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MjRGNTc2MTZDMTA2MTFFMDgwRUZGQ0JCMjgzMzU0MTYiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MjRGNTc2MTdDMTA2MTFFMDgwRUZGQ0JCMjgzMzU0MTYiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5MzM3N0Y2MUMxMDUxMUUwODBFRkZDQkIyODMzNTQxNiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5MzM3N0Y2MkMxMDUxMUUwODBFRkZDQkIyODMzNTQxNiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Plf0eOsAAAB4SURBVHjaYvz//z8DMYAFxph+BqyhA8qtQFaUacKIUAgFLkBsDMSCUMXvYRJMaApdgfgsEKcB8W6oJqwK30MVr4YqOgPEodgUgoASkkkgjfewKSyHmqIEdYIJlEZR6ILk606oonsYwQMEe6A+PQtlowBGYgMcIMAAF2wcFPVNZx8AAAAASUVORK5CYII=) !important;
-  color: #<%= @base["00"]["hex"] %> !important;
+  color: #{{ base["00"]["hex"] }} !important;
 }
 #-webkit-web-inspector .console-formatted-number {
-  color: #<%= @base["09"]["hex"] %> !important;
+  color: #{{ base["09"]["hex"] }} !important;
 }
 #-webkit-web-inspector .console-formatted-string {
-  color: #<%= @base["09"]["hex"] %> !important;
+  color: #{{ base["09"]["hex"] }} !important;
 }
 #-webkit-web-inspector .console-formatted-object,
 #-webkit-web-inspector .console-formatted-node,
@@ -289,10 +289,10 @@
   color: #7C7C7C !important;
 }
 #-webkit-web-inspector .console-formatted-function {
-  color: #<%= @base["00"]["hex"] %> !important;
+  color: #{{ base["00"]["hex"] }} !important;
 }
 #-webkit-web-inspector .console-formatted-regexp {
-  color: #<%= @base["0E"]["hex"] %> !important;
+  color: #{{ base["0E"]["hex"] }} !important;
 }
 #-webkit-web-inspector .script-view,
 #-webkit-web-inspector .properties-tree,
@@ -306,7 +306,7 @@
 #-webkit-web-inspector .pane.expanded,
 #-webkit-web-inspector #elements-content,
 #-webkit-web-inspector .resource-view.json {
-  background: #<%= @base["07"]["hex"] %> !important;
+  background: #{{ base["07"]["hex"] }} !important;
   font-size: 12px !important;
 }
 #-webkit-web-inspector .highlight {
@@ -319,29 +319,29 @@
   background-color: #8a8a8a !important;
 }
 #-webkit-web-inspector .base-navigator-tree-element-title {
-  color: #<%= @base["02"]["hex"] %>;
+  color: #{{ base["02"]["hex"] }};
 }
 #-webkit-web-inspector .tabbed-pane-header,
 #-webkit-web-inspector .navigator-tabbed-pane .tabbed-pane-header {
-  background-image: -webkit-linear-gradient(#<%= @base["04"]["hex"] %>, #<%= @base["06"]["hex"] %>) !important;
+  background-image: -webkit-linear-gradient(#{{ base["04"]["hex"] }}, #{{ base["06"]["hex"] }}) !important;
 }
 #-webkit-web-inspector .tabbed-pane-header-tab {
   color: #bbb !important;
   text-shadow: black 0 1px 0 !important;
 }
 #-webkit-web-inspector .tabbed-pane-header-tab.selected {
-  background-color: #<%= @base["07"]["hex"] %> !important;
-  color: #<%= @base["02"]["hex"] %> !important;
+  background-color: #{{ base["07"]["hex"] }} !important;
+  color: #{{ base["02"]["hex"] }} !important;
 }
 #-webkit-web-inspector #scripts-editor-container-tabbed-pane .tabbed-pane-header {
-  background-image: -webkit-linear-gradient(#<%= @base["04"]["hex"] %>, #<%= @base["06"]["hex"] %>) !important;
+  background-image: -webkit-linear-gradient(#{{ base["04"]["hex"] }}, #{{ base["06"]["hex"] }}) !important;
 }
 #-webkit-web-inspector .tabbed-pane-header-tab-close-button {
-  color: #<%= @base["02"]["hex"] %> !important;
+  color: #{{ base["02"]["hex"] }} !important;
 }
 #-webkit-web-inspector .tabbed-pane-content {
-  background: #<%= @base["07"]["hex"] %> !important;
-  color: #<%= @base["02"]["hex"] %> !important;
+  background: #{{ base["07"]["hex"] }} !important;
+  color: #{{ base["02"]["hex"] }} !important;
 }
 #-webkit-web-inspector .outline-disclosure li.selected .selection {
   background-color: #8a8a8a !important;
@@ -350,59 +350,59 @@
   background-color: #3879d9 !important;
 }
 #-webkit-web-inspector .header-toggle:hover {
-  color: #<%= @base["0D"]["hex"] %> !important;
+  color: #{{ base["0D"]["hex"] }} !important;
 }
 #-webkit-web-inspector .header-value.source-code {
   color: white !important;
 }
 #-webkit-web-inspector .webkit-html-comment {
-  color: #<%= @base["04"]["hex"] %> !important;
+  color: #{{ base["04"]["hex"] }} !important;
 }
 #-webkit-web-inspector .webkit-html-tag {
-  color: #<%= @base["08"]["hex"] %> !important;
+  color: #{{ base["08"]["hex"] }} !important;
 }
 #-webkit-web-inspector .webkit-html-attribute-name {
-  color: #<%= @base["09"]["hex"] %> !important;
+  color: #{{ base["09"]["hex"] }} !important;
 }
 #-webkit-web-inspector .webkit-html-attribute-value {
-  color: #<%= @base["0B"]["hex"] %> !important;
+  color: #{{ base["0B"]["hex"] }} !important;
 }
 #-webkit-web-inspector .webkit-html-text-node .webkit-html-css-node {
-  color: #<%= @base["09"]["hex"] %> !important;
+  color: #{{ base["09"]["hex"] }} !important;
 }
 #-webkit-web-inspector .webkit-html-js-node {
-  color: #<%= @base["0E"]["hex"] %> !important;
+  color: #{{ base["0E"]["hex"] }} !important;
 }
 #-webkit-web-inspector .webkit-html-resource-link,
 #-webkit-web-inspector .webkit-html-external-link {
-  color: #<%= @base["0D"]["hex"] %> !important;
+  color: #{{ base["0D"]["hex"] }} !important;
 }
 #-webkit-web-inspector .webkit-css-comment {
-  color: #<%= @base["04"]["hex"] %> !important;
+  color: #{{ base["04"]["hex"] }} !important;
 }
 #-webkit-web-inspector .webkit-css-selector,
 #-webkit-web-inspector .styles-selector {
-  color: #<%= @base["0B"]["hex"] %> !important;
+  color: #{{ base["0B"]["hex"] }} !important;
 }
 #-webkit-web-inspector .webkit-css-property {
-  color: #<%= @base["0A"]["hex"] %> !important;
+  color: #{{ base["0A"]["hex"] }} !important;
 }
 #-webkit-web-inspector .webkit-css-keyword {
-  color: #<%= @base["08"]["hex"] %> !important;
+  color: #{{ base["08"]["hex"] }} !important;
 }
 #-webkit-web-inspector .webkit-css-number,
 #-webkit-web-inspector .properties-tree .value {
-  color: #<%= @base["09"]["hex"] %> !important;
+  color: #{{ base["09"]["hex"] }} !important;
 }
 #-webkit-web-inspector .webkit-css-important,
 #-webkit-web-inspector .webkit-css-at-rule {
-  color: #<%= @base["0E"]["hex"] %> !important;
+  color: #{{ base["0E"]["hex"] }} !important;
 }
 #-webkit-web-inspector .webkit-css-string {
-  color: #<%= @base["0C"]["hex"] %> !important;
+  color: #{{ base["0C"]["hex"] }} !important;
 }
 #-webkit-web-inspector .webkit-css-url {
-  color: #<%= @base["0D"]["hex"] %> !important;
+  color: #{{ base["0D"]["hex"] }} !important;
 }
 #-webkit-web-inspector .sidebar-separator {
   padding: 3px 5px 5px !important;
@@ -412,26 +412,26 @@
 }
 #-webkit-web-inspector .webkit-line-content,
 #-webkit-web-inspector .webkit-javascript-ident {
-  color: #<%= @base["00"]["hex"] %> !important;
+  color: #{{ base["00"]["hex"] }} !important;
 }
 #-webkit-web-inspector .webkit-javascript-keyword {
-  color: #<%= @base["08"]["hex"] %> !important;
+  color: #{{ base["08"]["hex"] }} !important;
 }
 #-webkit-web-inspector .webkit-javascript-comment {
-  color: #<%= @base["04"]["hex"] %> !important;
+  color: #{{ base["04"]["hex"] }} !important;
 }
 #-webkit-web-inspector .webkit-javascript-string {
-  color: #<%= @base["09"]["hex"] %> !important;
+  color: #{{ base["09"]["hex"] }} !important;
 }
 #-webkit-web-inspector .webkit-javascript-number {
-  color: #<%= @base["09"]["hex"] %> !important;
+  color: #{{ base["09"]["hex"] }} !important;
 }
 #-webkit-web-inspector .webkit-javascript-regexp {
-  color: #<%= @base["0E"]["hex"] %> !important;
+  color: #{{ base["0E"]["hex"] }} !important;
 }
 #-webkit-web-inspector .section .properties .name,
 #-webkit-web-inspector .event-properties .name {
-  color: #<%= @base["0A"]["hex"] %> !important;
+  color: #{{ base["0A"]["hex"] }} !important;
 }
 #-webkit-web-inspector .popover {
   background-color: rgba(0, 0, 0, 0.9) !important;
@@ -463,7 +463,7 @@
   border-color: transparent transparent #000 transparent !important;
 }
 #-webkit-web-inspector .popover .source-frame-popover-title {
-  color: #<%= @base["00"]["hex"] %> !important;
+  color: #{{ base["00"]["hex"] }} !important;
 }
 #-webkit-web-inspector .popover .source-frame-popover-tree {
   border-top-color: #444 !important;
@@ -474,48 +474,48 @@
   border-radius: 5px !important;
 }
 #-webkit-web-inspector .popover table.image-preview-container .description {
-  color: #<%= @base["09"]["hex"] %>;
+  color: #{{ base["09"]["hex"] }};
 }
 #-webkit-web-inspector .network-log-grid.data-grid th,
 #-webkit-web-inspector .network-log-grid.data-grid th.sort-descending,
 #-webkit-web-inspector .network-log-grid.data-grid th.sort-ascending {
-  background: -webkit-linear-gradient(#<%= @base["04"]["hex"] %>, #<%= @base["06"]["hex"] %>) !important;
+  background: -webkit-linear-gradient(#{{ base["04"]["hex"] }}, #{{ base["06"]["hex"] }}) !important;
   color: white !important;
 }
 #-webkit-web-inspector .network-item {
-  color: #<%= @base["02"]["hex"] %>;
+  color: #{{ base["02"]["hex"] }};
 }
 #-webkit-web-inspector .network-log-grid.data-grid tr.filler {
-  background-color: #<%= @base["07"]["hex"] %> !important;
+  background-color: #{{ base["07"]["hex"] }} !important;
 }
 #-webkit-web-inspector .network-timing-bar-title {
-  color: #<%= @base["02"]["hex"] %> !important;
+  color: #{{ base["02"]["hex"] }} !important;
 }
 #-webkit-web-inspector #timeline-overview-sidebar {
-  background: -webkit-linear-gradient(#<%= @base["04"]["hex"] %>, #<%= @base["06"]["hex"] %>) !important;
+  background: -webkit-linear-gradient(#{{ base["04"]["hex"] }}, #{{ base["06"]["hex"] }}) !important;
 }
 #-webkit-web-inspector #timeline-overview-sidebar .sidebar-tree-item {
-  color: #<%= @base["02"]["hex"] %> !important;
+  color: #{{ base["02"]["hex"] }} !important;
 }
 #-webkit-web-inspector #timeline-overview-sidebar .sidebar-tree-item.selected {
   color: white !important;
 }
 #-webkit-web-inspector #timeline-overview-separator {
-  background: -webkit-linear-gradient(#<%= @base["04"]["hex"] %>, #<%= @base["06"]["hex"] %>) !important;
-  border-top: 1px solid #<%= @base["0C"]["hex"] %> !important;
-  border-bottom: 1px solid #<%= @base["05"]["hex"] %> !important;
+  background: -webkit-linear-gradient(#{{ base["04"]["hex"] }}, #{{ base["06"]["hex"] }}) !important;
+  border-top: 1px solid #{{ base["0C"]["hex"] }} !important;
+  border-bottom: 1px solid #{{ base["05"]["hex"] }} !important;
 }
 #-webkit-web-inspector .timeline-details-title {
-  color: #<%= @base["02"]["hex"] %>;
+  color: #{{ base["02"]["hex"] }};
 }
 #-webkit-web-inspector .timeline-details {
   color: white;
 }
 #-webkit-web-inspector .timeline-details-row-title {
-  color: #<%= @base["05"]["hex"] %>;
+  color: #{{ base["05"]["hex"] }};
 }
 #-webkit-web-inspector .timeline-details-row-data {
-  color: #<%= @base["02"]["hex"] %>;
+  color: #{{ base["02"]["hex"] }};
 }
 #-webkit-web-inspector .timeline-graph-side.even {
   background-color: rgba(0, 0, 0, 0.5) !important;
@@ -531,10 +531,10 @@
 }
 #-webkit-web-inspector .resources-divider-label,
 #-webkit-web-inspector .network-timeline-grid .resources-divider-label {
-  color: #<%= @base["02"]["hex"] %> !important;
+  color: #{{ base["02"]["hex"] }} !important;
 }
 #-webkit-web-inspector .network-graph-label {
-  color: #<%= @base["02"]["hex"] %> !important;
+  color: #{{ base["02"]["hex"] }} !important;
   text-shadow: rgba(0, 0, 0, 0.25) 1px 0 0, rgba(0, 0, 0, 0.25) -1px 0 0, rgba(0, 0, 0, 0.333) 0 1px 0, rgba(0, 0, 0, 0.25) 0 -1px 0 !important;
 }
 #-webkit-web-inspector .timeline-tree-item .data.dimmed {
@@ -544,16 +544,16 @@
   color: #0a0a0a;
 }
 #-webkit-web-inspector .resource-view {
-  background-color: #<%= @base["07"]["hex"] %>;
+  background-color: #{{ base["07"]["hex"] }};
 }
 #-webkit-web-inspector .resource-view .title {
   color: white;
 }
 #-webkit-web-inspector .resource-view .infoList dt {
-  color: #<%= @base["05"]["hex"] %> !important;
+  color: #{{ base["05"]["hex"] }} !important;
 }
 #-webkit-web-inspector .resource-view .infoList dd {
-  color: #<%= @base["02"]["hex"] %>;
+  color: #{{ base["02"]["hex"] }};
 }
 #-webkit-web-inspector .resource-view.font,
 #-webkit-web-inspector .resource-view.html iframe body {
@@ -567,30 +567,30 @@
   color: #0a0a0a;
 }
 #-webkit-web-inspector .storage-view {
-  background-color: #<%= @base["07"]["hex"] %>;
+  background-color: #{{ base["07"]["hex"] }};
 }
 #-webkit-web-inspector .storage-empty-view {
   color: white;
 }
 #-webkit-web-inspector .data-grid th {
   background-image: none !important;
-  background: -webkit-linear-gradient(#<%= @base["04"]["hex"] %>, #<%= @base["06"]["hex"] %>) !important;
+  background: -webkit-linear-gradient(#{{ base["04"]["hex"] }}, #{{ base["06"]["hex"] }}) !important;
 }
 #-webkit-web-inspector .data-grid table.data {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#000000), color-stop(0.5, #000000), color-stop(0.5, #<%= @base["07"]["hex"] %>), to(#<%= @base["07"]["hex"] %>)) !important;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#000000), color-stop(0.5, #000000), color-stop(0.5, #{{ base["07"]["hex"] }}), to(#{{ base["07"]["hex"] }})) !important;
 }
 #-webkit-web-inspector #settings-screen .help-window-main,
 #-webkit-web-inspector #drawer-contents .help-window-main,
 #-webkit-web-inspector .help-window-outer .tabbed-pane-header {
   color: white !important;
-  background-color: #<%= @base["07"]["hex"] %> !important;
+  background-color: #{{ base["07"]["hex"] }} !important;
 }
 #-webkit-web-inspector .settings-tab .help-section-title,
 #-webkit-web-inspector .help-key {
-  color: #<%= @base["0C"]["hex"] %> !important;
+  color: #{{ base["0C"]["hex"] }} !important;
 }
 #-webkit-web-inspector .help-key-delimiter {
-  color: #<%= @base["0E"]["hex"] %> !important;
+  color: #{{ base["0E"]["hex"] }} !important;
 }
 #-webkit-web-inspector .styles-element-state-pane {
   background: #b8b8b8 !important;
@@ -599,7 +599,7 @@
   background: #333 !important;
 }
 #-webkit-web-inspector .placard.selected {
-  background-image: -webkit-linear-gradient(#<%= @base["0C"]["hex"] %>, #335e57) !important;
+  background-image: -webkit-linear-gradient(#{{ base["0C"]["hex"] }}, #335e57) !important;
   border-top-color: #335e57 !important;
 }
 #-webkit-web-inspector .placard .title {

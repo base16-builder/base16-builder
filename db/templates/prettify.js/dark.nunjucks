@@ -1,7 +1,7 @@
 /*
 
-    Name:       Base16 <%= @scheme %> Dark
-    Author:     <%= @author %>
+    Name:       Base16 {{ scheme }} Dark
+    Author:     {{ author }}
 
     Prettify template by Jan T. Sott (https://github.com/idleberg/)
     Original Base16 color scheme by Chris Kempson (https://github.com/chriskempson/base16)
@@ -10,78 +10,78 @@
 
 /* plain text */
 .pln {
-  color: #<%= @base["07"]["hex"] %>;
+  color: #{{ base["07"]["hex"] }};
 }
 
 @media screen {
   /* string content */
   .str {
-    color: #<%= @base["0B"]["hex"] %>;
+    color: #{{ base["0B"]["hex"] }};
   }
 
   /* a keyword */
   .kwd {
-    color: #<%= @base["0E"]["hex"] %>;
+    color: #{{ base["0E"]["hex"] }};
   }
 
   /* a comment */
   .com {
-    color: #<%= @base["03"]["hex"] %>;
+    color: #{{ base["03"]["hex"] }};
   }
 
   /* a type name */
   .typ {
-    color: #<%= @base["0D"]["hex"] %>;
+    color: #{{ base["0D"]["hex"] }};
   }
 
   /* a literal value */
   .lit {
-    color: #<%= @base["09"]["hex"] %>;
+    color: #{{ base["09"]["hex"] }};
   }
 
   /* punctuation */
   .pun {
-    color: #<%= @base["07"]["hex"] %>;
+    color: #{{ base["07"]["hex"] }};
   }
 
   /* lisp open bracket */
   .opn {
-    color: #<%= @base["07"]["hex"] %>;
+    color: #{{ base["07"]["hex"] }};
   }
 
   /* lisp close bracket */
   .clo {
-    color: #<%= @base["07"]["hex"] %>;
+    color: #{{ base["07"]["hex"] }};
   }
 
   /* a markup tag name */
   .tag {
-    color: #<%= @base["08"]["hex"] %>;
+    color: #{{ base["08"]["hex"] }};
   }
 
   /* a markup attribute name */
   .atn {
-    color: #<%= @base["09"]["hex"] %>;
+    color: #{{ base["09"]["hex"] }};
   }
 
   /* a markup attribute value */
   .atv {
-    color: #<%= @base["0C"]["hex"] %>;
+    color: #{{ base["0C"]["hex"] }};
   }
 
   /* a declaration */
   .dec {
-    color: #<%= @base["09"]["hex"] %>;
+    color: #{{ base["09"]["hex"] }};
   }
 
   /* a variable name */
   .var {
-    color: #<%= @base["08"]["hex"] %>;
+    color: #{{ base["08"]["hex"] }};
   }
 
   /* a function name */
   .fun {
-    color: #<%= @base["0D"]["hex"] %>;
+    color: #{{ base["0D"]["hex"] }};
   }
 }
 /* Use higher contrast and text-weight for printable form. */
@@ -128,12 +128,12 @@
 }
 /* Style */
 pre.prettyprint {
-  background: #<%= @base["00"]["hex"] %>;
-  color: #<%= @base["02"]["hex"] %>;
+  background: #{{ base["00"]["hex"] }};
+  color: #{{ base["02"]["hex"] }};
   font-family: Consolas, Menlo, "DejaVu Sans Mono", "Bitstream Vera Sans Mono", Monaco, monospace;
   font-size: 12px;
   line-height: 1.5;
-  border: 1px solid #<%= @base["00"]["hex"] %>;
+  border: 1px solid #{{ base["00"]["hex"] }};
   padding: 10px;
   border-radius: 3px;
 }

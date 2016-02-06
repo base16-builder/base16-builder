@@ -1,5 +1,5 @@
--- <%= @scheme %> theme for Textadept
--- Theme author: <%= @author %>
+-- {{ scheme }} theme for Textadept
+-- Theme author: {{ author }}
 -- Base16 (https://github.com/chriskempson/base16)
 -- Build with Base16 Builder (https://github.com/chriskempson/base16-builder)
 -- Repository: https://github.com/rgieseke/ta-themes
@@ -7,22 +7,22 @@
 local buffer = buffer
 local property, property_int = buffer.property, buffer.property_int
 
-property['color.base00'] = 0x<%= @base["00"]["hexbgr"] %>
-property['color.base01'] = 0x<%= @base["01"]["hexbgr"] %>
-property['color.base02'] = 0x<%= @base["02"]["hexbgr"] %>
-property['color.base03'] = 0x<%= @base["03"]["hexbgr"] %>
-property['color.base04'] = 0x<%= @base["04"]["hexbgr"] %>
-property['color.base05'] = 0x<%= @base["05"]["hexbgr"] %>
-property['color.base06'] = 0x<%= @base["06"]["hexbgr"] %>
-property['color.base07'] = 0x<%= @base["07"]["hexbgr"] %>
-property['color.base08'] = 0x<%= @base["08"]["hexbgr"] %>
-property['color.base09'] = 0x<%= @base["09"]["hexbgr"] %>
-property['color.base0A'] = 0x<%= @base["0A"]["hexbgr"] %>
-property['color.base0B'] = 0x<%= @base["0B"]["hexbgr"] %>
-property['color.base0C'] = 0x<%= @base["0C"]["hexbgr"] %>
-property['color.base0D'] = 0x<%= @base["0D"]["hexbgr"] %>
-property['color.base0E'] = 0x<%= @base["0E"]["hexbgr"] %>
-property['color.base0F'] = 0x<%= @base["0F"]["hexbgr"] %>
+property['color.base00'] = 0x{{ base["00"]["hexbgr"] }}
+property['color.base01'] = 0x{{ base["01"]["hexbgr"] }}
+property['color.base02'] = 0x{{ base["02"]["hexbgr"] }}
+property['color.base03'] = 0x{{ base["03"]["hexbgr"] }}
+property['color.base04'] = 0x{{ base["04"]["hexbgr"] }}
+property['color.base05'] = 0x{{ base["05"]["hexbgr"] }}
+property['color.base06'] = 0x{{ base["06"]["hexbgr"] }}
+property['color.base07'] = 0x{{ base["07"]["hexbgr"] }}
+property['color.base08'] = 0x{{ base["08"]["hexbgr"] }}
+property['color.base09'] = 0x{{ base["09"]["hexbgr"] }}
+property['color.base0A'] = 0x{{ base["0A"]["hexbgr"] }}
+property['color.base0B'] = 0x{{ base["0B"]["hexbgr"] }}
+property['color.base0C'] = 0x{{ base["0C"]["hexbgr"] }}
+property['color.base0D'] = 0x{{ base["0D"]["hexbgr"] }}
+property['color.base0E'] = 0x{{ base["0E"]["hexbgr"] }}
+property['color.base0F'] = 0x{{ base["0F"]["hexbgr"] }}
 
 -- Default font.
 property['font'], property['fontsize'] = 'Bitstream Vera Sans Mono', 10

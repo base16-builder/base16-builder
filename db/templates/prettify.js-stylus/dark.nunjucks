@@ -1,7 +1,7 @@
 /*
 
-    Name:       Base16 <%= @scheme %> Dark
-    Author:     <%= @author %>
+    Name:       Base16 {{ scheme }} Dark
+    Author:     {{ author }}
 
     Prettify template by Jan T. Sott (https://github.com/idleberg/)
     Original Base16 color scheme by Chris Kempson (https://github.com/chriskempson/base16)

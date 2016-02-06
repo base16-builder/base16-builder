@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
   Name:
-    Base16 <%= @scheme %> Light
+    Base16 {{ scheme }} Light
 
   Credits:
     Original Base16 color schemes by Chris Kempson
@@ -21,29 +21,29 @@
     https://github.com/chriskempson/base16
 -->
 
-<style-scheme id="base16-<%= @slug %>-light" _name="Base16 <%= @scheme %> Light" version="1.0">
+<style-scheme id="base16-{{ slug }}-light" _name="Base16 {{ scheme }} Light" version="1.0">
   
   <!-- Meta -->
-  <author><%= @author %></author>
-  <_description>Base16 <%= @scheme %> Light</_description>
+  <author>{{ author }}</author>
+  <_description>Base16 {{ scheme }} Light</_description>
 
   <!-- Palette -->
-  <color name="base00" value="#<%= @base["00"]["hex"] %>"/>
-  <color name="base01" value="#<%= @base["01"]["hex"] %>"/>
-  <color name="base02" value="#<%= @base["02"]["hex"] %>"/>
-  <color name="base03" value="#<%= @base["03"]["hex"] %>"/>
-  <color name="base04" value="#<%= @base["04"]["hex"] %>"/>
-  <color name="base05" value="#<%= @base["05"]["hex"] %>"/>
-  <color name="base06" value="#<%= @base["06"]["hex"] %>"/>
-  <color name="base07" value="#<%= @base["07"]["hex"] %>"/>
-  <color name="base08" value="#<%= @base["08"]["hex"] %>"/>
-  <color name="base09" value="#<%= @base["09"]["hex"] %>"/>
-  <color name="base0A" value="#<%= @base["0A"]["hex"] %>"/>
-  <color name="base0B" value="#<%= @base["0B"]["hex"] %>"/>
-  <color name="base0C" value="#<%= @base["0C"]["hex"] %>"/>
-  <color name="base0D" value="#<%= @base["0D"]["hex"] %>"/>
-  <color name="base0E" value="#<%= @base["0E"]["hex"] %>"/>
-  <color name="base0F" value="#<%= @base["0F"]["hex"] %>"/>
+  <color name="base00" value="#{{ base["00"]["hex"] }}"/>
+  <color name="base01" value="#{{ base["01"]["hex"] }}"/>
+  <color name="base02" value="#{{ base["02"]["hex"] }}"/>
+  <color name="base03" value="#{{ base["03"]["hex"] }}"/>
+  <color name="base04" value="#{{ base["04"]["hex"] }}"/>
+  <color name="base05" value="#{{ base["05"]["hex"] }}"/>
+  <color name="base06" value="#{{ base["06"]["hex"] }}"/>
+  <color name="base07" value="#{{ base["07"]["hex"] }}"/>
+  <color name="base08" value="#{{ base["08"]["hex"] }}"/>
+  <color name="base09" value="#{{ base["09"]["hex"] }}"/>
+  <color name="base0A" value="#{{ base["0A"]["hex"] }}"/>
+  <color name="base0B" value="#{{ base["0B"]["hex"] }}"/>
+  <color name="base0C" value="#{{ base["0C"]["hex"] }}"/>
+  <color name="base0D" value="#{{ base["0D"]["hex"] }}"/>
+  <color name="base0E" value="#{{ base["0E"]["hex"] }}"/>
+  <color name="base0F" value="#{{ base["0F"]["hex"] }}"/>
 
   <!-- Styles -->
   <style name="bracket-match" background="base06" bold="true"/>

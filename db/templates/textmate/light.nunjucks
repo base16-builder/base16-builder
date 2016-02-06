@@ -7,25 +7,25 @@
 <plist version="1.0">
 <dict>
 	<key>author</key>
-	<string><%= @author %></string>
+	<string>{{ author }}</string>
 	<key>name</key>
-	<string>Base16 <%= @scheme %> Light</string>
+	<string>Base16 {{ scheme }} Light</string>
 	<key>semanticClass</key>
-	<string>base16.<%= @slug %>.light</string>
+	<string>base16.{{ slug }}.light</string>
 	<key>colorSpaceName</key>
 	<string>sRGB</string>
 	<key>gutterSettings</key>
 	<dict>
 		<key>background</key>
-		<string>#<%= @base["07"]["hex"] %></string>
+		<string>#{{ base["07"]["hex"] }}</string>
 		<key>divider</key>
-		<string>#<%= @base["07"]["hex"] %></string>
+		<string>#{{ base["07"]["hex"] }}</string>
 		<key>foreground</key>
-		<string>#<%= @base["02"]["hex"] %></string>
+		<string>#{{ base["02"]["hex"] }}</string>
 		<key>selectionBackground</key>
-		<string>#<%= @base["07"]["hex"] %></string>
+		<string>#{{ base["07"]["hex"] }}</string>
 		<key>selectionForeground</key>
-		<string>#<%= @base["05"]["hex"] %></string>
+		<string>#{{ base["05"]["hex"] }}</string>
 	</dict>
 	<key>settings</key>
 	<array>
@@ -33,17 +33,17 @@
 			<key>settings</key>
 			<dict>
 				<key>background</key>
-				<string>#<%= @base["07"]["hex"] %></string>
+				<string>#{{ base["07"]["hex"] }}</string>
 				<key>caret</key>
-				<string>#<%= @base["02"]["hex"] %></string>
+				<string>#{{ base["02"]["hex"] }}</string>
 				<key>foreground</key>
-				<string>#<%= @base["02"]["hex"] %></string>
+				<string>#{{ base["02"]["hex"] }}</string>
 				<key>invisibles</key>
-				<string>#<%= @base["06"]["hex"] %></string>
+				<string>#{{ base["06"]["hex"] }}</string>
 				<key>lineHighlight</key>
-				<string>#<%= @base["04"]["hex"] %>55</string>
+				<string>#{{ base["04"]["hex"] }}55</string>
 				<key>selection</key>
-				<string>#<%= @base["06"]["hex"] %></string>
+				<string>#{{ base["06"]["hex"] }}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -54,7 +54,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#<%= @base["02"]["hex"] %></string>
+				<string>#{{ base["02"]["hex"] }}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -65,7 +65,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#<%= @base["04"]["hex"] %></string>
+				<string>#{{ base["04"]["hex"] }}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -76,7 +76,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#<%= @base["02"]["hex"] %></string>
+				<string>#{{ base["02"]["hex"] }}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -87,7 +87,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#<%= @base["02"]["hex"] %></string>
+				<string>#{{ base["02"]["hex"] }}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -98,7 +98,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#<%= @base["02"]["hex"] %></string>
+				<string>#{{ base["02"]["hex"] }}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -109,7 +109,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#<%= @base["0E"]["hex"] %></string>
+				<string>#{{ base["0E"]["hex"] }}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -120,7 +120,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#<%= @base["08"]["hex"] %></string>
+				<string>#{{ base["08"]["hex"] }}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -131,7 +131,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#<%= @base["0D"]["hex"] %></string>
+				<string>#{{ base["0D"]["hex"] }}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -142,7 +142,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#<%= @base["09"]["hex"] %></string>
+				<string>#{{ base["09"]["hex"] }}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -153,7 +153,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#<%= @base["01"]["hex"] %></string>
+				<string>#{{ base["01"]["hex"] }}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -164,7 +164,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#<%= @base["0D"]["hex"] %></string>
+				<string>#{{ base["0D"]["hex"] }}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -175,7 +175,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#<%= @base["0E"]["hex"] %></string>
+				<string>#{{ base["0E"]["hex"] }}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -186,7 +186,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#<%= @base["0C"]["hex"] %></string>
+				<string>#{{ base["0C"]["hex"] }}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -197,7 +197,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#<%= @base["0B"]["hex"] %></string>
+				<string>#{{ base["0B"]["hex"] }}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -208,7 +208,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#<%= @base["09"]["hex"] %></string>
+				<string>#{{ base["09"]["hex"] }}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -219,7 +219,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#<%= @base["09"]["hex"] %></string>
+				<string>#{{ base["09"]["hex"] }}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -230,7 +230,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#<%= @base["09"]["hex"] %></string>
+				<string>#{{ base["09"]["hex"] }}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -241,7 +241,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#<%= @base["09"]["hex"] %></string>
+				<string>#{{ base["09"]["hex"] }}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -252,7 +252,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#<%= @base["08"]["hex"] %></string>
+				<string>#{{ base["08"]["hex"] }}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -263,7 +263,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#<%= @base["09"]["hex"] %></string>
+				<string>#{{ base["09"]["hex"] }}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -274,7 +274,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#<%= @base["0D"]["hex"] %></string>
+				<string>#{{ base["0D"]["hex"] }}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -285,7 +285,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#<%= @base["0E"]["hex"] %></string>
+				<string>#{{ base["0E"]["hex"] }}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -296,7 +296,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#<%= @base["09"]["hex"] %></string>
+				<string>#{{ base["09"]["hex"] }}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -309,7 +309,7 @@
 				<key>fontStyle</key>
 				<string></string>
 				<key>foreground</key>
-				<string>#<%= @base["0D"]["hex"] %></string>
+				<string>#{{ base["0D"]["hex"] }}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -320,7 +320,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#<%= @base["09"]["hex"] %></string>
+				<string>#{{ base["09"]["hex"] }}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -333,7 +333,7 @@
 				<key>fontStyle</key>
 				<string>bold</string>
 				<key>foreground</key>
-				<string>#<%= @base["09"]["hex"] %></string>
+				<string>#{{ base["09"]["hex"] }}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -346,7 +346,7 @@
 				<key>fontStyle</key>
 				<string>italic</string>
 				<key>foreground</key>
-				<string>#<%= @base["0E"]["hex"] %></string>
+				<string>#{{ base["0E"]["hex"] }}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -357,7 +357,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#<%= @base["0B"]["hex"] %></string>
+				<string>#{{ base["0B"]["hex"] }}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -368,7 +368,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#<%= @base["08"]["hex"] %></string>
+				<string>#{{ base["08"]["hex"] }}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -379,7 +379,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#<%= @base["09"]["hex"] %></string>
+				<string>#{{ base["09"]["hex"] }}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -390,7 +390,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#<%= @base["08"]["hex"] %></string>
+				<string>#{{ base["08"]["hex"] }}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -401,7 +401,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#<%= @base["09"]["hex"] %></string>
+				<string>#{{ base["09"]["hex"] }}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -412,9 +412,9 @@
 			<key>settings</key>
 			<dict>
 				<key>background</key>
-				<string>#<%= @base["06"]["hex"] %></string>
+				<string>#{{ base["06"]["hex"] }}</string>
 				<key>foreground</key>
-				<string>#<%= @base["02"]["hex"] %></string>
+				<string>#{{ base["02"]["hex"] }}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -425,7 +425,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#<%= @base["0B"]["hex"] %></string>
+				<string>#{{ base["0B"]["hex"] }}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -436,7 +436,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#<%= @base["08"]["hex"] %></string>
+				<string>#{{ base["08"]["hex"] }}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -447,7 +447,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#<%= @base["0E"]["hex"] %></string>
+				<string>#{{ base["0E"]["hex"] }}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -458,7 +458,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#<%= @base["0C"]["hex"] %></string>
+				<string>#{{ base["0C"]["hex"] }}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -469,7 +469,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#<%= @base["0C"]["hex"] %></string>
+				<string>#{{ base["0C"]["hex"] }}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -480,7 +480,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#<%= @base["0C"]["hex"] %></string>
+				<string>#{{ base["0C"]["hex"] }}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -491,7 +491,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#<%= @base["0F"]["hex"] %></string>
+				<string>#{{ base["0F"]["hex"] }}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -502,9 +502,9 @@
 			<key>settings</key>
 			<dict>
 				<key>background</key>
-				<string>#<%= @base["08"]["hex"] %></string>
+				<string>#{{ base["08"]["hex"] }}</string>
 				<key>foreground</key>
-				<string>#<%= @base["07"]["hex"] %></string>
+				<string>#{{ base["07"]["hex"] }}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -515,9 +515,9 @@
 			<key>settings</key>
 			<dict>
 				<key>background</key>
-				<string>#<%= @base["09"]["hex"] %></string>
+				<string>#{{ base["09"]["hex"] }}</string>
 				<key>foreground</key>
-				<string>#<%= @base["00"]["hex"] %></string>
+				<string>#{{ base["00"]["hex"] }}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -528,9 +528,9 @@
 			<key>settings</key>
 			<dict>
 				<key>background</key>
-				<string>#<%= @base["0F"]["hex"] %></string>
+				<string>#{{ base["0F"]["hex"] }}</string>
 				<key>foreground</key>
-				<string>#<%= @base["07"]["hex"] %></string>
+				<string>#{{ base["07"]["hex"] }}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -541,13 +541,13 @@
 			<key>settings</key>
 			<dict>
 				<key>background</key>
-				<string>#<%= @base["05"]["hex"] %></string>
+				<string>#{{ base["05"]["hex"] }}</string>
 				<key>foreground</key>
-				<string>#<%= @base["00"]["hex"] %></string>
+				<string>#{{ base["00"]["hex"] }}</string>
 			</dict>
 		</dict>
 	</array>
 	<key>uuid</key>
-	<string><%= @uuid %></string>
+	<string>{{ uuid }}</string>
 </dict>
 </plist>

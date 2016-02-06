@@ -3,11 +3,11 @@
 # Mansour Behabadi (mansour@oxplot.com)
 
 %>#!/usr/bin/env bash
-# Base16 <%= @scheme %> - Mate Terminal color scheme install script
-# <%= @author %>
+# Base16 {{ scheme }} - Mate Terminal color scheme install script
+# {{ author }}
 
-[[ -z "$PROFILE_NAME" ]] && PROFILE_NAME="Base 16 <%= @scheme %> Dark"
-[[ -z "$PROFILE_SLUG" ]] && PROFILE_SLUG="base-16-<%= @slug %>-dark"
+[[ -z "$PROFILE_NAME" ]] && PROFILE_NAME="Base 16 {{ scheme }} Dark"
+[[ -z "$PROFILE_SLUG" ]] && PROFILE_SLUG="base-16-{{ slug }}-dark"
 [[ -z "$DCONFTOOL" ]] && DCONFTOOL=dconf
 [[ -z "$BASE_KEY" ]] && BASE_KEY=/org/mate/terminal/profiles
 
@@ -39,10 +39,10 @@ glist_append() {
 glist_append /org/mate/terminal/global/profile-list "$PROFILE_SLUG"
 
 dset visible-name "'$PROFILE_NAME'"
-dset palette "'#<%= @base["00"]["hex"] %>:#<%= @base["08"]["hex"] %>:#<%= @base["0B"]["hex"] %>:#<%= @base["0A"]["hex"] %>:#<%= @base["0D"]["hex"] %>:#<%= @base["0E"]["hex"] %>:#<%= @base["0C"]["hex"] %>:#<%= @base["05"]["hex"] %>:#<%= @base["03"]["hex"] %>:#<%= @base["08"]["hex"] %>:#<%= @base["0B"]["hex"] %>:#<%= @base["0A"]["hex"] %>:#<%= @base["0D"]["hex"] %>:#<%= @base["0E"]["hex"] %>:#<%= @base["0C"]["hex"] %>:#<%= @base["07"]["hex"] %>'"
-dset background-color "'#<%= @base["00"]["hex"] %>'"
-dset foreground-color "'#<%= @base["05"]["hex"] %>'"
-dset bold-color "'#<%= @base["05"]["hex"] %>'"
+dset palette "'#{{ base["00"]["hex"] }}:#{{ base["08"]["hex"] }}:#{{ base["0B"]["hex"] }}:#{{ base["0A"]["hex"] }}:#{{ base["0D"]["hex"] }}:#{{ base["0E"]["hex"] }}:#{{ base["0C"]["hex"] }}:#{{ base["05"]["hex"] }}:#{{ base["03"]["hex"] }}:#{{ base["08"]["hex"] }}:#{{ base["0B"]["hex"] }}:#{{ base["0A"]["hex"] }}:#{{ base["0D"]["hex"] }}:#{{ base["0E"]["hex"] }}:#{{ base["0C"]["hex"] }}:#{{ base["07"]["hex"] }}'"
+dset background-color "'#{{ base["00"]["hex"] }}'"
+dset foreground-color "'#{{ base["05"]["hex"] }}'"
+dset bold-color "'#{{ base["05"]["hex"] }}'"
 dset bold-color-same-as-fg "true"
 dset use-theme-colors "false"
 dset use-theme-background "false"

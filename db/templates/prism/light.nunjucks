@@ -1,7 +1,7 @@
 /*
 
-Name:       Base16 <%= @scheme %> Light
-Author:     <%= @author %>
+Name:       Base16 {{ scheme }} Light
+Author:     {{ author }}
 
 Prism template by Bram de Haan (http://atelierbram.github.io/syntax-highlighting/prism/)
 Original Base16 color scheme by Chris Kempson (https://github.com/chriskempson/base16)
@@ -27,20 +27,20 @@ pre[class*="language-"] {
   -moz-hyphens: none;
   -ms-hyphens: none;
   hyphens: none;
-  background: #<%= @base["07"]["hex"] %>;
-  color: #<%= @base["02"]["hex"] %>;
+  background: #{{ base["07"]["hex"] }};
+  color: #{{ base["02"]["hex"] }};
 }
 
 pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
 code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
   text-shadow: none;
-  background: #<%= @base["06"]["hex"] %>;
+  background: #{{ base["06"]["hex"] }};
 }
 
 pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
 code[class*="language-"]::selection, code[class*="language-"] ::selection {
   text-shadow: none;
-  background: #<%= @base["06"]["hex"] %>;
+  background: #{{ base["06"]["hex"] }};
 }
 
 /* Code blocks */
@@ -60,11 +60,11 @@ pre[class*="language-"] {
 .token.prolog,
 .token.doctype,
 .token.cdata {
-  color: #<%= @base["04"]["hex"] %>;
+  color: #{{ base["04"]["hex"] }};
 }
 
 .token.punctuation {
-  color: #<%= @base["02"]["hex"] %>;
+  color: #{{ base["02"]["hex"] }};
 }
 
 .token.namespace {
@@ -74,28 +74,28 @@ pre[class*="language-"] {
 .token.operator,
 .token.boolean,
 .token.number {
-  color: #<%= @base["09"]["hex"] %>;
+  color: #{{ base["09"]["hex"] }};
 }
 .token.property {
-  color: #<%= @base["0A"]["hex"] %>;
+  color: #{{ base["0A"]["hex"] }};
 }
 .token.tag {
-  color: #<%= @base["0D"]["hex"] %>;
+  color: #{{ base["0D"]["hex"] }};
 }
 .token.string {
-  color: #<%= @base["0C"]["hex"] %>;
+  color: #{{ base["0C"]["hex"] }};
 }
 .token.selector {
-  color: #<%= @base["0E"]["hex"] %>;
+  color: #{{ base["0E"]["hex"] }};
 }
 .token.attr-name {
-  color: #<%= @base["09"]["hex"] %>;
+  color: #{{ base["09"]["hex"] }};
 }
 .token.entity,
 .token.url,
 .language-css .token.string,
 .style .token.string {
-  color: #<%= @base["0C"]["hex"] %>;
+  color: #{{ base["0C"]["hex"] }};
 }
 
 .token.attr-value,
@@ -103,18 +103,18 @@ pre[class*="language-"] {
 .token.control,
 .token.directive,
 .token.unit {
-  color: #<%= @base["0B"]["hex"] %>;
+  color: #{{ base["0B"]["hex"] }};
 }
 
 .token.statement,
 .token.regex,
 .token.atrule {
-  color: #<%= @base["0C"]["hex"] %>;
+  color: #{{ base["0C"]["hex"] }};
 }
 
 .token.placeholder,
 .token.variable {
-  color: #<%= @base["0D"]["hex"] %>;
+  color: #{{ base["0D"]["hex"] }};
 }
 
 .token.deleted {
@@ -122,7 +122,7 @@ pre[class*="language-"] {
 }
 
 .token.inserted {
-  border-bottom: 1px dotted #<%= @base["00"]["hex"] %>;
+  border-bottom: 1px dotted #{{ base["00"]["hex"] }};
   text-decoration: none;
 }
 
@@ -136,7 +136,7 @@ pre[class*="language-"] {
 }
 
 .token.important {
-  color: #<%= @base["08"]["hex"] %>;
+  color: #{{ base["08"]["hex"] }};
 }
 
 .token.entity {
@@ -144,6 +144,6 @@ pre[class*="language-"] {
 }
 
 pre > code.highlight {
-  outline: .4em solid #<%= @base["08"]["hex"] %>;
+  outline: .4em solid #{{ base["08"]["hex"] }};
   outline-offset: .4em;
 }

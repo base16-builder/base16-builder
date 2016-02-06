@@ -3,11 +3,11 @@
 # Chris Kempson (http://chriskempson.com)
 
 %>#!/usr/bin/env bash
-# Base16 <%= @scheme %> - Gnome Terminal color scheme install script
-# <%= @author %>
+# Base16 {{ scheme }} - Gnome Terminal color scheme install script
+# {{ author }}
 
-[[ -z "$PROFILE_NAME" ]] && PROFILE_NAME="Base 16 <%= @scheme %> Dark"
-[[ -z "$PROFILE_SLUG" ]] && PROFILE_SLUG="base-16-<%= @slug %>-dark"
+[[ -z "$PROFILE_NAME" ]] && PROFILE_NAME="Base 16 {{ scheme }} Dark"
+[[ -z "$PROFILE_SLUG" ]] && PROFILE_SLUG="base-16-{{ slug }}-dark"
 [[ -z "$DCONF" ]] && DCONF=dconf
 [[ -z "$UUIDGEN" ]] && UUIDGEN=uuidgen
 
@@ -66,10 +66,10 @@ if which "$DCONF" > /dev/null 2>&1; then
 
         # update profile values with theme options
         dset visible-name "'$PROFILE_NAME'"
-        dset palette "['#<%= @base["00"]["hex"] %>', '#<%= @base["08"]["hex"] %>', '#<%= @base["0B"]["hex"] %>', '#<%= @base["0A"]["hex"] %>', '#<%= @base["0D"]["hex"] %>', '#<%= @base["0E"]["hex"] %>', '#<%= @base["0C"]["hex"] %>', '#<%= @base["05"]["hex"] %>', '#<%= @base["03"]["hex"] %>', '#<%= @base["08"]["hex"] %>', '#<%= @base["0B"]["hex"] %>', '#<%= @base["0A"]["hex"] %>', '#<%= @base["0D"]["hex"] %>', '#<%= @base["0E"]["hex"] %>', '#<%= @base["0C"]["hex"] %>', '#<%= @base["07"]["hex"] %>']"
-        dset background-color "'#<%= @base["00"]["hex"] %>'"
-        dset foreground-color "'#<%= @base["05"]["hex"] %>'"
-        dset bold-color "'#<%= @base["05"]["hex"] %>'"
+        dset palette "['#{{ base["00"]["hex"] }}', '#{{ base["08"]["hex"] }}', '#{{ base["0B"]["hex"] }}', '#{{ base["0A"]["hex"] }}', '#{{ base["0D"]["hex"] }}', '#{{ base["0E"]["hex"] }}', '#{{ base["0C"]["hex"] }}', '#{{ base["05"]["hex"] }}', '#{{ base["03"]["hex"] }}', '#{{ base["08"]["hex"] }}', '#{{ base["0B"]["hex"] }}', '#{{ base["0A"]["hex"] }}', '#{{ base["0D"]["hex"] }}', '#{{ base["0E"]["hex"] }}', '#{{ base["0C"]["hex"] }}', '#{{ base["07"]["hex"] }}']"
+        dset background-color "'#{{ base["00"]["hex"] }}'"
+        dset foreground-color "'#{{ base["05"]["hex"] }}'"
+        dset bold-color "'#{{ base["05"]["hex"] }}'"
         dset bold-color-same-as-fg "true"
         dset use-theme-colors "false"
         dset use-theme-background "false"
@@ -116,10 +116,10 @@ glist_append() {
 glist_append string /apps/gnome-terminal/global/profile_list "$PROFILE_SLUG"
 
 gset string visible_name "$PROFILE_NAME"
-gset string palette "#<%= @base["00"]["hex"] %>:#<%= @base["08"]["hex"] %>:#<%= @base["0B"]["hex"] %>:#<%= @base["0A"]["hex"] %>:#<%= @base["0D"]["hex"] %>:#<%= @base["0E"]["hex"] %>:#<%= @base["0C"]["hex"] %>:#<%= @base["05"]["hex"] %>:#<%= @base["03"]["hex"] %>:#<%= @base["08"]["hex"] %>:#<%= @base["0B"]["hex"] %>:#<%= @base["0A"]["hex"] %>:#<%= @base["0D"]["hex"] %>:#<%= @base["0E"]["hex"] %>:#<%= @base["0C"]["hex"] %>:#<%= @base["07"]["hex"] %>"
-gset string background_color "#<%= @base["00"]["hex"] %>"
-gset string foreground_color "#<%= @base["05"]["hex"] %>"
-gset string bold_color "#<%= @base["05"]["hex"] %>"
+gset string palette "#{{ base["00"]["hex"] }}:#{{ base["08"]["hex"] }}:#{{ base["0B"]["hex"] }}:#{{ base["0A"]["hex"] }}:#{{ base["0D"]["hex"] }}:#{{ base["0E"]["hex"] }}:#{{ base["0C"]["hex"] }}:#{{ base["05"]["hex"] }}:#{{ base["03"]["hex"] }}:#{{ base["08"]["hex"] }}:#{{ base["0B"]["hex"] }}:#{{ base["0A"]["hex"] }}:#{{ base["0D"]["hex"] }}:#{{ base["0E"]["hex"] }}:#{{ base["0C"]["hex"] }}:#{{ base["07"]["hex"] }}"
+gset string background_color "#{{ base["00"]["hex"] }}"
+gset string foreground_color "#{{ base["05"]["hex"] }}"
+gset string bold_color "#{{ base["05"]["hex"] }}"
 gset bool   bold_color_same_as_fg "true"
 gset bool   use_theme_colors "false"
 gset bool   use_theme_background "false"

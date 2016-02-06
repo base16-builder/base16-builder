@@ -8,75 +8,75 @@ bplist = "bplist00\xD4\x01\x02\x03\x04\x05\x06\x15\x16X$versionX$objectsY$archiv
 <dict>
 	<key>ANSIBlackColor</key>
 	<data>
-	<%= Base64.encode64(sprintf(bplist, @base["00"]["srgb"][0], @base["00"]["srgb"][1], @base["00"]["srgb"][2])).gsub("\n", "\n\t").strip %>
+	<%= Base64.encode64(sprintf(bplist, @base["00"]["srgb"][0], @base["00"]["srgb"][1], @base["00"]["srgb"][2])).gsub("\n", "\n\t").strip }}
 	</data>
 	<key>ANSIBlueColor</key>
 	<data>
-	<%= Base64.encode64(sprintf(bplist, @base["0D"]["srgb"][0], @base["0D"]["srgb"][1], @base["0D"]["srgb"][2])).gsub("\n", "\n\t").strip %>
+	<%= Base64.encode64(sprintf(bplist, @base["0D"]["srgb"][0], @base["0D"]["srgb"][1], @base["0D"]["srgb"][2])).gsub("\n", "\n\t").strip }}
 	</data>
 	<key>ANSIBrightBlackColor</key>
 	<data>
-	<%= Base64.encode64(sprintf(bplist, @base["03"]["srgb"][0], @base["03"]["srgb"][1], @base["03"]["srgb"][2])).gsub("\n", "\n\t").strip %>
+	<%= Base64.encode64(sprintf(bplist, @base["03"]["srgb"][0], @base["03"]["srgb"][1], @base["03"]["srgb"][2])).gsub("\n", "\n\t").strip }}
 	</data>
 	<key>ANSIBrightBlueColor</key>
 	<data>
-	<%= Base64.encode64(sprintf(bplist, @base["0D"]["srgb"][0], @base["0D"]["srgb"][1], @base["0D"]["srgb"][2])).gsub("\n", "\n\t").strip %>
+	<%= Base64.encode64(sprintf(bplist, @base["0D"]["srgb"][0], @base["0D"]["srgb"][1], @base["0D"]["srgb"][2])).gsub("\n", "\n\t").strip }}
 	</data>
 	<key>ANSIBrightCyanColor</key>
 	<data>
-	<%= Base64.encode64(sprintf(bplist, @base["0C"]["srgb"][0], @base["0C"]["srgb"][1], @base["0C"]["srgb"][2])).gsub("\n", "\n\t").strip %>
+	<%= Base64.encode64(sprintf(bplist, @base["0C"]["srgb"][0], @base["0C"]["srgb"][1], @base["0C"]["srgb"][2])).gsub("\n", "\n\t").strip }}
 	</data>
 	<key>ANSIBrightGreenColor</key>
 	<data>
-	<%= Base64.encode64(sprintf(bplist, @base["0B"]["srgb"][0], @base["0B"]["srgb"][1], @base["0B"]["srgb"][2])).gsub("\n", "\n\t").strip %>
+	<%= Base64.encode64(sprintf(bplist, @base["0B"]["srgb"][0], @base["0B"]["srgb"][1], @base["0B"]["srgb"][2])).gsub("\n", "\n\t").strip }}
 	</data>
 	<key>ANSIBrightMagentaColor</key>
 	<data>
-	<%= Base64.encode64(sprintf(bplist, @base["0E"]["srgb"][0], @base["0E"]["srgb"][1], @base["0E"]["srgb"][2])).gsub("\n", "\n\t").strip %>
+	<%= Base64.encode64(sprintf(bplist, @base["0E"]["srgb"][0], @base["0E"]["srgb"][1], @base["0E"]["srgb"][2])).gsub("\n", "\n\t").strip }}
 	</data>
 	<key>ANSIBrightRedColor</key>
 	<data>
-	<%= Base64.encode64(sprintf(bplist, @base["08"]["srgb"][0], @base["08"]["srgb"][1], @base["08"]["srgb"][2])).gsub("\n", "\n\t").strip %>
+	<%= Base64.encode64(sprintf(bplist, @base["08"]["srgb"][0], @base["08"]["srgb"][1], @base["08"]["srgb"][2])).gsub("\n", "\n\t").strip }}
 	</data>
 	<key>ANSIBrightWhiteColor</key>
 	<data>
-	<%= Base64.encode64(sprintf(bplist, @base["07"]["srgb"][0], @base["07"]["srgb"][1], @base["07"]["srgb"][2])).gsub("\n", "\n\t").strip %>
+	<%= Base64.encode64(sprintf(bplist, @base["07"]["srgb"][0], @base["07"]["srgb"][1], @base["07"]["srgb"][2])).gsub("\n", "\n\t").strip }}
 	</data>
 	<key>ANSIBrightYellowColor</key>
 	<data>
-	<%= Base64.encode64(sprintf(bplist, @base["0A"]["srgb"][0], @base["0A"]["srgb"][1], @base["0A"]["srgb"][2])).gsub("\n", "\n\t").strip %>
+	<%= Base64.encode64(sprintf(bplist, @base["0A"]["srgb"][0], @base["0A"]["srgb"][1], @base["0A"]["srgb"][2])).gsub("\n", "\n\t").strip }}
 	</data>
 	<key>ANSICyanColor</key>
 	<data>
-	<%= Base64.encode64(sprintf(bplist, @base["0C"]["srgb"][0], @base["0C"]["srgb"][1], @base["0C"]["srgb"][2])).gsub("\n", "\n\t").strip %>
+	<%= Base64.encode64(sprintf(bplist, @base["0C"]["srgb"][0], @base["0C"]["srgb"][1], @base["0C"]["srgb"][2])).gsub("\n", "\n\t").strip }}
 	</data>
 	<key>ANSIGreenColor</key>
 	<data>
-	<%= Base64.encode64(sprintf(bplist, @base["0B"]["srgb"][0], @base["0B"]["srgb"][1], @base["0B"]["srgb"][2])).gsub("\n", "\n\t").strip %>
+	<%= Base64.encode64(sprintf(bplist, @base["0B"]["srgb"][0], @base["0B"]["srgb"][1], @base["0B"]["srgb"][2])).gsub("\n", "\n\t").strip }}
 	</data>
 	<key>ANSIMagentaColor</key>
 	<data>
-	<%= Base64.encode64(sprintf(bplist, @base["0E"]["srgb"][0], @base["0E"]["srgb"][1], @base["0E"]["srgb"][2])).gsub("\n", "\n\t").strip %>
+	<%= Base64.encode64(sprintf(bplist, @base["0E"]["srgb"][0], @base["0E"]["srgb"][1], @base["0E"]["srgb"][2])).gsub("\n", "\n\t").strip }}
 	</data>
 	<key>ANSIRedColor</key>
 	<data>
-	<%= Base64.encode64(sprintf(bplist, @base["08"]["srgb"][0], @base["08"]["srgb"][1], @base["08"]["srgb"][2])).gsub("\n", "\n\t").strip %>
+	<%= Base64.encode64(sprintf(bplist, @base["08"]["srgb"][0], @base["08"]["srgb"][1], @base["08"]["srgb"][2])).gsub("\n", "\n\t").strip }}
 	</data>
 	<key>ANSIWhiteColor</key>
 	<data>
-	<%= Base64.encode64(sprintf(bplist, @base["05"]["srgb"][0], @base["05"]["srgb"][1], @base["05"]["srgb"][2])).gsub("\n", "\n\t").strip %>
+	<%= Base64.encode64(sprintf(bplist, @base["05"]["srgb"][0], @base["05"]["srgb"][1], @base["05"]["srgb"][2])).gsub("\n", "\n\t").strip }}
 	</data>
 	<key>ANSIYellowColor</key>
 	<data>
-	<%= Base64.encode64(sprintf(bplist, @base["0A"]["srgb"][0], @base["0A"]["srgb"][1], @base["0A"]["srgb"][2])).gsub("\n", "\n\t").strip %>
+	<%= Base64.encode64(sprintf(bplist, @base["0A"]["srgb"][0], @base["0A"]["srgb"][1], @base["0A"]["srgb"][2])).gsub("\n", "\n\t").strip }}
 	</data>
 	<key>BackgroundColor</key>
 	<data>
-	<%= Base64.encode64(sprintf(bplist, @base["00"]["srgb"][0], @base["00"]["srgb"][1], @base["00"]["srgb"][2])).gsub("\n", "\n\t").strip %>
+	<%= Base64.encode64(sprintf(bplist, @base["00"]["srgb"][0], @base["00"]["srgb"][1], @base["00"]["srgb"][2])).gsub("\n", "\n\t").strip }}
 	</data>
 	<key>CursorColor</key>
 	<data>
-	<%= Base64.encode64(sprintf(bplist, @base["05"]["srgb"][0], @base["05"]["srgb"][1], @base["05"]["srgb"][2])).gsub("\n", "\n\t").strip %>
+	<%= Base64.encode64(sprintf(bplist, @base["05"]["srgb"][0], @base["05"]["srgb"][1], @base["05"]["srgb"][2])).gsub("\n", "\n\t").strip }}
 	</data>
 	<key>FontAntialias</key>
 	<true/>
@@ -88,20 +88,20 @@ bplist = "bplist00\xD4\x01\x02\x03\x04\x05\x06\x15\x16X$versionX$objectsY$archiv
 	<real>2.02</real>
 	<key>SelectionColor</key>
 	<data>
-    <%= Base64.encode64(sprintf(bplist, @base["03"]["srgb"][0], @base["03"]["srgb"][1], @base["03"]["srgb"][2])).gsub("\n", "\n\t").strip %>
+    <%= Base64.encode64(sprintf(bplist, @base["03"]["srgb"][0], @base["03"]["srgb"][1], @base["03"]["srgb"][2])).gsub("\n", "\n\t").strip }}
     </data>
 	<key>TextBoldColor</key>
 	<data>
-	<%= Base64.encode64(sprintf(bplist, @base["05"]["srgb"][0], @base["05"]["srgb"][1], @base["05"]["srgb"][2])).gsub("\n", "\n\t").strip %>
+	<%= Base64.encode64(sprintf(bplist, @base["05"]["srgb"][0], @base["05"]["srgb"][1], @base["05"]["srgb"][2])).gsub("\n", "\n\t").strip }}
 	</data>
 	<key>TextColor</key>
 	<data>
-	<%= Base64.encode64(sprintf(bplist, @base["05"]["srgb"][0], @base["05"]["srgb"][1], @base["05"]["srgb"][2])).gsub("\n", "\n\t").strip %>
+	<%= Base64.encode64(sprintf(bplist, @base["05"]["srgb"][0], @base["05"]["srgb"][1], @base["05"]["srgb"][2])).gsub("\n", "\n\t").strip }}
 	</data>
 	<key>UseBrightBold</key>
 	<false/>
 	<key>name</key>
-	<string>Base 16 <%= @scheme %></string>
+	<string>Base 16 {{ scheme }}</string>
 	<key>shellExitAction</key>
 	<integer>1</integer>
 	<key>type</key>
