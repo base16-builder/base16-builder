@@ -1,6 +1,18 @@
 # Contributing
 
-## Pull Requests
+## Contributing Templates
+
+Template contributions are more than welcome!
+
+The number one thing to keep in mind when submitting a template is **consistency**. We recommend that all new contributors first browse the [templates](https://github.com/alexbooker/base17-builder/tree/master/db/templates) directory to get a feel for our convention. Once you have the general idea, use the following specification for precise details.
+
+### Template Specification
+
+Coming soon...
+
+Until then see [this comment](https://github.com/alexbooker/base16-builder/issues/19#issuecomment-180026062).
+
+## Contributing Code
 
 :warning: If you would like to add functionality, please submit [an issue](https://github.com/alexbooker/base16-builder/issues) first to make sure it's a direction we want to take.
 
