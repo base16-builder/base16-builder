@@ -136,7 +136,7 @@ test('generateContext returns context with correct dhex colors', function(t) {
 
 test('buildTemplate returns correct result', function(t) {
   // buildTheme usually takes file contents. Emulate that by converting scheme to a string.
-  const scheme = JSON.stringify(scheme);
+  const localScheme = JSON.stringify(scheme);
 
   const template = `
     {{ scheme }}
@@ -180,7 +180,7 @@ test('buildTemplate returns correct result', function(t) {
     AB7967
   `;
 
-  const actual = buildTheme(scheme, template);
+  const actual = buildTheme(localScheme, template);
 
   t.is(actual, expected);
 });
