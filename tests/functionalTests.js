@@ -43,3 +43,32 @@ test('Given valid arguments & light shade, correct output is emitted', async fun
   t.ok(actual.match(/URxvt\*background:\s{21}#ffffff/), 'Match not found');
 });
 
+test('Given non-existent template, correct error is emitted', async function (t) {
+  const templName = 'template-foo';
+  const schemeName = 'gooey';
+  const shade = 'light';
+  const commandArgs = ['--template', templName, '--scheme', schemeName, '--shade', shade];
+  const {stderr: actual} = await execute(command, commandArgs);
+
+  t.is(actual, `Could not find a template called ${templName} in the database.`);
+});
+
+test('Given non-existent scheme, correct error is emitted', async function (t) {
+  const templName = 'rxvt-unicode';
+  const schemeName = 'scheme-foo';
+  const shade = 'light';
+  const commandArgs = ['--template', templName, '--scheme', schemeName, '--shade', shade];
+  const {stderr: actual} = await execute(command, commandArgs);
+
+  t.is(actual, `Could not find a scheme called ${schemeName} in the database.`);
+});
+
+test('Given non-existent scheme & non-existent template, correct error is emitted', async function (t) {
+  const templName = 'template-foo';
+  const schemeName = 'scheme-foo';
+  const shade = 'light';
+  const commandArgs = ['--template', templName, '--scheme', schemeName, '--shade', shade];
+  const {stderr: actual} = await execute(command, commandArgs);
+
+  t.is(actual, `Could not find a template called ${templName} in the database.`);
+});
