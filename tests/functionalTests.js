@@ -43,7 +43,7 @@ test('Given valid arguments & light shade, correct output is emitted', async fun
   t.ok(actual.match(/URxvt\*background:\s{21}#ffffff/), 'Match not found');
 });
 
-test('Given non-existent template, correct error is emitted', async function (t) {
+test('Given non-existent template name, correct error is emitted', async function (t) {
   const templName = 'template-foo';
   const schemeName = 'gooey';
   const shade = 'light';
@@ -53,7 +53,7 @@ test('Given non-existent template, correct error is emitted', async function (t)
   t.is(actual, `Could not find a template called ${templName} in the database.`);
 });
 
-test('Given non-existent scheme, correct error is emitted', async function (t) {
+test('Given non-existent scheme name, correct error is emitted', async function (t) {
   const templName = 'rxvt-unicode';
   const schemeName = 'scheme-foo';
   const shade = 'light';
@@ -63,7 +63,7 @@ test('Given non-existent scheme, correct error is emitted', async function (t) {
   t.is(actual, `Could not find a scheme called ${schemeName} in the database.`);
 });
 
-test('Given non-existent scheme & non-existent template, correct error is emitted', async function (t) {
+test('Given non-existent scheme name & non-existent template name, correct error is emitted', async function (t) {
   const templName = 'template-foo';
   const schemeName = 'scheme-foo';
   const shade = 'light';
@@ -85,5 +85,14 @@ test('Given invalid command arguments, correct error is emitted', async function
 
     t.is(actual, 'fatal: You did not supply valid arguments. Run \'base16-builder -h\' for guidance.');
   }
+});
+
+test('Given valid template path, correct output is emitted', async function (t) {
+  const templPath = '../db/templates/rxvt-unicode/dark.nunjucks';
+  const schemeName = 'gooey';
+  const commandArgs = ['--template', templPath, '--scheme', schemeName];
+  const {stdout: actual} = await execute(command, commandArgs);
+
+  t.ok(actual.match(/URxvt\*background:\s{21}#101218/), 'Match not found');
 });
 
