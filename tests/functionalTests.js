@@ -72,3 +72,18 @@ test('Given non-existent scheme & non-existent template, correct error is emitte
 
   t.is(actual, `Could not find a template called ${templName} in the database.`);
 });
+
+test('Given invalid command arguments, correct error is emitted', async function (t) {
+  const invalidCommandArguments = [
+    [],
+    ['--template', 'i3wm'],
+    ['--scheme', 'gooey'],
+    ['--shade', 'dark']
+  ];
+  for (const commandArguments of invalidCommandArguments) {
+    const {stderr: actual} = await execute(command, commandArguments);
+
+    t.is(actual, 'fatal: You did not supply valid arguments. Run \'base16-builder -h\' for guidance.');
+  }
+});
+
