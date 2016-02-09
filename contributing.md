@@ -37,20 +37,20 @@ You MUST follow our commit message conventions even if you're making a small cha
 * Avoid duplicate as possible.
 * Each contribution MUST be preceded by an [issue]().
 
-#### Writing a template /* Move the spec to RFC 2119 */
+#### Writing a template
 
 A Base16-builder's template is a nunjucks file. Nunjucks is a rich and powerful templating language for JavaScript made by Mozilla. You can learn more about nunjuck files on their [page](https://mozilla.github.io/nunjucks/).
 
 Templates are saved in `./db/templates/`.
 
-/* Add more informations */
+Each template MUST follows this table:
 
 | name       | type   | mandatory | note                                 |
 |------------|--------|-----------|--------------------------------------|
-| tool       | string | true      | Can contain any alphanumeric character or `.-` | 
-| luminosity | enum   | true      | Can be `dark` or `light`             | 
-| delimiter  | char   | false     | SHALL be use only if palette is used. MUST be a `-` | 
-| palette    | int    | false     | 256 only value known /* todo */      | 
+| tool       | string | true      | MUST contain any alphanumeric character or `.-` | 
+| luminosity | enum   | true      | MUST be `dark` or `light`            | 
+| delimiter  | char   | false     | MUST be use only if palette is used. MUST be a `-` | 
+| palette    | int    | false     | MUST be 256 if used or nothing if not relevant |
 
 
 Feel free to browse the folder [`templates`](https://github.com/alexbooker/base16-builder/tree/master/db/templates) to see valid example of template.
@@ -66,7 +66,7 @@ Each scheme MUST follows this table:
 | name   | type   | mandatory | note                                           |
 |--------|--------|-----------|------------------------------------------------|
 | scheme | string | true      | MUST contain any alphanumeric characters or `.-` |
-| author | string | true      | SHOULD contain a name and MAY contain an url   |
+| author | string | true      | MUST contain a name and MAY contain an url     |
 | base0X | string | true      | MUST be a hexadecimal color in uppercase       |
 
 You are free to add any comments in your file. YAML comments start with the delimiter `#` and finish at the end of the line.
