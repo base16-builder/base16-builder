@@ -47,11 +47,10 @@ Each template MUST follows this table:
 
 | name       | type   | mandatory | note                                 |
 |------------|--------|-----------|--------------------------------------|
-| tool       | string | true      | MUST contain any alphanumeric character or `.-` | 
-| luminosity | enum   | true      | MUST be `dark` or `light`            | 
-| delimiter  | char   | false     | MUST be use only if palette is used. MUST be a `-` | 
+| tool       | string | true      | MUST contain any alphanumeric character or `.-` |
+| luminosity | enum   | true      | MUST be `dark` or `light`            |
+| delimiter  | char   | false     | MUST be use only if palette is used. MUST be a `-` |
 | palette    | int    | false     | MUST be 256 if used or nothing if not relevant |
-
 
 Feel free to browse the folder [`templates`](https://github.com/alexbooker/base16-builder/tree/master/db/templates) to see valid example of template.
 
