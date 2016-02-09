@@ -23,21 +23,21 @@ test('with alias help arguments should cause help to be output', async function 
   t.ok(actual.match(/Example/));
 });
 
-test('Given valid arguments & dark shade, correct output is emitted', async function (t) {
+test('Given valid arguments & dark brightness, correct output is emitted', async function (t) {
   const templName = 'rxvt-unicode';
   const schemeName = 'gooey';
-  const shade = 'dark';
-  const commandArgs = ['--template', templName, '--scheme', schemeName, '--shade', shade];
+  const brightness = 'dark';
+  const commandArgs = ['--template', templName, '--scheme', schemeName, '--brightness', brightness];
   const {stdout: actual} = await execute(command, commandArgs);
 
   t.ok(actual.match(/URxvt\*background:\s{21}#101218/), 'Match not found');
 });
 
-test('Given valid arguments & light shade, correct output is emitted', async function (t) {
+test('Given valid arguments & light brightness, correct output is emitted', async function (t) {
   const templName = 'rxvt-unicode';
   const schemeName = 'gooey';
-  const shade = 'light';
-  const commandArgs = ['--template', templName, '--scheme', schemeName, '--shade', shade];
+  const brightness = 'light';
+  const commandArgs = ['--template', templName, '--scheme', schemeName, '--brightness', brightness];
   const {stdout: actual} = await execute(command, commandArgs);
 
   t.ok(actual.match(/URxvt\*background:\s{21}#ffffff/), 'Match not found');
@@ -46,8 +46,8 @@ test('Given valid arguments & light shade, correct output is emitted', async fun
 test('Given non-existent template name, correct error is emitted', async function (t) {
   const templName = 'template-foo';
   const schemeName = 'gooey';
-  const shade = 'light';
-  const commandArgs = ['--template', templName, '--scheme', schemeName, '--shade', shade];
+  const brightness = 'light';
+  const commandArgs = ['--template', templName, '--scheme', schemeName, '--brightness', brightness];
   const {stderr: actual} = await execute(command, commandArgs);
 
   t.is(actual, `Could not find a template called ${templName} in the database.`);
@@ -56,8 +56,8 @@ test('Given non-existent template name, correct error is emitted', async functio
 test('Given non-existent scheme name, correct error is emitted', async function (t) {
   const templName = 'rxvt-unicode';
   const schemeName = 'scheme-foo';
-  const shade = 'light';
-  const commandArgs = ['--template', templName, '--scheme', schemeName, '--shade', shade];
+  const brightness = 'light';
+  const commandArgs = ['--template', templName, '--scheme', schemeName, '--brightness', brightness];
   const {stderr: actual} = await execute(command, commandArgs);
 
   t.is(actual, `Could not find a scheme called ${schemeName} in the database.`);
@@ -66,8 +66,8 @@ test('Given non-existent scheme name, correct error is emitted', async function 
 test('Given non-existent scheme name & non-existent template name, correct error is emitted', async function (t) {
   const templName = 'template-foo';
   const schemeName = 'scheme-foo';
-  const shade = 'light';
-  const commandArgs = ['--template', templName, '--scheme', schemeName, '--shade', shade];
+  const brightness = 'light';
+  const commandArgs = ['--template', templName, '--scheme', schemeName, '--brightness', brightness];
   const {stderr: actual} = await execute(command, commandArgs);
 
   t.is(actual, `Could not find a template called ${templName} in the database.`);
@@ -78,7 +78,7 @@ test('Given invalid command arguments, correct error is emitted', async function
     [],
     ['--template', 'i3wm'],
     ['--scheme', 'gooey'],
-    ['--shade', 'dark']
+    ['--brightness', 'dark']
   ];
   for (const commandArguments of invalidCommandArguments) {
     const {stderr: actual} = await execute(command, commandArguments);
@@ -99,8 +99,8 @@ test('Given valid template path, correct output is emitted', async function (t) 
 test('Given valid scheme path, correct output is emitted', async function (t) {
   const templName = 'rxvt-unicode';
   const schemePath = '../db/schemes/gooey.yml';
-  const shade = 'dark';
-  const commandArgs = ['--template', templName, '--scheme', schemePath, '--shade', shade];
+  const brightness = 'dark';
+  const commandArgs = ['--template', templName, '--scheme', schemePath, '--brightness', brightness];
   const {stdout: actual} = await execute(command, commandArgs);
 
   t.ok(actual.match(/URxvt\*background:\s{21}#101218/), 'Match not found');
@@ -109,8 +109,8 @@ test('Given valid scheme path, correct output is emitted', async function (t) {
 test('Given valid template & scheme path, correct output is emitted', async function (t) {
   const templPath = '../db/templates/rxvt-unicode/dark.nunjucks';
   const schemePath = '../db/schemes/gooey.yml';
-  const shade = 'dark';
-  const commandArgs = ['--template', templPath, '--scheme', schemePath, '--shade', shade];
+  const brightness = 'dark';
+  const commandArgs = ['--template', templPath, '--scheme', schemePath, '--brightness', brightness];
   const {stdout: actual} = await execute(command, commandArgs);
 
   t.ok(actual.match(/URxvt\*background:\s{21}#101218/), 'Match not found');
