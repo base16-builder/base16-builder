@@ -115,3 +115,13 @@ test('Given valid template & scheme path, correct output is emitted', async func
 
   t.ok(actual.match(/URxvt\*background:\s{21}#101218/), 'Match not found');
 });
+
+test('Given valid arguments & dark brightness, correct output is emitted', async function (t) {
+  const templName = 'rxvt-unicode';
+  const schemeName = 'gooey';
+  const brightness = 'dark';
+  const commandArgs = ['-t', templName, '-s', schemeName, '-b', brightness];
+  const {stdout: actual} = await execute(command, commandArgs);
+
+  t.ok(actual.match(/URxvt\*background:\s{21}#101218/), 'Match not found');
+});
