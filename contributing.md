@@ -67,7 +67,7 @@ Each scheme MUST follows this table:
 |--------|--------|-----------|------------------------------------------------|
 | scheme | string | true      | MUST contain any alphanumeric characters or `.-` |
 | author | string | true      | MUST contain a name and MAY contain an url     |
-| base0X | string | true      | MUST be a hexadecimal color in uppercase       |
+| base0X | string | true      | MUST be an hexadecimal color in uppercase      |
 
 You are free to add any comments in your file. YAML comments start with the delimiter `#` and finish at the end of the line.
 
