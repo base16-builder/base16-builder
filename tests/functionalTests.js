@@ -96,3 +96,22 @@ test('Given valid template path, correct output is emitted', async function (t) 
   t.ok(actual.match(/URxvt\*background:\s{21}#101218/), 'Match not found');
 });
 
+test('Given valid scheme path, correct output is emitted', async function (t) {
+  const templName = 'rxvt-unicode';
+  const schemePath = '../db/schemes/gooey.yml';
+  const shade = 'dark';
+  const commandArgs = ['--template', templName, '--scheme', schemePath, '--shade', shade];
+  const {stdout: actual} = await execute(command, commandArgs);
+
+  t.ok(actual.match(/URxvt\*background:\s{21}#101218/), 'Match not found');
+});
+
+test('Given valid template & scheme path, correct output is emitted', async function (t) {
+  const templPath = '../db/templates/rxvt-unicode/dark.nunjucks';
+  const schemePath = '../db/schemes/gooey.yml';
+  const shade = 'dark';
+  const commandArgs = ['--template', templPath, '--scheme', schemePath, '--shade', shade];
+  const {stdout: actual} = await execute(command, commandArgs);
+
+  t.ok(actual.match(/URxvt\*background:\s{21}#101218/), 'Match not found');
+});
