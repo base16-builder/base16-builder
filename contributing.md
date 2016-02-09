@@ -43,7 +43,18 @@ A Base16-builder's template is a nunjucks file. Nunjucks is a rich and powerful 
 
 Templates are saved in `./db/templates/`.
 
+<<<<<<< ffd0964eb2c4afdf5304d337487ceeeb3df74312
 Each template MUST follows this table:
+=======
+/* Add more informations */
+
+| name       | type   | mandatory | note                                 |
+|------------|--------|-----------|--------------------------------------|
+| tool       | string | true      | Can contain any alphanumeric character or `.-` |
+| luminosity | enum   | true      | Can be `dark` or `light`             |
+| delimiter  | char   | false     | SHALL be use only if palette is used. MUST be a `-` |
+| palette    | int    | false     | 256 only value known /* todo */      |
+>>>>>>> docs(contributing): Fix delimiter line in template table
 
 | name       | type   | mandatory | note                                 |
 |------------|--------|-----------|--------------------------------------|
