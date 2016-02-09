@@ -20,7 +20,7 @@ Glad to see you here! If your are reading this, you may want to contribute to Ba
 * Search for an [pull request](https://github.com/alexbooker/base16-builder/pulls) that relates to your submission. You don't want to duplicate effort.
 * [Fork the project](https://help.github.com/articles/fork-a-repo/).
 * Create a [pull request](https://help.github.com/articles/creating-a-pull-request/).
-* Write [good commits](#).
+* Write [good commits]().
 * Submit your pull request.
 
 ### Writing a good commit
@@ -45,12 +45,12 @@ Templates are saved in `./db/templates/`.
 
 /* Add more informations */
 
-| name       | type   | mandatory | note                              |
-|------------|--------|-----------|-----------------------------------|
+| name       | type   | mandatory | note                                 |
+|------------|--------|-----------|--------------------------------------|
 | tool       | string | true      | Can contain any alphanumeric character or `.-` | 
-| luminosity | enum   | true      | Can be `dark` or `light`          | 
-| delimiter  | char   | false     | Can be `dark` or `light`          | 
-| palette    | int    | false     | 256 only value known /* todo */   | 
+| luminosity | enum   | true      | Can be `dark` or `light`             | 
+| delimiter  | char   | false     | SHALL be use only if palette is used. MUST be a `-` | 
+| palette    | int    | false     | 256 only value known /* todo */      | 
 
 
 Feel free to browse the folder [`templates`](https://github.com/alexbooker/base16-builder/tree/master/db/templates) to see valid example of template.
