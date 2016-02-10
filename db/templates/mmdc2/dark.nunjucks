@@ -3,7 +3,7 @@
 // Name: Base16 {{ scheme }}
 // Author: {{ author }}
 // Built: By [Base16 Builder](https://github.com/chriskempson/base16-builder)
-// Build date: <%= Time.now.strftime('%F') }}
+// Build date: {{ new Date().toJSON().slice(0,10) }}
 // ---
 // Template based on [Pretentious](http://support.multimarkdown.com/discussions/extras-style-sheets-etc/4-pretentious) 1.0 by Brett Terpstra.
 // [Style syntax description](http://support.multimarkdown.com/kb/style-sheets/how-do-i-create-a-custom-style-sheet)
