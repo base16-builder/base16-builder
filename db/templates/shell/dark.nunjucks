@@ -2,39 +2,39 @@
 # Shell Color Setup Template
 # Chris Kempson (http://chriskempson.com)
 %>#!/bin/sh
-# Base16 <%= @scheme %> - Shell color setup script
-# <%= @author %>
+# Base16 {{ scheme }} - Shell color setup script
+# {{ author }}
 
 if [ "${TERM%%-*}" = 'linux' ]; then
     # This script doesn't support linux console (use 'vconsole' template instead)
     return 2>/dev/null || exit 0
 fi
 
-color00="<%= split_by_slash(@base["00"]["hex"]) %>" # Base 00 - Black
-color01="<%= split_by_slash(@base["08"]["hex"]) %>" # Base 08 - Red
-color02="<%= split_by_slash(@base["0B"]["hex"]) %>" # Base 0B - Green
-color03="<%= split_by_slash(@base["0A"]["hex"]) %>" # Base 0A - Yellow
-color04="<%= split_by_slash(@base["0D"]["hex"]) %>" # Base 0D - Blue
-color05="<%= split_by_slash(@base["0E"]["hex"]) %>" # Base 0E - Magenta
-color06="<%= split_by_slash(@base["0C"]["hex"]) %>" # Base 0C - Cyan
-color07="<%= split_by_slash(@base["05"]["hex"]) %>" # Base 05 - White
-color08="<%= split_by_slash(@base["03"]["hex"]) %>" # Base 03 - Bright Black
+color00="{{ base["00"]["hex"].match(/.{2}/g).join('/') }}" # Base 00 - Black
+color01="{{ base["08"]["hex"].match(/.{2}/g).join('/') }}" # Base 08 - Red
+color02="{{ base["0B"]["hex"].match(/.{2}/g).join('/') }}" # Base 0B - Green
+color03="{{ base["0A"]["hex"].match(/.{2}/g).join('/') }}" # Base 0A - Yellow
+color04="{{ base["0D"]["hex"].match(/.{2}/g).join('/') }}" # Base 0D - Blue
+color05="{{ base["0E"]["hex"].match(/.{2}/g).join('/') }}" # Base 0E - Magenta
+color06="{{ base["0C"]["hex"].match(/.{2}/g).join('/') }}" # Base 0C - Cyan
+color07="{{ base["05"]["hex"].match(/.{2}/g).join('/') }}" # Base 05 - White
+color08="{{ base["03"]["hex"].match(/.{2}/g).join('/') }}" # Base 03 - Bright Black
 color09=$color01 # Base 08 - Bright Red
 color10=$color02 # Base 0B - Bright Green
 color11=$color03 # Base 0A - Bright Yellow
 color12=$color04 # Base 0D - Bright Blue
 color13=$color05 # Base 0E - Bright Magenta
 color14=$color06 # Base 0C - Bright Cyan
-color15="<%= split_by_slash(@base["07"]["hex"]) %>" # Base 07 - Bright White
-color16="<%= split_by_slash(@base["09"]["hex"]) %>" # Base 09
-color17="<%= split_by_slash(@base["0F"]["hex"]) %>" # Base 0F
-color18="<%= split_by_slash(@base["01"]["hex"]) %>" # Base 01
-color19="<%= split_by_slash(@base["02"]["hex"]) %>" # Base 02
-color20="<%= split_by_slash(@base["04"]["hex"]) %>" # Base 04
-color21="<%= split_by_slash(@base["06"]["hex"]) %>" # Base 06
-color_foreground="<%= split_by_slash(@base["05"]["hex"]) %>" # Base 05
-color_background="<%= split_by_slash(@base["00"]["hex"]) %>" # Base 00
-color_cursor="<%= split_by_slash(@base["05"]["hex"]) %>" # Base 05
+color15="{{ base["07"]["hex"].match(/.{2}/g).join('/') }}" # Base 07 - Bright White
+color16="{{ base["09"]["hex"].match(/.{2}/g).join('/') }}" # Base 09
+color17="{{ base["0F"]["hex"].match(/.{2}/g).join('/') }}" # Base 0F
+color18="{{ base["01"]["hex"].match(/.{2}/g).join('/') }}" # Base 01
+color19="{{ base["02"]["hex"].match(/.{2}/g).join('/') }}" # Base 02
+color20="{{ base["04"]["hex"].match(/.{2}/g).join('/') }}" # Base 04
+color21="{{ base["06"]["hex"].match(/.{2}/g).join('/') }}" # Base 06
+color_foreground="{{ base["05"]["hex"].match(/.{2}/g).join('/') }}" # Base 05
+color_background="{{ base["00"]["hex"].match(/.{2}/g).join('/') }}" # Base 00
+color_cursor="{{ base["05"]["hex"].match(/.{2}/g).join('/') }}" # Base 05
 
 if [ -n "$TMUX" ]; then
   # tell tmux to pass the escape sequences through
@@ -85,13 +85,13 @@ printf $printf_template 21 $color21
 # foreground / background / cursor color
 if [ -n "$ITERM_SESSION_ID" ]; then
   # iTerm2 proprietary escape codes
-  printf $printf_template_custom Pg <%= @base["05"]["hex"] %> # forground
-  printf $printf_template_custom Ph <%= @base["00"]["hex"] %> # background
-  printf $printf_template_custom Pi <%= @base["05"]["hex"] %> # bold color
-  printf $printf_template_custom Pj <%= @base["02"]["hex"] %> # selection color
-  printf $printf_template_custom Pk <%= @base["05"]["hex"] %> # selected text color
-  printf $printf_template_custom Pl <%= @base["05"]["hex"] %> # cursor
-  printf $printf_template_custom Pm <%= @base["00"]["hex"] %> # cursor text
+  printf $printf_template_custom Pg {{ @base["05"]["hex"] }} # forground
+  printf $printf_template_custom Ph {{ @base["00"]["hex"] }} # background
+  printf $printf_template_custom Pi {{ @base["05"]["hex"] }} # bold color
+  printf $printf_template_custom Pj {{ @base["02"]["hex"] }} # selection color
+  printf $printf_template_custom Pk {{ @base["05"]["hex"] }} # selected text color
+  printf $printf_template_custom Pl {{ @base["05"]["hex"] }} # cursor
+  printf $printf_template_custom Pm {{ @base["00"]["hex"] }} # cursor text
 else
   printf $printf_template_var 10 $color_foreground
   printf $printf_template_var 11 $color_background
