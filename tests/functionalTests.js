@@ -123,3 +123,13 @@ test('Given valid arguments & dark brightness, correct output is emitted', async
 
   t.ok(actual.match(/URxvt\*background:\s{21}#101218/), 'Match not found');
 });
+
+test('Given invalid brightness argument, correct error is emitted ', async function (t) {
+  const templName = 'rxvt-unicode';
+  const schemeName = 'gooey';
+  const brightness = 'foo';
+  const commandArgs = ['-t', templName, '-s', schemeName, '-b', brightness];
+  const {stderr: actual} = await execute(command, commandArgs);
+
+  t.is(actual, 'fatal: Brightness (-b) must be \'light\' or \'dark\'.');
+});
