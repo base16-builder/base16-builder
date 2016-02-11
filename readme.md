@@ -1,6 +1,7 @@
 # Base16 Builder
 
-[![Join the chat at https://gitter.im/alexbooker/base16-builder](https://badges.gitter.im/alexbooker/base16-builder.svg)](https://gitter.im/alexbooker/base16-builder?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) [![Build Status](https://travis-ci.org/alexbooker/base16-builder.svg?branch=master)](https://travis-ci.org/alexbooker/base16-builder)
+
+
 
 
 *:hammer: Base16 Builder is nimble command line tool whose purpose is to generate themes for your favorite programs.*
@@ -18,6 +19,12 @@ $ npm install -g base16-builder
 ## Attribution
 
 The original Base16 Builder tool was built by [**@chriskempson**](https://github.com/chriskempson) and can be viewed [**here**](https://github.com/chriskempson/base16-builder). What you are looking at here is an independent copy of the original repository (a [**fork**](https://www.quora.com/What-does-it-mean-to-fork-on-GitHub)).
+
+## Build Status
+
+| Windows | Linux |
+|:------:|:------:|
+|[![Build status](https://ci.appveyor.com/api/projects/status/6xckfbsriju345cd?svg=true)](https://ci.appveyor.com/project/alexbooker/base16-builder) | [![Build Status](https://travis-ci.org/alexbooker/base16-builder.svg?branch=master)](https://travis-ci.org/alexbooker/base16-builder) |
 
 ## License
 
