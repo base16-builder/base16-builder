@@ -37,6 +37,7 @@
     "eslint": "^1.10.3",
     "eslint-config-google": "^0.3.0",
     "execa": "^0.2.2",
+    "ghooks": "^1.0.3",
     "line-count": "^0.1.0",
     "nodemon": "^1.8.1"
   },
@@ -48,6 +49,9 @@
     "nunjucks": "^2.3.0"
   },
   "config": {
+    "ghooks": {
+      "pre-commit": "npm run test"
+    },
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
