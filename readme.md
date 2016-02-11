@@ -1,5 +1,8 @@
 # Base16 Builder
 
+[![Join the chat at https://gitter.im/alexbooker/base16-builder](https://badges.gitter.im/alexbooker/base16-builder.svg)](https://gitter.im/alexbooker/base16-builder?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) [![Build Status](https://travis-ci.org/alexbooker/base16-builder.svg?branch=master)](https://travis-ci.org/alexbooker/base16-builder)
+
+
 *:hammer: Base16 Builder is nimble command line tool whose purpose is to generate themes for your favorite programs.*
 
 ![](https://i.imgur.com/UL4nSKN.gif)
