@@ -1,0 +1,16 @@
+environment:
+  nodejs_version: "5.0.0"
+
+install:
+  - ps: Install-Product node $env:nodejs_version
+  - npm install
+
+test_script:
+  - node --version
+  - npm --version
+  - npm test
+
+init:
+  - git config --global core.autocrlf true
+
+build: off
