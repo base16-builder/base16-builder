@@ -1,8 +1,6 @@
-# Base16 Builder
-
-
-
-
+<h1 align="center">
+	<img width="360" src="https://raw.githubusercontent.com/alexbooker/base16-builder/master/media/banner.png" alt="Base16 Builder">
+</h1>
 
 *:hammer: Base16 Builder is nimble command line tool whose purpose is to generate themes for your favorite programs.*
 
