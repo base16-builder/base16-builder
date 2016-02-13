@@ -48,7 +48,7 @@ test('Given non-existent template name, correct error is emitted', async functio
   const commandArgs = ['--template', templName, '--scheme', schemeName, '--brightness', brightness];
   const {stderr: actual} = await execute(command, commandArgs);
 
-  t.is(actual, `Could not find a template called ${templName} in the database.`);
+  t.is(actual, `Could not find template ${templName}.`);
 });
 
 test('Given non-existent scheme name, correct error is emitted', async function (t) {
@@ -58,7 +58,7 @@ test('Given non-existent scheme name, correct error is emitted', async function 
   const commandArgs = ['--template', templName, '--scheme', schemeName, '--brightness', brightness];
   const {stderr: actual} = await execute(command, commandArgs);
 
-  t.is(actual, `Could not find a scheme called ${schemeName} in the database.`);
+  t.is(actual, `Could not find scheme ${schemeName}.`);
 });
 
 test('Given non-existent scheme name & non-existent template name, correct error is emitted', async function (t) {
@@ -68,7 +68,7 @@ test('Given non-existent scheme name & non-existent template name, correct error
   const commandArgs = ['--template', templName, '--scheme', schemeName, '--brightness', brightness];
   const {stderr: actual} = await execute(command, commandArgs);
 
-  t.is(actual, `Could not find a template called ${templName} in the database.`);
+  t.is(actual, `Could not find template ${templName}.`);
 });
 
 test('Given invalid command arguments, correct error is emitted', async function (t) {
@@ -131,5 +131,5 @@ test('Given invalid brightness argument, correct error is emitted ', async funct
   const commandArgs = ['-t', templName, '-s', schemeName, '-b', brightness];
   const {stderr: actual} = await execute(command, commandArgs);
 
-  t.is(actual, 'fatal: Brightness (-b) must be \'light\' or \'dark\'.');
+  t.is(actual, 'fatal: You did not supply valid arguments. The value for brightness must be \'light\' or \'dark\'.');
 });
