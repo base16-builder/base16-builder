@@ -4,7 +4,10 @@
 
 > *:hammer: Base16 Builder is a nimble command-line tool that generates themes for your favourite programs.*
 
-![](https://i.imgur.com/UL4nSKN.gif)
+<p align="center">
+  <img src="https://i.imgur.com/lAnvpRj.gif">
+</p>
+
 
 ## Installation
 
