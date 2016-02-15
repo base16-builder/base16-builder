@@ -1,5 +1,5 @@
 <h1>
-    <img src="https://raw.githubusercontent.com/base16-builder/base16-builder/master/media/logoWithText.png" alt="Base16 Builder/>
+	<img src="https://raw.githubusercontent.com/alexbooker/base16-builder/master/media/logoWithText.png" alt="Base16 Builder">
 </h1>
 
 _**:hammer: Base16 Builder** is a nimble command-line tool that generates themes for your favourite programs. See it in action below:_
