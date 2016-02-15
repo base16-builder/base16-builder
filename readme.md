@@ -1,13 +1,17 @@
 <h1 align="center">
-	<img width="360" src="https://raw.githubusercontent.com/alexbooker/base16-builder/master/media/logoWithText.png" alt="Base16 Builder">
+	<img width="360" src="http://i.imgur.com/1vPwEtQ.png" alt="Base16 Builder">
 </h1>
 
-> *:hammer: Base16 Builder is a nimble command-line tool that generates themes for your favourite programs.*
+> *:hammer: Base16 Builder is a nimble command-line tool that generates themes for your favourite programs. See it in action below.*
 
 <p align="center">
   <img src="https://i.imgur.com/lAnvpRj.gif">
 </p>
 
+
+**Explaination:** Give `base16-builder` a [color `s`heme](https://github.com/alexbooker/base16-builder/tree/master/db/schemes), [`t`emplate](https://github.com/alexbooker/base16-builder/tree/master/db/templates), and `b`rightness. Get a theme that you can pipe or copy into a relevant configuration file. 
+
+The terminal emulator and Vim instance you see above were themed using this tool and the [gooey color scheme](https://github.com/alexbooker/base16-builder/blob/master/db/schemes/gooey.yml).
 
 ## Installation
 
