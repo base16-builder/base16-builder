@@ -39,7 +39,7 @@ $ npm install --global base16-builder
 
 ## Usage
 
-```
+```bash
 $ base16-builder --help 
 
     Usage:
@@ -53,10 +53,11 @@ $ base16-builder --help
         -b, --brightness Build theme using this brightness
 
     Examples:
-        $ base16-builder -s oceanicnext -t by [@aloisdg](https://github.com/aloisdg) -b dark
-        $ base16-builder --scheme oceanicnext --template rxvt-unicode --brightness dark
-        $ base16-builder --scheme schemes/customScheme.yml --template templs/customTempl.nunjucks
+    	$ base16-builder -s oceanicnext -t i3wm -b dark
+      	$ base16-builder --scheme oceanicnext --template i3wm --brightness dark
+      	$ base16-builder --scheme schemes/customScheme.yml --template templs/customTempl.nunjucks
 ```
+
 ## Ecosystem
 
 - _[bb16-schemer](https://github.com/aloisdg/bb16-schemer) by [@aloisdg](https://github.com/aloisdg)_: A wrapper to manage a group of template
