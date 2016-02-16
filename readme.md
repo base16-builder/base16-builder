@@ -1,5 +1,5 @@
 <h1>
-	<img src="https://raw.githubusercontent.com/alexbooker/base16-builder/master/media/logoWithText.png" alt="Base16 Builder">
+	<img src="https://cloud.githubusercontent.com/assets/2873986/13090600/00486fe4-d4f7-11e5-9bdb-fc814a3c6e77.png" alt="Base16 Builder">
 </h1>
 
 _**:hammer: Base16 Builder** is a nimble command-line tool that generates themes for your favourite programs. See it in action below:_
@@ -8,7 +8,7 @@ _**:hammer: Base16 Builder** is a nimble command-line tool that generates themes
 
 Base16 Builder is simple to use. All you have to do is supply a color [**`s`cheme**](https://github.com/alexbooker/base16-builder/tree/master/db/schemes), [**`t`emplate**](https://github.com/alexbooker/base16-builder/tree/master/db/templates), and **`b`rightness** value (`light` or `dark`). Base16 Builder will use that information to generate a theme and write it to [`stdout`](https://en.wikipedia.org/wiki/Standard_streams#Standard_output_.28stdout.29). 
 
-Because Base16 Builder writes to `stdout`, it's possible to [pipe](https://en.wikipedia.org/wiki/Pipeline_(Unix)) the theme anywhere! In the above demo, the theme is piped to a new file called `theme` but this could just as well have been a configuration file like [`~/.Xresources`](https://wiki.archlinux.org/index.php/X_resources). 
+Because Base16 Builder writes the theme to `stdout`, it's possible to [pipe](https://en.wikipedia.org/wiki/Pipeline_(Unix)) the theme anywhere! In the above demo, the theme is piped to a new file called `theme` but this could just as well have been a configuration file like [`~/.Xresources`](https://wiki.archlinux.org/index.php/X_resources). 
 
 In case you were wondering, the terminal emulator and Vim instance you see above were themed using Base16 Builder and the [gooey color scheme](https://github.com/alexbooker/base16-builder/blob/master/db/schemes/gooey.yml) :wink:.
 
@@ -43,7 +43,6 @@ $ npm install --global base16-builder
 $ base16-builder --help 
 
     Usage:
-        $ base16-builder <command>
         $ base16-builder [-s <scheme>] [-t <template>] [-b <light|dark>]
         $ base16-builder [-s <scheme path>] [-t <template path>]
 
@@ -53,8 +52,8 @@ $ base16-builder --help
         -b, --brightness Build theme using this brightness
 
     Examples:
-    	$ base16-builder -s oceanicnext -t i3wm -b dark
-      	$ base16-builder --scheme oceanicnext --template i3wm --brightness dark
+    	$ base16-builder -s oceanicnext -t rxvt-unicode -b dark
+      	$ base16-builder --scheme oceanicnext --template rxvt-unicode --brightness dark
       	$ base16-builder --scheme schemes/customScheme.yml --template templs/customTempl.nunjucks
 ```
 
