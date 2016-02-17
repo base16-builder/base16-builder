@@ -59,6 +59,8 @@ $ base16-builder --help
 
 ## Ecosystem
 
+Base16 Builder tries to adhere to the [Unix philosophy](https://en.wikipedia.org/wiki/Unix_philosophy), which is to do one thing and do it well. As such, we rely on the community to build seperate tools that utilize our [API](https://github.com/base16-builder/base16-builder/issues/50) when they want extra functionality:
+
 - _[bb16-schemer](https://github.com/aloisdg/bb16-schemer) by [@aloisdg](https://github.com/aloisdg)_: A wrapper to manage a group of template
 - _[generator-bb16-scheme](https://github.com/aloisdg/generator-bb16-scheme) by [@aloisdg](https://github.com/aloisdg)_: This project is a yeoman generator. It helps you to create schemes for base16-builder.
 
