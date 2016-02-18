@@ -5,6 +5,14 @@ import execute from 'execa';
 
 const command = '../dist/cli.js';
 
+test('No arguments should cause help to be output', async function (t) {
+  const {stdout: actual} = await execute(command);
+
+  t.ok(actual.match(/Usage/));
+  t.ok(actual.match(/Options/));
+  t.ok(actual.match(/Example/));
+});
+
 test('help arguments should cause help to be output', async function (t) {
   const {stdout: actual} = await execute(command, ['--help']);
 
@@ -73,7 +81,6 @@ test('Given non-existent scheme name & non-existent template name, correct error
 
 test('Given invalid command arguments, correct error is emitted', async function (t) {
   const invalidCommandArguments = [
-    [],
     ['--template', 'i3wm'],
     ['--scheme', 'gooey'],
     ['--brightness', 'dark']
