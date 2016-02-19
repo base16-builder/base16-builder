@@ -29,6 +29,8 @@ You MUST follow our commit message conventions even if you're making a small cha
 
 ## What can I contribute?
 
+You can contribute in a lot of differents way. A comment, an issue, a blog post, a video, a pull request or a new tool are all a good way to contribute to Base16-Builder. If you dont have any ideas, you can browse our "[issues](https://github.com/base16-builder/base16-builder/issues)" pages and especially the "[help wanted](https://github.com/base16-builder/base16-builder/labels/help%20wanted)" label.
+
 ### Writing a new template or a new scheme
 
 #### Guidelines
