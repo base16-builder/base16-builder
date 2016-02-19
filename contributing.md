@@ -23,6 +23,8 @@ Glad to see you here! If your are reading this, you may want to contribute to Ba
 * Write [good commits](#writing-a-good-commit). We are using [commitizen](https://github.com/commitizen/cz-cli).
 * Submit your pull request.
 
+**Working on your first Pull Request?** You can learn how from this free series [How to Contribute to an Open Source Project on GitHub](https://egghead.io/series/how-to-contribute-to-an-open-source-project-on-github) .
+
 ### Writing a good commit
 
 You MUST follow our commit message conventions even if you're making a small change! This repository uses a tool called [Commitizen](https://github.com/commitizen/cz-cli) to generate conventional commit messages. See this [document](https://github.com/stevemao/conventional-changelog-angular/blob/master/convention.md) to learn more about the commit message conventions.
