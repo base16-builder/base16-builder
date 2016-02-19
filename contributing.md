@@ -8,7 +8,7 @@ Glad to see you here! If your are reading this, you may want to contribute to Ba
 
 ### Writing an issue
 
-* Search if the [issue](https://github.com/alexbooker/base16-builder/issues) exist.
+* Search if the [issue](https://github.com/base16-builder/base16-builder/issues) exist.
 * If the issue exists, then contribute by comments, or you can create one.
 * Try to be as descriptive, concise and specific as possible.
 * Titles must be able to stand on their own without requiring readers to click on the issue.
@@ -20,7 +20,7 @@ Glad to see you here! If your are reading this, you may want to contribute to Ba
 * Search for an [pull request](https://github.com/alexbooker/base16-builder/pulls) that relates to your submission. You don't want to duplicate effort.
 * [Fork the project](https://help.github.com/articles/fork-a-repo/).
 * Create a [pull request](https://help.github.com/articles/creating-a-pull-request/).
-* Write [good commits]().
+* Write [good commits](#writing-a-good-commit). We are using [commitizen](https://github.com/commitizen/cz-cli).
 * Submit your pull request.
 
 ### Writing a good commit
@@ -35,7 +35,7 @@ You MUST follow our commit message conventions even if you're making a small cha
 
 * Follow the specification for each one.
 * Avoid duplicate as possible.
-* Each contribution MUST be preceded by an [issue]().
+* Each contribution MUST be preceded by an [issue](#writing-an-issue).
 
 #### Writing a template
 
@@ -80,7 +80,7 @@ Feel free to browse the folder [`schemes`](https://github.com/alexbooker/base16-
 * Follow the existing code style. /* which one? */
 * Document your changes in the [`readme.md`](https://github.com/alexbooker/base16-builder/blob/master/readme.md).
 * Document your changes in the `--help` page.
-* Each contribution MUST be preceded by an [issue]().
+* Each contribution MUST be preceded by an [issue](#writing-an-issue).
 
 #### Development
 
