@@ -4,7 +4,7 @@
 
 Glad to see you here! If your are reading this, you may want to contribute to Base16-builder. Awesome! To help keeping the project as nice as possible, we ask you to following this contribution guidelines. Welcome in the contributor-side of Base16-builder.
 
-## How can I contribute? /* this title can change */
+## How can I contribute?
 
 ### Writing an issue
 
@@ -55,7 +55,7 @@ Each template MUST follows this table:
 
 Feel free to browse the folder [`templates`](https://github.com/alexbooker/base16-builder/tree/master/db/templates) to see valid example of template.
 
-#### Writing a scheme /* Move the spec to RFC 2119 */
+#### Writing a scheme
 
 A Base16-builder's scheme is a YAML file. YAML is a human friendly data serialization standard for all programming languages. You can learn more about YAML files on their [page](http://yaml.org/).
 
@@ -77,7 +77,6 @@ Feel free to browse the folder [`schemes`](https://github.com/alexbooker/base16-
 
 #### Guidelines
 
-* Follow the existing code style. /* which one? */
 * Document your changes in the [`readme.md`](https://github.com/alexbooker/base16-builder/blob/master/readme.md).
 * Document your changes in the `--help` page.
 * Each contribution MUST be preceded by an [issue](#writing-an-issue).
