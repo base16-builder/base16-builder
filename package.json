@@ -6,7 +6,7 @@
   "main": "dist/index.js",
   "bin": "dist/cli.js",
   "engines": {
-    "node": ">=0.12.0"
+    "node": ">=5"
   },
   "scripts": {
     "prebuild": "rm -rf dist && mkdir dist && cp -r db/ dist/",
@@ -15,6 +15,7 @@
     "pretest": "npm run build",
     "build": "babel lib --out-dir dist && chmod +x dist/cli.js",
     "prepublish": "npm run build",
+    "lint": "eslint ./lib",
     "commit": "git-cz"
   },
   "keywords": [
@@ -25,20 +26,17 @@
     "email": "alexbooker@fastmail.im",
     "url": "booker.codes"
   },
-  "engines": {
-    "node": ">=5"
-  },
   "license": "MIT",
   "devDependencies": {
     "ava": "^0.10.0",
     "babel-cli": "^6.4.0",
-    "babel-eslint": "^4.1.6",
+    "babel-eslint": "^5.0.0",
     "babel-preset-es2015": "^6.5.0",
     "babel-preset-stage-3": "^6.3.13",
     "commitizen": "^2.5.0",
     "cz-conventional-changelog": "^1.1.5",
-    "eslint": "^1.10.3",
-    "eslint-config-google": "^0.3.0",
+    "eslint": "^2.2.0",
+    "eslint-config-google": "^0.4.0",
     "execa": "^0.2.2",
     "ghooks": "^1.0.3",
     "line-count": "^0.1.0",
