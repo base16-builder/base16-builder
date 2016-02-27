@@ -163,3 +163,13 @@ test('Given valid arguments & brightness in uppercase, correct output is emitted
 
   t.ok(actual.match(/URxvt\*background:\s{21}#101218/), 'Match not found');
 });
+
+test('Given valid arguments & scheme in uppercase, correct output is emitted', async function (t) {
+  const templName = 'rxvt-unicode';
+  const schemeName = 'GOOEY';
+  const brightness = 'dark';
+  const commandArgs = ['--template', templName, '--scheme', schemeName, '--brightness', brightness];
+  const {stdout: actual} = await execute(command, commandArgs);
+
+  t.ok(actual.match(/URxvt\*background:\s{21}#101218/), 'Match not found');
+});
