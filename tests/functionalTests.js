@@ -140,3 +140,15 @@ test('Given invalid brightness argument, correct error is emitted ', async funct
 
   t.is(actual, 'fatal: You did not supply valid arguments. The value for brightness must be \'light\' or \'dark\'.');
 });
+
+test('Given valid arguments & dark brightness, author email is not encoded', async function (t) {
+  const templName = 'rxvt-unicode';
+  const schemeName = 'gooey';
+  const brightness = 'dark';
+  const commandArgs = ['--template', templName, '--scheme', schemeName, '--brightness', brightness];
+  const {stdout: actual} = await execute(command, commandArgs);
+
+  t.ok(actual.match(/<alexbooker@fastmail.im>/), 'Match not found');
+  t.notOk(actual.match(/&lt;/), 'Match found');
+  t.notOk(actual.match(/&gt;/), 'Match found');
+});
