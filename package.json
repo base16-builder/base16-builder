@@ -13,7 +13,7 @@
     "test": "ava tests --require babel-register",
     "testw": "nodemon --watch lib --watch tests --exec npm run test",
     "pretest": "npm run build",
-    "build": "babel lib --out-dir dist && chmod +x dist/cli.js",
+    "build": "node util/schemesPreviewGenerator.js && babel lib --out-dir dist && chmod +x dist/cli.js",
     "prepublish": "npm run build",
     "lint": "eslint ./lib",
     "commit": "git-cz"
