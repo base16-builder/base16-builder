@@ -4,7 +4,7 @@ const path = require('path');
 const yaml = require('js-yaml');
 const Promise = require('bluebird');
 
-const schemesDir = '../db/schemes';
+const schemesDir = path.join(__dirname, '../db/schemes');
 
 fs
   .readdir(schemesDir)
@@ -16,12 +16,12 @@ fs
     Promise.all(promises).then(function(yamlSchemes) {
       yamlSchemes = yamlSchemes.map(yamlScheme => yaml.load(yamlScheme));
       fs
-        .readFile('./schemesPreview.nunJucks', 'utf-8')
+        .readFile(path.join(__dirname, './schemesPreview.nunJucks'), 'utf-8')
         .then(function(templ) {
           const preview = nunjucks.renderString(templ, {
             schemes: yamlSchemes
           });
-          fs.writeFile('../dist/index.html', preview);
+          fs.writeFile(path.join(__dirname, '../dist/index.html'), preview);
         });
     });
   });
