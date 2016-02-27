@@ -5,6 +5,7 @@ import execute from 'execa';
 
 const command = '../dist/cli.js';
 
+
 test('No arguments should cause help to be output', async function (t) {
   const {stdout: actual} = await execute(command);
 
@@ -151,4 +152,14 @@ test('Given valid arguments & dark brightness, author email is not encoded', asy
   t.ok(actual.match(/<alexbooker@fastmail.im>/), 'Match not found');
   t.notOk(actual.match(/&lt;/), 'Match found');
   t.notOk(actual.match(/&gt;/), 'Match found');
+});
+
+test('Given valid arguments & brightness in uppercase, correct output is emitted', async function (t) {
+  const templName = 'rxvt-unicode';
+  const schemeName = 'gooey';
+  const brightness = 'DARK';
+  const commandArgs = ['--template', templName, '--scheme', schemeName, '--brightness', brightness];
+  const {stdout: actual} = await execute(command, commandArgs);
+
+  t.ok(actual.match(/URxvt\*background:\s{21}#101218/), 'Match not found');
 });
