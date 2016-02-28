@@ -51,7 +51,7 @@ Each template MUST follows this table:
 
 | name       | type   | mandatory | note                                 |
 |------------|--------|-----------|--------------------------------------|
-| tool       | string | true      | MUST contain any alphanumeric character or `.-` | 
+| tool       | string | true      | MUST contain any alphanumeric character or `.-`. SHOULD be lowercase | 
 | luminosity | enum   | true      | MUST be `dark` or `light`            | 
 | delimiter  | char   | false     | MUST be use only if palette is used. MUST be a `-` | 
 | palette    | int    | false     | MUST be 256 if used or nothing if not relevant |
@@ -69,7 +69,7 @@ Each scheme MUST follows this table:
 
 | name   | type   | mandatory | note                                           |
 |--------|--------|-----------|------------------------------------------------|
-| scheme | string | true      | MUST contain any alphanumeric characters or `.-` |
+| scheme | string | true      | MUST contain any alphanumeric characters or `.-`. SHOULD be lowercase |
 | author | string | true      | MUST contain a name and MAY contain an url     |
 | base0X | string | true      | MUST be an hexadecimal color in uppercase      |
 
