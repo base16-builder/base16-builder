@@ -1,7 +1,7 @@
-<%
+{#
 # Emacs Template
 # Neil Bhakta
-%>;; Base16 {{ scheme }} (https://github.com/chriskempson/base16)
+#};; Base16 {{ scheme }} (https://github.com/chriskempson/base16)
 ;; Scheme: {{ author }}
 
 ;;; base16-{{ slug }}-dark-theme.el

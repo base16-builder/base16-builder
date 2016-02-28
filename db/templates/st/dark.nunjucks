@@ -1,7 +1,7 @@
-<%
+{#
 # st - simple terminal Color Setup Template (st.suckless.org)
 # Vlad Grigorescu
-%>
+#}
 
 // Base16 {{ scheme }} dark - simple terminal color setup
 // {{ author }}
@@ -45,4 +45,3 @@ static const char *colorname[] = {
 static unsigned int defaultfg = 256;
 static unsigned int defaultbg = 257;
 static unsigned int defaultcs = 256;
-

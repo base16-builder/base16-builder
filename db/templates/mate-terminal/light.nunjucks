@@ -1,8 +1,8 @@
-<%
+{#
 # Mate Terminal Template
 # Mansour Behabadi (mansour@oxplot.com)
 
-%>#!/usr/bin/env bash
+#}#!/usr/bin/env bash
 # Base16 {{ scheme }} - Mate Terminal color scheme install script
 # {{ author }}
 

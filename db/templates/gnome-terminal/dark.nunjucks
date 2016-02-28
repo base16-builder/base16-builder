@@ -1,8 +1,8 @@
-<%
+{#
 # Gnome Terminal Template
 # Chris Kempson (http://chriskempson.com)
 
-%>#!/usr/bin/env bash
+#}#!/usr/bin/env bash
 # Base16 {{ scheme }} - Gnome Terminal color scheme install script
 # {{ author }}
 

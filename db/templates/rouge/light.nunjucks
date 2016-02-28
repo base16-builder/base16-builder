@@ -1,7 +1,7 @@
-<%
+{#
 # Rouge Template (https://github.com/jneen/rouge/)
 # Jeanine Adkisson (http://jneen.net/)
-%>module Rouge
+#}module Rouge
   module Themes
     class {{ scheme }} < Base16
       name 'base16.{{ scheme }}'

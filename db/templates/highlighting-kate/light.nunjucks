@@ -1,8 +1,8 @@
-<%
+{#
 # Highlighting-kate Template
 # Timothée Poisot (http://timotheepoisot.fr)
 
-%>/* Base16 {{ scheme }}
+#}/* Base16 {{ scheme }}
 Scheme: {{ author }} */
 
 table.sourceCode, tr.sourceCode, td.sourceCode, table.sourceCode pre

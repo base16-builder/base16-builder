@@ -24,4 +24,3 @@ INSERT INTO COLORS (number, value, scheme) VALUES (20 , {{ parseInt("base["04"][
 INSERT INTO COLORS (number, value, scheme) VALUES (21 , {{ parseInt("base["06"]["hex"]", 16) - parseInt("010­00000", 16) }} , 0);
 
 UPDATE colorDefaults set fg=7, bg=0 WHERE scheme = 0;
-

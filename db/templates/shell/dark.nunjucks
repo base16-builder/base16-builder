@@ -1,7 +1,7 @@
-<%
+{#
 # Shell Color Setup Template
 # Chris Kempson (http://chriskempson.com)
-%>#!/bin/sh
+#}#!/bin/sh
 # Base16 {{ scheme }} - Shell color setup script
 # {{ author }}
 

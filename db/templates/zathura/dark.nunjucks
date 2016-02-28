@@ -1,6 +1,6 @@
-<%
+{#
 # zathurarc-dark
-%>
+#}
 
 set default-bg                  "#{{ base["00"]["hex"] }}"
 set default-fg                  "#{{ base["01"]["hex"] }}"

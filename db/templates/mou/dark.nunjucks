@@ -1,8 +1,8 @@
-<%
+{#
 # Mou Markdown Editor Template
 # Chris Kempson (http://chriskempson.com)
   
-%>editor
+#}editor
 foreground: {{ base["05"]["hex"] }}
 background: {{ base["00"]["hex"] }}
 caret: {{ base["05"]["hex"] }}

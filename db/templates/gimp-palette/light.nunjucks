@@ -1,8 +1,8 @@
-<%
+{#
 # GIMP Palette Template
 # Chris Kempson (http://chriskempson.com)
  
-%>GIMP Palette
+#}GIMP Palette
 Name: Base16 {{ scheme }}
 Columns: 16
 #

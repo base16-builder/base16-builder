@@ -1,8 +1,8 @@
-<%
+{#
 # Pantheon Terminal Template
 # Charles B Johnson (http://cbjohnson.info)
 
-%>#!/usr/bin/env bash
+#}#!/usr/bin/env bash
 # Base16 {{ scheme }} - Pantheon Terminal color scheme install script
 # {{ author }}
 # Charles B Johnson (https://github.com/charlesbjohnson)
