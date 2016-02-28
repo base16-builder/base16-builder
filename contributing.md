@@ -4,11 +4,11 @@
 
 Glad to see you here! If your are reading this, you may want to contribute to Base16-builder. Awesome! To help keeping the project as nice as possible, we ask you to following this contribution guidelines. Welcome in the contributor-side of Base16-builder.
 
-## How can I contribute? /* this title can change */
+## How can I contribute?
 
 ### Writing an issue
 
-* Search if the [issue](https://github.com/alexbooker/base16-builder/issues) exist.
+* Search if the [issue](https://github.com/base16-builder/base16-builder/issues) exist.
 * If the issue exists, then contribute by comments, or you can create one.
 * Try to be as descriptive, concise and specific as possible.
 * Titles must be able to stand on their own without requiring readers to click on the issue.
@@ -20,8 +20,10 @@ Glad to see you here! If your are reading this, you may want to contribute to Ba
 * Search for an [pull request](https://github.com/alexbooker/base16-builder/pulls) that relates to your submission. You don't want to duplicate effort.
 * [Fork the project](https://help.github.com/articles/fork-a-repo/).
 * Create a [pull request](https://help.github.com/articles/creating-a-pull-request/).
-* Write [good commits]().
+* Write [good commits](#writing-a-good-commit). We are using [commitizen](https://github.com/commitizen/cz-cli).
 * Submit your pull request.
+
+**Working on your first Pull Request?** You can learn how from this free series [How to Contribute to an Open Source Project on GitHub](https://egghead.io/series/how-to-contribute-to-an-open-source-project-on-github) .
 
 ### Writing a good commit
 
@@ -29,13 +31,15 @@ You MUST follow our commit message conventions even if you're making a small cha
 
 ## What can I contribute?
 
+You can contribute in a lot of differents way. A comment, an issue, a blog post, a video, a pull request or a new tool are all a good way to contribute to Base16-Builder. If you dont have any ideas, you can browse our "[issues](https://github.com/base16-builder/base16-builder/issues)" pages and especially the "[help wanted](https://github.com/base16-builder/base16-builder/labels/help%20wanted)" label.
+
 ### Writing a new template or a new scheme
 
 #### Guidelines
 
 * Follow the specification for each one.
 * Avoid duplicate as possible.
-* Each contribution MUST be preceded by an [issue]().
+* Each contribution MUST be preceded by an [issue](#writing-an-issue).
 
 #### Writing a template
 
@@ -47,7 +51,7 @@ Each template MUST follows this table:
 
 | name       | type   | mandatory | note                                 |
 |------------|--------|-----------|--------------------------------------|
-| tool       | string | true      | MUST contain any alphanumeric character or `.-` | 
+| tool       | string | true      | MUST contain any lowercase alphanumeric character or `.-` | 
 | luminosity | enum   | true      | MUST be `dark` or `light`            | 
 | delimiter  | char   | false     | MUST be use only if palette is used. MUST be a `-` | 
 | palette    | int    | false     | MUST be 256 if used or nothing if not relevant |
@@ -55,7 +59,7 @@ Each template MUST follows this table:
 
 Feel free to browse the folder [`templates`](https://github.com/alexbooker/base16-builder/tree/master/db/templates) to see valid example of template.
 
-#### Writing a scheme /* Move the spec to RFC 2119 */
+#### Writing a scheme
 
 A Base16-builder's scheme is a YAML file. YAML is a human friendly data serialization standard for all programming languages. You can learn more about YAML files on their [page](http://yaml.org/).
 
@@ -65,7 +69,7 @@ Each scheme MUST follows this table:
 
 | name   | type   | mandatory | note                                           |
 |--------|--------|-----------|------------------------------------------------|
-| scheme | string | true      | MUST contain any alphanumeric characters or `.-` |
+| scheme | string | true      | MUST contain any lowercase alphanumeric characters or `.-` |
 | author | string | true      | MUST contain a name and MAY contain an url     |
 | base0X | string | true      | MUST be an hexadecimal color in uppercase      |
 
@@ -77,10 +81,9 @@ Feel free to browse the folder [`schemes`](https://github.com/alexbooker/base16-
 
 #### Guidelines
 
-* Follow the existing code style. /* which one? */
 * Document your changes in the [`readme.md`](https://github.com/alexbooker/base16-builder/blob/master/readme.md).
 * Document your changes in the `--help` page.
-* Each contribution MUST be preceded by an [issue]().
+* Each contribution MUST be preceded by an [issue](#writing-an-issue).
 
 #### Development
 
