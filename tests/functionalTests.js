@@ -183,3 +183,10 @@ test('Given valid arguments & template in uppercase, correct output is emitted',
 
   t.ok(actual.match(/URxvt\*background:\s{21}#101218/), 'Match not found');
 });
+
+test('Given ls schemes command, correct output is emitted', async function (t) {
+  const commandArgs = ['ls', 'schemes'];
+  const {stdout: actual} = await execute(command, commandArgs);
+
+  t.ok(actual.match(/Your browser window should have just loaded this/), 'Match not found');
+});
