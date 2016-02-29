@@ -11,6 +11,7 @@ test('No arguments should cause help to be output', async function (t) {
 
   t.ok(actual.match(/Usage/));
   t.ok(actual.match(/Options/));
+  t.ok(actual.match(/Commands/));
   t.ok(actual.match(/Example/));
 });
 
@@ -19,6 +20,7 @@ test('help arguments should cause help to be output', async function (t) {
 
   t.ok(actual.match(/Usage/));
   t.ok(actual.match(/Options/));
+  t.ok(actual.match(/Commands/));
   t.ok(actual.match(/Example/));
 });
 
@@ -27,6 +29,7 @@ test('with alias help arguments should cause help to be output', async function 
 
   t.ok(actual.match(/Usage/));
   t.ok(actual.match(/Options/));
+  t.ok(actual.match(/Commands/));
   t.ok(actual.match(/Example/));
 });
 
