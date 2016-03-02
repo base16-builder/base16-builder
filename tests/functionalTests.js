@@ -209,7 +209,7 @@ test('Given ls templates command, no templates end with ".nunjucks"', async func
   t.false(/\.nunjucks$/.test(actual));
 });
 
-test.only('Given ls templates command, template list is sorted alphabetically', async function (t) {
+test('Given ls templates command, template list is sorted alphabetically', async function (t) {
   const {stdout: actual} = await execute(command, ['ls', 'templates']);
 
   const expected = actual.split('\n').sort().join('\n');
