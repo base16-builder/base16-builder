@@ -2,9 +2,10 @@
 
 import test from 'ava';
 import execute from 'execa';
+import countLines from 'line-count';
+import fs from 'fs-promise';
 
 const command = '../dist/cli.js';
-
 
 test('No arguments should cause help to be output', async function (t) {
   const {stdout: actual} = await execute(command);
@@ -192,4 +193,26 @@ test('Given ls schemes command, correct output is emitted', async function (t) {
   const {stdout: actual} = await execute(command, commandArgs);
 
   t.ok(actual.match(/Your browser window should have just loaded this/), 'Match not found');
+});
+
+test('Given ls templates command, all templtes are included in the list', async function (t) {
+  const {stdout: output} = await execute(command, ['ls', 'templates']);
+  const actual = countLines(output);
+
+  const expected = (await fs.readdir('../db/templates')).length;
+  t.is(actual, expected);
+});
+
+test('Given ls templates command, no templates end with ".nunjucks"', async function (t) {
+  const {stdout: actual} = await execute(command, ['ls', 'templates']);
+
+  t.false(/\.nunjucks$/.test(actual));
+});
+
+test.only('Given ls templates command, template list is sorted alphabetically', async function (t) {
+  const {stdout: actual} = await execute(command, ['ls', 'templates']);
+
+  const expected = actual.split('\n').sort().join('\n');
+
+  t.is(actual, expected);
 });
