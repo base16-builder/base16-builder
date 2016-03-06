@@ -50,7 +50,8 @@
     "js-yaml": "^3.5.2",
     "meow": "^3.7.0",
     "nunjucks": "^2.3.0",
-    "open": "0.0.5"
+    "open": "0.0.5",
+    "slug": "^0.9.1"
   },
   "config": {
     "ghooks": {

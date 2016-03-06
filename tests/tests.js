@@ -184,3 +184,9 @@ test('buildTemplate returns correct result', function(t) {
 
   t.is(actual, expected);
 });
+
+test('generateContext returns context with correct slug', function(t) {
+  const actual = generateContext(scheme);
+
+  t.is(actual.slug, 'oceanicnext');
+});
