@@ -28,7 +28,7 @@ This project aims to rejuvenate [Chris Kempson's original tool](https://github.c
 $ npm install --global base16-builder
 ```
 
-<sub>If you haven't done so already, you'll also need to install [Node.js](https://docs.npmjs.com/getting-started/installing-node). `npm` (the **n**ode **p**ackage **m**anager) is bundled and installed automatically with Node.js.</sub>
+<sub>If you haven't done so already, you'll also need to install [Node.js](https://docs.npmjs.com/getting-started/installing-node). npm (the **n**ode **p**ackage **m**anager) is bundled and installed automatically with Node.js.</sub>
 
 ## Usage
 
