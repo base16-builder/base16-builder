@@ -5,7 +5,7 @@
 
 [![Gitter](https://img.shields.io/badge/Gitter-Join%20chat%20%E2%86%92-brightgreen.svg?style=flat-square)](https://gitter.im/base16-builder/base16-builder)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
-[![MIT License](https://img.shields.io/badge/Licence-MIT-blue.svg?style=flat-square)](http://opensource.org/licenses/MIT)
+[![MIT License](https://img.shields.io/badge/Licence-MIT-blue.svg?style=flat-square)](https://github.com/base16-builder/base16-builder/blob/master/licence.md)
 
 
 _**Base16 Builder** is a nimble command-line tool that generates themes for your favourite programs. See it in action below:_
