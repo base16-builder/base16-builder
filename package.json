@@ -46,10 +46,10 @@
   "dependencies": {
     "babel-polyfill": "^6.5.0",
     "chalk": "^1.1.1",
+    "ejs": "^2.4.1",
     "fs-promise": "^0.3.1",
     "js-yaml": "^3.5.2",
     "meow": "^3.7.0",
-    "nunjucks": "^2.3.0",
     "open": "0.0.5",
     "slug": "^0.9.1"
   },

@@ -1,0 +1,43 @@
+# ~/.i3/config
+# i3 config template
+# Base16 <%- scheme %> by <%- author %>
+# template by Matt Parnell, @parnmatt
+
+set $base00 #<%- base["00"]["hex"] %>
+set $base01 #<%- base["01"]["hex"] %>
+set $base02 #<%- base["02"]["hex"] %>
+set $base03 #<%- base["03"]["hex"] %>
+set $base04 #<%- base["04"]["hex"] %>
+set $base05 #<%- base["05"]["hex"] %>
+set $base06 #<%- base["06"]["hex"] %>
+set $base07 #<%- base["07"]["hex"] %>
+set $base08 #<%- base["08"]["hex"] %>
+set $base09 #<%- base["09"]["hex"] %>
+set $base0A #<%- base["0A"]["hex"] %>
+set $base0B #<%- base["0B"]["hex"] %>
+set $base0C #<%- base["0C"]["hex"] %>
+set $base0D #<%- base["0D"]["hex"] %>
+set $base0E #<%- base["0E"]["hex"] %>
+set $base0F #<%- base["0F"]["hex"] %>
+
+client.focused $base0D $base0D $base07 $base06
+client.focused_inactive $base05 $base05 $base04 $base06
+client.unfocused $base06 $base06 $base04 $base06
+client.urgent $base05 $base08 $base00 $base08
+
+## remember to add the rest of your configuration
+
+bar {
+    ## remember to add your favourite status bar, i.e.,
+    # status_command i3status
+    
+        colors {
+        separator $base04
+        background $base06
+        statusline $base02
+        focused_workspace $base0C $base0D $base07
+        active_workspace $base05 $base05 $base00
+        inactive_workspace $base06 $base06 $base04
+        urgent_workspace $base08 $base08 $base00
+    }
+}
