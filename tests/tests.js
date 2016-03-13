@@ -139,24 +139,24 @@ test('buildTemplate returns correct result', function(t) {
   const localScheme = JSON.stringify(scheme);
 
   const template = `
-    {{ scheme }}
-    {{ author }}
-    {{ base["00"]["hex"] }}
-    {{ base["01"]["hex"] }}
-    {{ base["02"]["hex"] }}
-    {{ base["03"]["hex"] }}
-    {{ base["04"]["hex"] }}
-    {{ base["05"]["hex"] }}
-    {{ base["06"]["hex"] }}
-    {{ base["07"]["hex"] }}
-    {{ base["08"]["hex"] }}
-    {{ base["09"]["hex"] }}
-    {{ base["0A"]["hex"] }}
-    {{ base["0B"]["hex"] }}
-    {{ base["0C"]["hex"] }}
-    {{ base["0D"]["hex"] }}
-    {{ base["0E"]["hex"] }}
-    {{ base["0F"]["hex"] }}
+    <%= scheme %>
+    <%= author %>
+    <%= base["00"]["hex"] %>
+    <%= base["01"]["hex"] %>
+    <%= base["02"]["hex"] %>
+    <%= base["03"]["hex"] %>
+    <%= base["04"]["hex"] %>
+    <%= base["05"]["hex"] %>
+    <%= base["06"]["hex"] %>
+    <%= base["07"]["hex"] %>
+    <%= base["08"]["hex"] %>
+    <%= base["09"]["hex"] %>
+    <%= base["0A"]["hex"] %>
+    <%= base["0B"]["hex"] %>
+    <%= base["0C"]["hex"] %>
+    <%= base["0D"]["hex"] %>
+    <%= base["0E"]["hex"] %>
+    <%= base["0F"]["hex"] %>
   `;
 
   const expected = `

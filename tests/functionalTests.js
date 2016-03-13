@@ -86,7 +86,7 @@ test('Given non-existent scheme name & non-existent template name, correct error
 
 test('Given invalid command arguments, correct error is emitted', async function (t) {
   const invalidCommandArguments = [
-    ['--template', 'i3wm'],
+    ['--template', 'rxvt-unicode'],
     ['--scheme', 'gooey'],
     ['--brightness', 'dark']
   ];
@@ -98,7 +98,7 @@ test('Given invalid command arguments, correct error is emitted', async function
 });
 
 test('Given valid template path, correct output is emitted', async function (t) {
-  const templPath = '../db/templates/rxvt-unicode/dark.nunjucks';
+  const templPath = '../db/templates/rxvt-unicode/dark.ejs';
   const schemeName = 'gooey';
   const commandArgs = ['--template', templPath, '--scheme', schemeName];
   const {stdout: actual} = await execute(command, commandArgs);
@@ -117,7 +117,7 @@ test('Given valid scheme path, correct output is emitted', async function (t) {
 });
 
 test('Given valid template & scheme path, correct output is emitted', async function (t) {
-  const templPath = '../db/templates/rxvt-unicode/dark.nunjucks';
+  const templPath = '../db/templates/rxvt-unicode/dark.ejs';
   const schemePath = '../db/schemes/gooey.yml';
   const brightness = 'dark';
   const commandArgs = ['--template', templPath, '--scheme', schemePath, '--brightness', brightness];
@@ -190,8 +190,9 @@ test('Given valid arguments & template in uppercase, correct output is emitted',
 
 test('Given ls schemes command, correct output is emitted', async function (t) {
   const commandArgs = ['ls', 'schemes'];
-  const {stdout: actual} = await execute(command, commandArgs);
+  const {stdout: actual, stderr} = await execute(command, commandArgs);
 
+  t.notOk(stderr)
   t.ok(actual.match(/Your browser window should have just loaded this/), 'Match not found');
 });
 
@@ -203,10 +204,10 @@ test('Given ls templates command, all templtes are included in the list', async 
   t.is(actual, expected);
 });
 
-test('Given ls templates command, no templates end with ".nunjucks"', async function (t) {
+test('Given ls templates command, no templates end with ".ejs"', async function (t) {
   const {stdout: actual} = await execute(command, ['ls', 'templates']);
 
-  t.false(/\.nunjucks$/.test(actual));
+  t.false(/\.ejs$/.test(actual));
 });
 
 test('Given ls templates command, template list is sorted alphabetically', async function (t) {

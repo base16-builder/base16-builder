@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+    body {
+      font-family: sans;
+    }
+    .scheme {
+
+    }
+    .color-swatch {
+      width: 500px;
+    }
+    .color-swatch__color {
+      list-style: none;
+      height: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Base16 Builder</h1>
+
+  <% schemes.forEach(function(scheme) { %>
+    <div class="scheme">
+      <h2 class="scheme__name"><%=scheme.scheme%></h2>
+      <ul class="color-swatch">
+        <li class="color-swatch__color" style='background-color: #<%=scheme.base00%>'></li>
+        <li class="color-swatch__color" style='background-color: #<%=scheme.base01%>'></li>
+        <li class="color-swatch__color" style='background-color: #<%=scheme.base02%>'></li>
+        <li class="color-swatch__color" style='background-color: #<%=scheme.base03%>'></li>
+        <li class="color-swatch__color" style='background-color: #<%=scheme.base04%>'></li>
+        <li class="color-swatch__color" style='background-color: #<%=scheme.base05%>'></li>
+        <li class="color-swatch__color" style='background-color: #<%=scheme.base06%>'></li>
+        <li class="color-swatch__color" style='background-color: #<%=scheme.base07%>'></li>
+        <li class="color-swatch__color" style='background-color: #<%=scheme.base08%>'></li>
+        <li class="color-swatch__color" style='background-color: #<%=scheme.base09%>'></li>
+        <li class="color-swatch__color" style='background-color: #<%=scheme.base09%>'></li>
+        <li class="color-swatch__color" style='background-color: #<%=scheme.base0A%>'></li>
+        <li class="color-swatch__color" style='background-color: #<%=scheme.base0B%>'></li>
+        <li class="color-swatch__color" style='background-color: #<%=scheme.base0C%>'></li>
+        <li class="color-swatch__color" style='background-color: #<%=scheme.base0D%>'></li>
+        <li class="color-swatch__color" style='background-color: #<%=scheme.base0E%>'></li>
+        <li class="color-swatch__color" style='background-color: #<%=scheme.base0F%>'></li>
+      </ul>
+    </div>
+  <% }) %>
+
+</body>
+</html>
