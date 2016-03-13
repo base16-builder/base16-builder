@@ -8,7 +8,7 @@ _**Base16 Builder** is a nimble command-line tool that generates themes for your
 
 Base16 Builder is easy to use. All you have to do is supply a [**color `s`cheme**](https://github.com/alexbooker/base16-builder/tree/master/db/schemes), [**`t`emplate**](https://github.com/alexbooker/base16-builder/tree/master/db/templates), and **`b`rightness** (`light` or `dark`). Base16 Builder will use the information you provide to generate a theme and write it to `stdout`. 
 
-Because Base16 Builder writes the theme to `stdout`, it's possible to pipe the theme anywhere you like. In the above screencast, the theme is piped to a new file called `theme`, but this could just as well have been a configuration file like `~/.Xresources`. 
+Because Base16 Builder writes to `stdout`, it's possible to pipe the theme anywhere you like. In the above screencast, the theme is piped to a new file called `theme`, but this could just as well have been a configuration file like `.Xresources`. 
 
 ## Features
 
