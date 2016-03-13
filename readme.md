@@ -27,31 +27,31 @@ This project aims to rejuvenate [Chris Kempson's original tool](https://github.c
 $ npm install --global base16-builder
 ```
 
-<sub>You'll mneed [here](https://docs.npmjs.com/getting-started/installing-node). npm comes installed alongside Node.js.</sub>
+<sub>If you haven't done so already, you'll also need to install [Node.js](https://docs.npmjs.com/getting-started/installing-node). `npm` (the **n**ode **p**ackage **m**anager) is bundled and installed automatically with Node.js.</sub>
 
 ## Usage
 
 ```bash
-  Usage:
-    $ base16-builder [-s <scheme>] [-t <template>] [-b <light|dark>]
-    $ base16-builder [-s <scheme path>] [-t <template path>]
+Usage:
+  $ base16-builder [-s <scheme>] [-t <template>] [-b <light|dark>]
+  $ base16-builder [-s <scheme path>] [-t <template path>]
     
-  Options:
-    -s, --scheme        Build theme using this color scheme
-    -t, --template      Build theme using this template
-    -b, --brightness    Build theme using this brightness
-    -h, --help          Show this menu
+Options:
+  -s, --scheme        Build theme using this color scheme
+  -t, --template      Build theme using this template
+  -b, --brightness    Build theme using this brightness
+  -h, --help          Show this menu
     
-  Commands:
-    ls schemes      Opens an offline web page with a list of scheme names and their colors
-    ls templates    Writes a list of available templates to the terminal
+Commands:
+  ls schemes      Opens an offline web page with a list of scheme names and their colors
+  ls templates    Writes a list of available templates to the terminal
     
-  Examples:
-    $ base16-builder -s oceanicnext -t rxvt-unicode -b dark
-    $ base16-builder --scheme oceanicnext --template rxvt-unicode --brightness dark
-    $ base16-builder --scheme schemes/customScheme.yml --template templs/customTempl.ejs
-    $ base16-builder ls schemes
-    $ base16-builder ls templates
+Examples:
+  $ base16-builder -s oceanicnext -t rxvt-unicode -b dark
+  $ base16-builder --scheme oceanicnext --template rxvt-unicode --brightness dark
+  $ base16-builder --scheme schemes/customScheme.yml --template templs/customTempl.ejs
+  $ base16-builder ls schemes
+  $ base16-builder ls templates
 ```
 
 ## Build Status
@@ -62,6 +62,6 @@ $ npm install --global base16-builder
 
 ## Attribution
 
-- [Original project](https://github.com/chriskempson/base16-builder) by [Chris Kempson](https://github.com/chriskempson)
-- Numerous templates and schemes were contributed to the [original project]((https://github.com/chriskempson/base16-builder)) by various [contributors](https://github.com/chriskempson/base16-builder/graphs/contributors)
-- Logo by [Phis](https://github.com/Phisherman)
+- The [original base16-builder](https://github.com/chriskempson/base16-builder).
+- Scheme and template [contributors](https://github.com/chriskempson/base16-builder/graphs/contributors) to the original base16-builder.
+- [Phis](https://github.com/Phisherman) for the charming logo.
