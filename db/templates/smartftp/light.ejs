@@ -1,0 +1,49 @@
+Windows Registry Editor Version 5.00
+
+; Based on "shell" and "putty" versions
+
+[HKEY_CURRENT_USER\Software\SmartFTP\Client 2.0\Settings\Terminal\Settings\Terminal\Window\Colors]
+
+; Default Foreground
+"Color 0"=dword:00<%- base["03"]["hex"].match(/.{2}/g).reverse().join('') %>
+"Color 1"=dword:00<%- base["02"]["hex"].match(/.{2}/g).reverse().join('') %>
+
+; Default Background
+"Color 2"=dword:00<%- base["07"]["hex"].match(/.{2}/g).reverse().join('') %>
+"Color 3"=dword:00<%- base["06"]["hex"].match(/.{2}/g).reverse().join('') %>
+
+; Cursor
+"Color 4"=dword:00<%- base["07"]["hex"].match(/.{2}/g).reverse().join('') %>
+"Color 5"=dword:00<%- base["01"]["hex"].match(/.{2}/g).reverse().join('') %>
+
+; Black
+"Color 6"=dword:00<%- base["07"]["hex"].match(/.{2}/g).reverse().join('') %>
+"Color 7"=dword:00<%- base["04"]["hex"].match(/.{2}/g).reverse().join('') %>
+
+; Red
+"Color 8"=dword:00<%- base["08"]["hex"].match(/.{2}/g).reverse().join('') %>
+"Color 9"=dword:00<%- base["08"]["hex"].match(/.{2}/g).reverse().join('') %>
+
+; Green
+"Color 10"=dword:00<%- base["0B"]["hex"].match(/.{2}/g).reverse().join('') %>
+"Color 11"=dword:00<%- base["0B"]["hex"].match(/.{2}/g).reverse().join('') %>
+
+; Yellow
+"Color 12"=dword:00<%- base["0A"]["hex"].match(/.{2}/g).reverse().join('') %>
+"Color 13"=dword:00<%- base["0A"]["hex"].match(/.{2}/g).reverse().join('') %>
+
+; Blue
+"Color 14"=dword:00<%- base["0D"]["hex"].match(/.{2}/g).reverse().join('') %>
+"Color 15"=dword:00<%- base["0D"]["hex"].match(/.{2}/g).reverse().join('') %>
+
+; Magenta
+"Color 16"=dword:00<%- base["0E"]["hex"].match(/.{2}/g).reverse().join('') %>
+"Color 17"=dword:00<%- base["0E"]["hex"].match(/.{2}/g).reverse().join('') %>
+
+; Cyan
+"Color 18"=dword:00<%- base["0C"]["hex"].match(/.{2}/g).reverse().join('') %>
+"Color 19"=dword:00<%- base["0C"]["hex"].match(/.{2}/g).reverse().join('') %>
+
+; White
+"Color 20"=dword:00<%- base["02"]["hex"].match(/.{2}/g).reverse().join('') %>
+"Color 21"=dword:00<%- base["00"]["hex"].match(/.{2}/g).reverse().join('') %>
