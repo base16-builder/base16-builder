@@ -18,8 +18,9 @@ This project aims to rejuvenate [Chris Kempson's original tool](https://github.c
 - [Well-tested](https://github.com/alexbooker/base16-builder/tree/master/tests)
 - Simple to use
 - Simpler to [install](https://github.com/alexbooker/base16-builder#installation)
-- Writes themes to  [`stdout`](https://en.wikipedia.org/wiki/Standard_streams#Standard_output_.28stdout.29)
+- Writes themes to [`stdout`](https://www.digitalocean.com/community/tutorials/an-introduction-to-linux-i-o-redirection)
 - Written in uncomplicated JavaScript
+- Works on Mac, Linux, and Windows
 
 ## Installation
 
@@ -32,26 +33,28 @@ $ npm install --global base16-builder
 ## Usage
 
 ```bash
-Usage:
-  $ base16-builder [-s <scheme>] [-t <template>] [-b <light|dark>]
-  $ base16-builder [-s <scheme path>] [-t <template path>]
+$ base16-builder --help
+
+  Usage:
+    $ base16-builder [-s <scheme>] [-t <template>] [-b <light|dark>]
+    $ base16-builder [-s <scheme path>] [-t <template path>]
     
-Options:
-  -s, --scheme        Build theme using this color scheme
-  -t, --template      Build theme using this template
-  -b, --brightness    Build theme using this brightness
-  -h, --help          Show this menu
+  Options:
+    -s, --scheme        Build theme using this color scheme
+    -t, --template      Build theme using this template
+    -b, --brightness    Build theme using this brightness
+    -h, --help          Show this menu
     
-Commands:
-  ls schemes      Opens an offline web page with a list of scheme names and their colors
-  ls templates    Writes a list of available templates to the terminal
+  Commands:
+    ls schemes      Opens an offline web page with a list of scheme names and their colors
+    ls templates    Writes a list of available templates to the terminal
     
-Examples:
-  $ base16-builder -s oceanicnext -t rxvt-unicode -b dark
-  $ base16-builder --scheme oceanicnext --template rxvt-unicode --brightness dark
-  $ base16-builder --scheme schemes/customScheme.yml --template templs/customTempl.ejs
-  $ base16-builder ls schemes
-  $ base16-builder ls templates
+  Examples:
+    $ base16-builder -s oceanicnext -t rxvt-unicode -b dark
+    $ base16-builder --scheme oceanicnext --template rxvt-unicode --brightness dark
+    $ base16-builder --scheme schemes/customScheme.yml --template templs/customTempl.ejs
+    $ base16-builder ls schemes
+    $ base16-builder ls templates
 ```
 
 ## Build Status
