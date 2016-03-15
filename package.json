@@ -1,6 +1,6 @@
 {
   "name": "base16-builder",
-  "version": "0.0.19",
+  "version": "0.0.20",
   "description": "",
   "repository": "alexbooker/base16-builder",
   "main": "dist/index.js",
