@@ -15,7 +15,6 @@
     "pretest": "npm run build",
     "build": "node util/schemesPreviewGenerator.js && babel lib --out-dir dist && chmod +x dist/cli.js",
     "prepublish": "npm run build",
-    "lint": "eslint ./lib",
     "commit": "git-cz"
   },
   "keywords": [
@@ -30,14 +29,15 @@
   "devDependencies": {
     "ava": "^0.10.0",
     "babel-cli": "^6.4.0",
-    "babel-eslint": "^5.0.0",
+    "babel-eslint": "^4.1.3",
     "babel-preset-es2015": "^6.5.0",
     "babel-preset-stage-3": "^6.3.13",
     "bluebird": "^3.3.3",
     "commitizen": "^2.5.0",
     "cz-conventional-changelog": "^1.1.5",
-    "eslint": "^2.2.0",
-    "eslint-config-google": "^0.4.0",
+    "eslint": "^1.10.3",
+    "eslint-config-standard": "^4.4.0",
+    "eslint-plugin-standard": "^1.3.2",
     "execa": "^0.2.2",
     "ghooks": "^1.0.3",
     "line-count": "^0.1.0",
