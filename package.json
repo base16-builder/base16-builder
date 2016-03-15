@@ -50,7 +50,8 @@
     "js-yaml": "^3.5.2",
     "meow": "^3.7.0",
     "open": "0.0.5",
-    "slug": "^0.9.1"
+    "slug": "^0.9.1",
+    "update-notifier": "^0.6.2"
   },
   "config": {
     "ghooks": {
