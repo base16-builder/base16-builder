@@ -44,6 +44,7 @@
     "nodemon": "^1.8.1"
   },
   "dependencies": {
+    "babel-polyfill": "^6.7.2",
     "chalk": "^1.1.1",
     "ejs": "^2.4.1",
     "fs-promise": "^0.3.1",
