@@ -188,7 +188,9 @@ test('Given valid arguments & template in uppercase, correct output is emitted',
   t.ok(actual.match(/URxvt\*background:\s{21}#101218/), 'Match not found');
 });
 
-test('Given ls schemes command, correct output is emitted', async function (t) {
+// This test causes the browser to open and will not finish until the browser
+// has been closed manually. This is way too much friction.
+test.skip('Given ls schemes command, correct output is emitted', async function (t) {
   const commandArgs = ['ls', 'schemes'];
   const {stdout: actual, stderr} = await execute(command, commandArgs);
 
