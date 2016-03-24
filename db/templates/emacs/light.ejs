@@ -4,11 +4,11 @@
 #};; Base16 <%- scheme %> (https://github.com/chriskempson/base16)
 ;; Scheme: <%- author %>
 
-;;; base16-<%- slug %>-light-theme.el
+;;; base16-<%- schemeSlug %>-light-theme.el
 
 ;;; Code:
 
-(deftheme base16-<%- slug %>-light)
+(deftheme base16-<%- schemeSlug %>-light)
 
 (let ((base00 "#<%- base["00"]["hex"] %>")
       (base01 "#<%- base["01"]["hex"] %>")
@@ -28,7 +28,7 @@
       (base0F "#<%- base["0F"]["hex"] %>"))
 
   (custom-theme-set-faces
-   'base16-<%- slug %>-light
+   'base16-<%- schemeSlug %>-light
 
    ;; Built-in stuff (Emacs 23)
    `(border ((t (:background ,base03))))
@@ -441,7 +441,7 @@
 
 
   (custom-theme-set-variables
-   'base16-<%- slug %>-light
+   'base16-<%- schemeSlug %>-light
 
    `(ansi-color-names-vector
      ;; black, base08, base0B, base0A, base0D, magenta, cyan, white
@@ -450,6 +450,6 @@
      ;; black, base08, base0B, base0A, base0D, magenta, cyan, white
      [unspecified ,base00 ,base08 ,base0B ,base0A ,base0D ,base0E ,base0D ,base05])))
 
-(provide-theme 'base16-<%- slug %>-light)
+(provide-theme 'base16-<%- schemeSlug %>-light)
 
-;;; base16-<%- slug %>-light-theme.el ends here
+;;; base16-<%- schemeSlug %>-light-theme.el ends here
