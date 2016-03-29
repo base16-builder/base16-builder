@@ -42,8 +42,8 @@ $ npm install --global base16-builder
 $ base16-builder --help
 
   Usage:
-    $ base16-builder [-s <scheme>] [-t <template>] [-b <light|dark>]
-    $ base16-builder [-s <scheme path>] [-t <template path>]
+    $ base16-builder <-s scheme> <-t template> <-b light|dark>
+    $ base16-builder <-s scheme path> <-t template path>
     
   Options:
     -s, --scheme        Build theme using this color scheme
