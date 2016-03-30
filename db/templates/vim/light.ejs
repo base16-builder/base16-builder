@@ -261,14 +261,14 @@ call <sid>hi("javaScriptBraces",  s:gui05, "", s:cterm05, "", "", "")
 call <sid>hi("javaScriptNumber",  s:gui09, "", s:cterm09, "", "", "")
 
 " Mail highlighting
-call <sid>hi("mailQuoted1",  s:gui0A, "", s:cterm0A, "", "")
-call <sid>hi("mailQuoted2",  s:gui0B, "", s:cterm0B, "", "")
-call <sid>hi("mailQuoted3",  s:gui0E, "", s:cterm0E, "", "")
-call <sid>hi("mailQuoted4",  s:gui0C, "", s:cterm0C, "", "")
-call <sid>hi("mailQuoted5",  s:gui0D, "", s:cterm0D, "", "")
-call <sid>hi("mailQuoted6",  s:gui0A, "", s:cterm0A, "", "")
-call <sid>hi("mailURL",      s:gui0D, "", s:cterm0D, "", "")
-call <sid>hi("mailEmail",    s:gui0D, "", s:cterm0D, "", "")
+call <sid>hi("mailQuoted1",  s:gui0A, "", s:cterm0A, "", "", "")
+call <sid>hi("mailQuoted2",  s:gui0B, "", s:cterm0B, "", "", "")
+call <sid>hi("mailQuoted3",  s:gui0E, "", s:cterm0E, "", "", "")
+call <sid>hi("mailQuoted4",  s:gui0C, "", s:cterm0C, "", "", "")
+call <sid>hi("mailQuoted5",  s:gui0D, "", s:cterm0D, "", "", "")
+call <sid>hi("mailQuoted6",  s:gui0A, "", s:cterm0A, "", "", "")
+call <sid>hi("mailURL",      s:gui0D, "", s:cterm0D, "", "", "")
+call <sid>hi("mailEmail",    s:gui0D, "", s:cterm0D, "", "", "")
 
 " Markdown highlighting
 call <sid>hi("markdownCode",              s:gui0B, "", s:cterm0B, "", "", "")
