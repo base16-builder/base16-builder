@@ -12,9 +12,9 @@ _**Base16 Builder** is a nimble command-line tool that generates themes for your
 
 ![](https://camo.githubusercontent.com/ddfcd564006e0f6f6f24abeb1b9424cb71c97ddd/68747470733a2f2f692e696d6775722e636f6d2f6c416e7670526a2e676966)
 
-Base16 Builder is easy to use. All you have to do is supply a [**color `s`cheme**](https://github.com/alexbooker/base16-builder/tree/master/db/schemes), [**`t`emplate**](https://github.com/alexbooker/base16-builder/tree/master/db/templates), and **`b`rightness** (`light` or `dark`). Base16 Builder will use the information you provide to generate a theme and write it to `stdout`. 
+Base16 Builder is easy to use. All you have to do is supply a [**color `s`cheme**](https://github.com/alexbooker/base16-builder/tree/master/db/schemes), [**`t`emplate**](https://github.com/alexbooker/base16-builder/tree/master/db/templates), and **`b`rightness** (`light` or `dark`). Base16 Builder will use the information you provide to generate a theme and write it to [*stdout*](https://www.digitalocean.com/community/tutorials/an-introduction-to-linux-i-o-redirection). 
 
-Because Base16 Builder writes to `stdout`, it's possible to pipe the theme anywhere you like. In the above screencast, the theme is piped to a new file called `theme` but this could just as well have been a configuration file like `.Xresources`. If you're not comfortable with [pipelines](https://en.wikipedia.org/wiki/Pipeline_(Unix)) then that's ok -- you can just copy the text with your mouse :wink:.
+Because Base16 Builder writes to stdout, it's possible to pipe the theme anywhere you like. In the above screencast, the theme is piped to a new file called "theme", but this could just as well have been a configuration file like ".Xresources". If you're not comfortable with [pipelines](https://en.wikipedia.org/wiki/Pipeline_(Unix)) then that's OK -- you can just copy the text with your mouse :wink:.
 
 ## Features
 
