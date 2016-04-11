@@ -1,4 +1,4 @@
-{#
+#{
 # Shell Color Setup Template
 # Chris Kempson (http://chriskempson.com)
 #}#!/bin/sh
@@ -85,13 +85,13 @@ printf $printf_template 21 $color21
 # foreground / background / cursor color
 if [ -n "$ITERM_SESSION_ID" ]; then
   # iTerm2 proprietary escape codes
-  printf $printf_template_custom Pg <%- @base["05"]["hex"] %> # forground
-  printf $printf_template_custom Ph <%- @base["00"]["hex"] %> # background
-  printf $printf_template_custom Pi <%- @base["05"]["hex"] %> # bold color
-  printf $printf_template_custom Pj <%- @base["02"]["hex"] %> # selection color
-  printf $printf_template_custom Pk <%- @base["05"]["hex"] %> # selected text color
-  printf $printf_template_custom Pl <%- @base["05"]["hex"] %> # cursor
-  printf $printf_template_custom Pm <%- @base["00"]["hex"] %> # cursor text
+  printf $printf_template_custom Pg <%- base["05"]["hex"] %> # forground
+  printf $printf_template_custom Ph <%- base["00"]["hex"] %> # background
+  printf $printf_template_custom Pi <%- base["05"]["hex"] %> # bold color
+  printf $printf_template_custom Pj <%- base["02"]["hex"] %> # selection color
+  printf $printf_template_custom Pk <%- base["05"]["hex"] %> # selected text color
+  printf $printf_template_custom Pl <%- base["05"]["hex"] %> # cursor
+  printf $printf_template_custom Pm <%- base["00"]["hex"] %> # cursor text
 else
   printf $printf_template_var 10 $color_foreground
   printf $printf_template_var 11 $color_background
