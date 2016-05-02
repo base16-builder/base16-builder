@@ -1,0 +1,179 @@
+/*
+ *  Name:       Base16 <%- scheme %> Dark
+ *  Author:     <%- author %>
+ *
+ *  Brackets template by Jan T. Sott (https://github.com/idleberg/)
+ */
+.CodeMirror .CodeMirror-scroll {
+    background-color: #<%- base["00"]["hex"] %>;
+    color: #<%- base["05"]["hex"] %>;
+}
+.CodeMirror-focused .CodeMirror-activeline-background {
+    outline: 1px solid #<%- base["01"]["hex"] %>;
+    background: #<%- base["01"]["hex"] %>;
+}
+.show-line-padding .CodeMirror-focused .CodeMirror-activeline-background {
+    box-shadow: inset 15px 0 0 0 #<%- base["01"]["hex"] %>;
+}
+.CodeMirror-focused .CodeMirror-activeline .CodeMirror-gutter-elt {
+    background: #<%- base["01"]["hex"] %>;
+    color: #<%- base["02"]["hex"] %>;
+}
+.CodeMirror-focused .CodeMirror-activeline .inline-widget .CodeMirror-gutter-elt {
+    color: #<%- base["01"]["hex"] %>;
+}
+.CodeMirror.find-highlighting div.CodeMirror-selected,
+.CodeMirror .CodeMirror.find-highlighting div.CodeMirror-selected {
+    background: #<%- base["08"]["hex"] %>;
+}
+.CodeMirror-cursor {
+    border-left: 1px solid #<%- base["05"]["hex"] %> !important;
+}
+.CodeMirror-overwrite .CodeMirror-cursor {
+    border-left: none !important;
+    border-bottom: 1px solid #<%- base["05"]["hex"] %>;
+}
+.CodeMirror-gutters {
+    background-color: #<%- base["02"]["hex"] %>;
+    border-right: none;
+}
+.CodeMirror-focused .CodeMirror-activeline .CodeMirror-gutter-elt {
+    color: #<%- base["05"]["hex"] %>;
+}
+.CodeMirror .CodeMirror-selected {
+    background: #<%- base["02"]["hex"] %>;
+}
+.CodeMirror-focused .CodeMirror-selected {
+    background: #<%- base["02"]["hex"] %>;
+}
+.CodeMirror-matchingbracket,
+.CodeMirror-matchingtag {
+    /* Ensure visibility against gray inline editor background */
+    
+    background-color: #<%- base["02"]["hex"] %>;
+    color: #<%- base["05"]["hex"] %> !important;
+}
+.cm-atom {
+    color: #<%- base["0D"]["hex"] %>;
+}
+.cm-qualifier {
+    color: #<%- base["0A"]["hex"] %>;
+}
+.cm-def {
+    color: #<%- base["08"]["hex"] %>;
+}
+.cm-keyword {
+    color: #<%- base["0A"]["hex"] %>;
+}
+.cm-comment {
+    color: #999999;
+}
+.cm-string {
+    color: #<%- base["0D"]["hex"] %>;
+}
+.cm-string-2 {
+    color: #<%- base["0E"]["hex"] %>;
+}
+.cm-variable {
+    color: #<%- base["0C"]["hex"] %>;
+}
+.cm-variable-2 {
+    color: #<%- base["0A"]["hex"] %>;
+}
+.cm-variable-3 {
+    color: #<%- base["09"]["hex"] %>;
+}
+.cm-tag {
+    color: #<%- base["09"]["hex"] %>;
+}
+.cm-attribute {
+    color: #<%- base["0B"]["hex"] %>;
+}
+.cm-property {
+    color: #<%- base["0B"]["hex"] %>;
+}
+.cm-number {
+    color: #<%- base["0E"]["hex"] %>;
+}
+.cm-meta {
+    color: #<%- base["09"]["hex"] %>;
+}
+.cm-operator {
+    color: #<%- base["0C"]["hex"] %>;
+}
+.cm-builtin {
+    color: #<%- base["0E"]["hex"] %>;
+}
+.cm-hr {
+    color: #<%- base["0E"]["hex"] %>;
+}
+.cm-plus {
+    color: #<%- base["0B"]["hex"] %>;
+}
+.cm-bracket {
+    color: #<%- base["09"]["hex"] %>;
+}
+.cm-error {
+    color: #<%- base["08"]["hex"] %>;
+}
+.cm-minus {
+    color: #<%- base["08"]["hex"] %>;
+}
+.cm-quote {
+    color: #<%- base["0A"]["hex"] %>;
+}
+/* Non-editor styling */
+
+#image-holder,
+#not-editor {
+    background-color: #<%- base["02"]["hex"] %>;
+}
+#image-holder {
+    color: #<%- base["02"]["hex"] %>;
+}
+/* Code Folding */
+
+.CodeMirror-foldgutter {
+    width: 2em;
+}
+.CodeMirror-foldgutter-open,
+.CodeMirror-foldgutter-folded,
+.CodeMirror-foldgutter-blank {
+    text-align: center;
+    width: 100%;
+}
+.CodeMirror-foldgutter-open,
+.CodeMirror-foldgutter-folded,
+.CodeMirror-foldgutter-blank::after {
+    position: relative;
+    top: 0.0625em;
+    font-size: 1em;
+    color: rgba(255, 255, 255, 0.33);
+}
+.CodeMirror-foldmarker {
+    display: inline-block;
+    margin: 0 0.125em;
+    border-radius: 0.75em;
+    border: 0;
+    color: rgba(255, 255, 255, 0.66);
+    background-color: rgba(255, 255, 255, 0.16);
+}
+.CodeMirror-foldmarker::after {
+    content: '\2022\2022\2022';
+    position: relative;
+    top: -0.0625em;
+}
+/* CSS Color Preview */
+
+.ico-cssColorPreview {
+    display: block;
+    width: 0.5em;
+    height: 1.25em;
+    margin: 0;
+    border: 0;
+}
+/* Document Toolbar */
+
+.ext-documents .document.selected {
+    background-color: #<%- base["00"]["hex"] %>;
+}
