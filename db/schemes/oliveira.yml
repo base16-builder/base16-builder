@@ -1,0 +1,18 @@
+scheme: "Oliveira"
+author: "Protesilaos Stavrou (http://www.protesilaos.com)"
+base00: "1A2217" # dark background
+base01: "2A3227" # dark highlight
+base02: "374934" # light bg text primary
+base03: "778974" # light bg text secondary
+base04: "8A9187" # dark bg text primary
+base05: "6A7167" # dark bg text secondary
+base06: "E7E9E4" # light highlight
+base07: "F7F9F4" # light background
+base08: "A64E3C" # red
+base09: "A35C35" # orange
+base0A: "A59520" # yellow
+base0B: "477E44" # green
+base0C: "5CA090" # cyan
+base0D: "107595" # blue
+base0E: "6C85b7" # violet
+base0F: "A95F85" # magenta
