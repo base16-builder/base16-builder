@@ -1,0 +1,41 @@
+/*
+ * <%- scheme %> scheme
+ * by <%- author %>
+ *
+ * GTK 3.0 template 
+ * by Jonn Mostovoy - https://github.com/manpages
+ *
+ * Generated
+ * by base16-builder - https://github.com/base16-builder/base16-builder
+ */
+
+@define-color theme_base_color #<%- base["00"]["hex"] %>;
+@define-color theme_fg_color #<%- base["04"]["hex"] %>;
+@define-color theme_active_color #<%- base["02"]["hex"] %>;
+@define-color theme_insensitive_color #<%- base["04"]["hex"] %>;
+@define-color theme_insensitive_bg #<%- base["00"]["hex"] %>;
+
+@define-color theme_cursor_color #<%- base["0D"]["hex"] %>;
+
+/* fallback mode */
+@define-color os_chrome_bg_color #<%- base["00"]["hex"] %>;
+@define-color os_chrome_fg_color #<%- base["04"]["hex"] %>;
+@define-color os_chrome_selected_bg_color #<%- base["06"]["hex"] %>;
+@define-color os_chrome_selected_fg_color #<%- base["02"]["hex"] %>;
+
+* {
+    /* Pidgin */
+    -GtkIMHtml-hyperlink-color: #<%- base["0D"]["hex"] %>;
+    -GtkIMHtml-hyperlink-visited-color: #<%- base["0E"]["hex"] %>;
+    -GtkIMHtml-hyperlink-prelight-color: #<%- base["07"]["hex"] %>;
+
+    /* Evolution */
+    -GtkHTML-link-color: #<%- base["0D"]["hex"] %>;
+    -GtkHTML-vlink-color: #<%- base["0E"]["hex"] %>;
+    -GtkHTML-cite-color: #<%- base["0B"]["hex"] %>;
+
+    -GtkWidget-link-color: #<%- base["0D"]["hex"] %>;
+    -GtkWidget-visited-link-color: #<%- base["0E"]["hex"] %>;
+}
+
+@import url("resource:///org/gnome/HighContrastInverse/a11y.css");

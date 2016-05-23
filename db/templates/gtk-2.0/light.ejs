@@ -1,0 +1,80 @@
+# <%- scheme %> scheme
+# by <%- author %>
+#
+# GTK 3.0 template 
+# by Jonn Mostovoy - https://github.com/manpages
+#
+# Generated
+#  by base16-builder - https://github.com/base16-builder/base16-builder
+
+style "default"
+{
+  engine "hcengine" {
+    edge_thickness = 2
+  }
+
+  xthickness = 2
+  ythickness = 2
+
+  EelEditableLabel::cursor_aspect_ratio = 0.1
+  EelEditableLabel::cursor_color    = "#<%- base["0D"]["hex"] %>"
+
+  GtkEntry::cursor_color    = "#<%- base["0D"]["hex"] %>"
+  GtkEntry::cursor_aspect_ratio = 0.1
+
+  GtkHSV::focus-line-pattern = "\0"
+
+  GtkRange::stepper-size = 20
+
+  GtkTextView::cursor_aspect_ratio = 0.1
+  GtkTextView::cursor_color    = "#<%- base["0D"]["hex"] %>"
+
+  GtkTreeView::expander-size = 16
+
+  GtkWidget::focus-line-pattern = "\4\2"
+  GtkWidget::focus-line-width = 2
+  GtkWidget::focus-padding = 0
+  GtkWidget::interior_focus = 1
+  GtkWidget::link-color = "#<%- base["0D"]["hex"] %>"
+  GtkWidget::visited-link-color = "#<%- base["0E"]["hex"] %>"
+
+  # Nautilus
+  NautilusIconContainer::frame_text = 1
+
+  # Pidgin
+  GtkIMHtml::hyperlink-color = "#<%- base["0D"]["hex"] %>"
+  GtkIMHtml::hyperlink-visited-color = "#<%- base["0E"]["hex"] %>"
+  GtkIMHtml::hyperlink-prelight-color = "#<%- base["07"]["hex"] %>"
+
+  # Evolution
+  GtkHTML::link_color = "#<%- base["0D"]["hex"] %>"
+  GtkHTML::vlink_color = "#<%- base["0E"]["hex"] %>"
+  GtkHTML::cite_color = "#<%- base["07"]["hex"] %>"
+
+  fg[NORMAL]      = "#<%- base["04"]["hex"] %>"
+  text[NORMAL]    = "#<%- base["04"]["hex"] %>"
+  bg[NORMAL]      = "#<%- base["00"]["hex"] %>"
+  base[NORMAL]    = "#<%- base["00"]["hex"] %>"
+
+  fg[INSENSITIVE]      = "#<%- base["04"]["hex"] %>"
+  bg[INSENSITIVE]      = "#<%- base["01"]["hex"] %>"
+  text[INSENSITIVE]    = "#<%- base["04"]["hex"] %>"
+  base[INSENSITIVE]    = "#<%- base["01"]["hex"] %>"
+
+  fg[PRELIGHT]    = "#<%- base["00"]["hex"] %>"
+  text[PRELIGHT]  = "#<%- base["00"]["hex"] %>"
+  bg[PRELIGHT]    = "#<%- base["04"]["hex"] %>"
+  base[PRELIGHT]  = "#<%- base["04"]["hex"] %>"
+
+  fg[ACTIVE]      = "#<%- base["05"]["hex"] %>"
+  text[ACTIVE]    = "#<%- base["05"]["hex"] %>"
+  bg[ACTIVE]      = "#<%- base["02"]["hex"] %>"
+  base[ACTIVE]    = "#<%- base["02"]["hex"] %>"
+
+  fg[SELECTED]    = "#<%- base["00"]["hex"] %>"
+  text[SELECTED]  = "#<%- base["00"]["hex"] %>"
+  bg[SELECTED]    = "#<%- base["04"]["hex"] %>"
+  base[SELECTED]  = "#<%- base["07"]["hex"] %>"
+}
+
+class "GtkWidget" style "default"
