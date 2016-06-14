@@ -9,13 +9,22 @@
       background-color: #202020;
       color: #e0e0e0;
     }
-    .scheme {
 
+    .title {
+      font-weight: 200;
     }
+    
+    .scheme__name {
+      font-weight: 100;
+      font-size: 20px;
+      padding-left: 10px;
+    }
+
     .color-swatch {
       padding-left: 0;
     }
-    .color-circle {
+
+    .color-swatch > .color-swatch__circle {
       border: 2px solid white;
       border-radius: 50%;
       height: 40px;
@@ -23,51 +32,36 @@
       display: inline-block;
       margin-right: -25px;
     }
-    h1 {
-      font-weight: 200;
-    }
-    h2 {
-      font-weight: 100;
-      font-size: 20px;
-      padding-left: 10px;
-    }
-    a {
-      text-decoration: none;
-      color: blue;
-      position: absolute;
-      right: 20px;
-      top: 10px;
-    }
+
     hr {
       border-color: #404040;
     }
   </style>
 </head>
 <body>
-  <h1>Base16 Builder</h1>
-  <a target="_blank" href="https://www.github.com/base16-builder/base16-builder#readme">GitHub</a>
+  <h1 class="title">Base16 Builder</h1>
 
   <% schemes.forEach(function(scheme) { %>
     <hr></hr>
     <div class="scheme">
       <h2 class="scheme__name"><%=scheme.scheme%></h2>
       <ul class="color-swatch">
-        <li class="color-circle" style='background-color: #<%=scheme.base00%>'></li>
-        <li class="color-circle" style='background-color: #<%=scheme.base01%>'></li>
-        <li class="color-circle" style='background-color: #<%=scheme.base02%>'></li>
-        <li class="color-circle" style='background-color: #<%=scheme.base03%>'></li>
-        <li class="color-circle" style='background-color: #<%=scheme.base04%>'></li>
-        <li class="color-circle" style='background-color: #<%=scheme.base05%>'></li>
-        <li class="color-circle" style='background-color: #<%=scheme.base06%>'></li>
-        <li class="color-circle" style='background-color: #<%=scheme.base07%>'></li>
-        <li class="color-circle" style='background-color: #<%=scheme.base08%>'></li>
-        <li class="color-circle" style='background-color: #<%=scheme.base09%>'></li>
-        <li class="color-circle" style='background-color: #<%=scheme.base0A%>'></li>
-        <li class="color-circle" style='background-color: #<%=scheme.base0B%>'></li>
-        <li class="color-circle" style='background-color: #<%=scheme.base0C%>'></li>
-        <li class="color-circle" style='background-color: #<%=scheme.base0D%>'></li>
-        <li class="color-circle" style='background-color: #<%=scheme.base0E%>'></li>
-        <li class="color-circle" style='background-color: #<%=scheme.base0F%>'></li>
+        <li class="color-swatch__circle" style='background-color: #<%=scheme.base00%>'></li>
+        <li class="color-swatch__circle" style='background-color: #<%=scheme.base01%>'></li>
+        <li class="color-swatch__circle" style='background-color: #<%=scheme.base02%>'></li>
+        <li class="color-swatch__circle" style='background-color: #<%=scheme.base03%>'></li>
+        <li class="color-swatch__circle" style='background-color: #<%=scheme.base04%>'></li>
+        <li class="color-swatch__circle" style='background-color: #<%=scheme.base05%>'></li>
+        <li class="color-swatch__circle" style='background-color: #<%=scheme.base06%>'></li>
+        <li class="color-swatch__circle" style='background-color: #<%=scheme.base07%>'></li>
+        <li class="color-swatch__circle" style='background-color: #<%=scheme.base08%>'></li>
+        <li class="color-swatch__circle" style='background-color: #<%=scheme.base09%>'></li>
+        <li class="color-swatch__circle" style='background-color: #<%=scheme.base0A%>'></li>
+        <li class="color-swatch__circle" style='background-color: #<%=scheme.base0B%>'></li>
+        <li class="color-swatch__circle" style='background-color: #<%=scheme.base0C%>'></li>
+        <li class="color-swatch__circle" style='background-color: #<%=scheme.base0D%>'></li>
+        <li class="color-swatch__circle" style='background-color: #<%=scheme.base0E%>'></li>
+        <li class="color-swatch__circle" style='background-color: #<%=scheme.base0F%>'></li>
       </ul>
     </div>
   <% }) %>
