@@ -13,8 +13,15 @@
     .title {
       font-weight: 200;
     }
-    
-    .scheme__name {
+
+    .scheme {
+      margin-top: 0.5em;
+      border-bottom: 0.5em;
+      border-top: 1px #404040 solid;
+      border-top-style: inset;
+    }
+
+    .scheme .scheme__name {
       font-weight: 100;
       font-size: 20px;
       padding-left: 10px;
@@ -32,17 +39,12 @@
       display: inline-block;
       margin-right: -25px;
     }
-
-    hr {
-      border-color: #404040;
-    }
   </style>
 </head>
 <body>
   <h1 class="title">Base16 Builder</h1>
 
   <% schemes.forEach(function(scheme) { %>
-    <hr></hr>
     <div class="scheme">
       <h2 class="scheme__name"><%=scheme.scheme%></h2>
       <ul class="color-swatch">
