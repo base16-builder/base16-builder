@@ -8,66 +8,118 @@
       font-family: sans;
       background-color: #202020;
       color: #e0e0e0;
-    }
-    .scheme {
-
+      margin: 0;
     }
     .color-swatch {
       padding-left: 0;
+      display: inline-block;
+      margin-left: 40px;
     }
-    .color-circle {
+    .color {
       border: 2px solid white;
-      border-radius: 50%;
       height: 40px;
       width: 40px;
       display: inline-block;
+      transition: all 1s;
+    }
+    .color-circle {
+      border-radius: 50%;
       margin-right: -25px;
+    }
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 80px;
+      background-color: #404040;
+      border-bottom: 2px groove #404040;
+    }
+    .place_holder {
+      height: 70px;
+      width: 100%;
     }
     h1 {
       font-weight: 200;
+      font-size: 32px;
+      margin: 21px;
     }
     h2 {
       font-weight: 100;
       font-size: 20px;
       padding-left: 10px;
     }
-    a {
-      text-decoration: none;
-      color: blue;
-      position: absolute;
-      right: 20px;
-      top: 10px;
-    }
     hr {
       border-color: #404040;
     }
+    #button {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+    }
+    #icon {
+      margin: 5px;
+      border: 1px solid white;
+      height: 30px;
+      width: 30px;
+      box-sizing: border-box;
+    }
   </style>
+  <script>
+    window.addEventListener('load', function() {
+      document.getElementById('button').addEventListener('click', function() {
+        var icon = document.getElementById('icon');
+        var colors = document.getElementsByClassName('color');
+        if(icon.style.borderRadius == "50%") {
+          icon.style.borderRadius = "0";
+          for(var i = 0; i < colors.length; i++) {
+            colors[i].classList.add('color-circle');
+          }
+        } else {
+          icon.style.borderRadius = "50%";
+          for(var i = 0; i < colors.length; i++) {
+            colors[i].classList.remove('color-circle');
+          }
+        }
+      });
+    });
+  </script>
 </head>
 <body>
-  <h1>Base16 Builder</h1>
-  <a target="_blank" href="https://www.github.com/base16-builder/base16-builder#readme">GitHub</a>
+  <div class="place_holder"></div>
+  <div class="header">
+    <h1>Base16 Builder</h1>
+    <div id="button">
+      <div id="icon"></div>
+    </div>
+  </div>
 
   <% schemes.forEach(function(scheme) { %>
     <hr></hr>
     <div class="scheme">
       <h2 class="scheme__name"><%=scheme.scheme%></h2>
       <ul class="color-swatch">
-        <li class="color-circle" style='background-color: #<%=scheme.base00%>'></li>
-        <li class="color-circle" style='background-color: #<%=scheme.base01%>'></li>
-        <li class="color-circle" style='background-color: #<%=scheme.base02%>'></li>
-        <li class="color-circle" style='background-color: #<%=scheme.base03%>'></li>
-        <li class="color-circle" style='background-color: #<%=scheme.base04%>'></li>
-        <li class="color-circle" style='background-color: #<%=scheme.base05%>'></li>
-        <li class="color-circle" style='background-color: #<%=scheme.base06%>'></li>
-        <li class="color-circle" style='background-color: #<%=scheme.base07%>'></li>
-        <li class="color-circle" style='background-color: #<%=scheme.base08%>'></li>
-        <li class="color-circle" style='background-color: #<%=scheme.base09%>'></li>
-        <li class="color-circle" style='background-color: #<%=scheme.base0A%>'></li>
-        <li class="color-circle" style='background-color: #<%=scheme.base0B%>'></li>
-        <li class="color-circle" style='background-color: #<%=scheme.base0C%>'></li>
-        <li class="color-circle" style='background-color: #<%=scheme.base0D%>'></li>
-        <li class="color-circle" style='background-color: #<%=scheme.base0E%>'></li>
-        <li class="color-circle" style='background-color: #<%=scheme.base0F%>'></li>
+        <li class="color color-circle" style='background-color: #<%=scheme.base00%>'></li>
+        <li class="color color-circle" style='background-color: #<%=scheme.base01%>'></li>
+        <li class="color color-circle" style='background-color: #<%=scheme.base02%>'></li>
+        <li class="color color-circle" style='background-color: #<%=scheme.base03%>'></li>
+        <li class="color color-circle" style='background-color: #<%=scheme.base04%>'></li>
+        <li class="color color-circle" style='background-color: #<%=scheme.base05%>'></li>
+        <li class="color color-circle" style='background-color: #<%=scheme.base06%>'></li>
+        <li class="color color-circle" style='background-color: #<%=scheme.base07%>'></li>
+      </ul>
+      <ul class="color-swatch">
+        <li class="color color-circle" style='background-color: #<%=scheme.base08%>'></li>
+        <li class="color color-circle" style='background-color: #<%=scheme.base09%>'></li>
+        <li class="color color-circle" style='background-color: #<%=scheme.base0A%>'></li>
+        <li class="color color-circle" style='background-color: #<%=scheme.base0B%>'></li>
+        <li class="color color-circle" style='background-color: #<%=scheme.base0C%>'></li>
+        <li class="color color-circle" style='background-color: #<%=scheme.base0D%>'></li>
+        <li class="color color-circle" style='background-color: #<%=scheme.base0E%>'></li>
+        <li class="color color-circle" style='background-color: #<%=scheme.base0F%>'></li>
       </ul>
     </div>
   <% }) %>
