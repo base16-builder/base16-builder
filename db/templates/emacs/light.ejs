@@ -27,6 +27,24 @@
       (base0E "#<%- base["0E"]["hex"] %>")
       (base0F "#<%- base["0F"]["hex"] %>"))
 
+  (unless (display-graphic-p)
+    (setq base00 "black"
+          base01 "color-18"
+          base02 "color-19"
+          base03 "brightblack"
+          base04 "color-20"
+          base05 "white"
+          base06 "color-21"
+          base07 "brightwhite"
+          base08 "red"
+          base09 "color-16"
+          base0A "yellow"
+          base0B "green"
+          base0C "cyan"
+          base0D "blue"
+          base0E "magenta"
+          base0F "color-17"))
+
   (custom-theme-set-faces
    'base16-<%- schemeSlug %>-light
 
@@ -80,9 +98,10 @@
    `(isearch ((t (:foreground ,base0A :background ,base01 :inverse-video t))))
    `(isearch-lazy-highlight-face ((t (:foreground ,base0C :background ,base01 :inverse-video t))))
    `(isearch-fail ((t (:background ,base01 :inherit font-lock-warning-face :inverse-video t))))
+   `(evil-search-highlight-persist-highlight-face ((t (:background ,base01 :inherit font-lock-warning-face :inverse-video t))))
 
    ;; Popups
-   `(popup-face ((t (:foreground ,base02 :background ,base05))))	
+   `(popup-face ((t (:foreground ,base02 :background ,base05))))
    `(popup-isearch-match ((t (:foreground ,base07 :background ,base0B))))
    `(popup-scroll-bar-background-face ((t (:background ,base04))))
    `(popup-scroll-bar-foreground-face ((t (:background ,base02))))
@@ -175,6 +194,10 @@
    `(diff-header ((t (:background ,base01))))
    `(diff-file-header ((t (:background ,base02))))
    `(diff-hunk-header ((t (:background ,base01 :foreground ,base0E))))
+
+   `(diff-hl-change ((t (:foreground ,base0A))))
+   `(diff-hl-delete ((t (:foreground ,base08))))
+   `(diff-hl-insert ((t (:foreground ,base0B))))
 
    `(ediff-even-diff-A ((t (:foreground nil :background nil :inverse-video t))))
    `(ediff-even-diff-B ((t (:foreground nil :background nil :inverse-video t))))
@@ -434,6 +457,37 @@
    `(erc-pal-face ((t (:foreground ,base09))))
    `(erc-prompt-face ((t (:foreground ,base0D))))
    `(erc-timestamp-face ((t (:foreground ,base0C))))
+
+   ;; helm
+   `(helm-M-x-key ((t (:foreground ,base0C))))
+   `(helm-action ((t (:foreground ,base05))))
+   `(helm-buffer-directory ((t (:foreground ,base04 :background nil :weight bold))))
+   `(helm-buffer-file ((t (:foreground ,base0C))))
+   `(helm-buffer-not-saved ((t (:foreground ,base08))))
+   `(helm-buffer-process ((t (:foreground ,base03))))
+   `(helm-buffer-saved-out ((t (:foreground ,base0F))))
+   `(helm-buffer-size ((t (:foreground ,base09))))
+   `(helm-candidate-number ((t (:foreground ,base00 :background ,base09))))
+   `(helm-ff-directory ((t (:foreground ,base04 :background nil :weight bold))))
+   `(helm-ff-executable ((t (:foreground ,base0B))))
+   `(helm-ff-file ((t (:foreground ,base0C))))
+   `(helm-ff-invalid-symlink ((t (:foreground ,base00 :background ,base08))))
+   `(helm-ff-prefix ((t (:foreground nil :background nil))))
+   `(helm-ff-symlink ((t (:foreground ,base00 :background ,base0C))))
+   `(helm-grep-cmd-line ((t (:foreground ,base0B))))
+   `(helm-grep-file ((t (:foreground ,base0C))))
+   `(helm-grep-finish ((t (:foreground ,base00 :background ,base09))))
+   `(helm-grep-lineno ((t (:foreground ,base03))))
+   `(helm-grep-match ((t (:foreground ,base0A))))
+   `(helm-grep-running ((t (:foreground ,base09))))
+   `(helm-header ((t (:foreground ,base0A :background ,base00 :underline nil))))
+   `(helm-match ((t (:foreground ,base0A))))
+   `(helm-moccur-buffer ((t (:foreground ,base0C))))
+   `(helm-selection ((t (:foreground nil :background ,base02 :underline nil))))
+   `(helm-selection-line ((t (:foreground nil :background ,base02))))
+   `(helm-separator ((t (:foreground ,base02))))
+   `(helm-source-header ((t (:foreground ,base05 :background ,base01 :weight bold))))
+   `(helm-visible-mark ((t (:foreground ,base00 :background ,base0B))))
 
    `(custom-variable-tag ((t (:foreground ,base0D))))
    `(custom-group-tag ((t (:foreground ,base0D))))
