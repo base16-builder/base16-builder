@@ -40,7 +40,7 @@ dlist_append() {
 # Newest versions of gnome-terminal use dconf
 if which "$DCONF" > /dev/null 2>&1; then
     #check that uuidgen is available
-    type $UUIDGEN >/dev/null 2>&1 || { echo >&2 "Requires uuidgen but it's not installed.  Aborting!"; return 1; }
+    type $UUIDGEN >/dev/null 2>&1 || { echo >&2 "Requires uuidgen but it's not installed.  Aborting!"; exit 1; }
 
     [[ -z "$BASE_KEY_NEW" ]] && BASE_KEY_NEW=/org/gnome/terminal/legacy/profiles:
 
@@ -66,8 +66,7 @@ if which "$DCONF" > /dev/null 2>&1; then
 
         # update profile values with theme options
         dset visible-name "'$PROFILE_NAME'"
-        dset palette "'#<%- base["00"]["hex"] %>:#<%- base["08"]["hex"] %>:#<%- base["0B"]["hex"] %>:#<%- base["0A"]["hex"] %>:#<%- base["0D"]["hex"] %>:#<%- base["0E"]["hex"] %>:#<%- base["0C"]["hex"] %>:#<%- base["05"]["hex"] %>:#<%- base["03"]["hex"] %>:#<%- base["08"]["hex"] %>:#<%- base["0B"]["hex"] %>:#<%- base["0A"]["hex"] %>:#<%- base["0D"]["hex"] %>:#<%- base["0E"]["hex"] %>:#<%- base["0C"]["hex"] %>:#<%- base["07"]["hex"] %>'"
-        dset palette "'#<%- base["07"]["hex"] %>:#<%- base["08"]["hex"] %>:#<%- base["0B"]["hex"] %>:#<%- base["0A"]["hex"] %>:#<%- base["0D"]["hex"] %>:#<%- base["0E"]["hex"] %>:#<%- base["0C"]["hex"] %>:#<%- base["05"]["hex"] %>:#<%- base["03"]["hex"] %>:#<%- base["08"]["hex"] %>:#<%- base["0B"]["hex"] %>:#<%- base["0A"]["hex"] %>:#<%- base["0D"]["hex"] %>:#<%- base["0E"]["hex"] %>:#<%- base["0C"]["hex"] %>:#<%- base["00"]["hex"] %>'"
+        dset palette "['#<%- base["00"]["hex"] %>', '#<%- base["08"]["hex"] %>', '#<%- base["0B"]["hex"] %>', '#<%- base["0A"]["hex"] %>', '#<%- base["0D"]["hex"] %>', '#<%- base["0E"]["hex"] %>', '#<%- base["0C"]["hex"] %>', '#<%- base["05"]["hex"] %>', '#<%- base["03"]["hex"] %>', '#<%- base["08"]["hex"] %>', '#<%- base["0B"]["hex"] %>', '#<%- base["0A"]["hex"] %>', '#<%- base["0D"]["hex"] %>', '#<%- base["0E"]["hex"] %>', '#<%- base["0C"]["hex"] %>', '#<%- base["07"]["hex"] %>']"
         dset background-color "'#<%- base["07"]["hex"] %>'"
         dset foreground-color "'#<%- base["02"]["hex"] %>'"
         dset bold-color "'#<%- base["02"]["hex"] %>'"
@@ -79,7 +78,7 @@ if which "$DCONF" > /dev/null 2>&1; then
         unset PROFILE_SLUG
         unset DCONF
         unset UUIDGEN
-        return 0
+        exit 0
     fi
 fi
 
