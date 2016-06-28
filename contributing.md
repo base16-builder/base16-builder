@@ -43,7 +43,7 @@ You can contribute in a lot of differents way. A comment, an issue, a blog post,
 
 #### Writing a template
 
-A Base16-builder's template is a nunjucks file. Nunjucks is a rich and powerful templating language for JavaScript made by Mozilla. You can learn more about nunjuck files on their [page](https://mozilla.github.io/nunjucks/).
+A Base16-builder's template is an ejs file. Ejs is simple templating language for JavaScript. You can learn more about ejs files on their [page](https://github.com/mde/ejs).
 
 Templates are saved in `./db/templates/`.
 
