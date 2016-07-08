@@ -147,3 +147,24 @@ pre > code.highlight {
   outline: .4em solid #<%- base["08"]["hex"] %>;
   outline-offset: .4em;
 }
+
+/* overrides color-values for the Line Numbers plugin
+ * http://prismjs.com/plugins/line-numbers/
+ */
+.line-numbers .line-numbers-rows {
+  border-right-color: #<%- base["01"]["hex"] %>;
+}
+
+.line-numbers-rows > span:before {
+  color: #<%- base["02"]["hex"] %>;
+}
+
+/* overrides color-values for the Line Highlight plugin
+ * http://prismjs.com/plugins/line-highlight/
+ * alpha transparency in 8 digits hex notation coming to a browser near you soon:
+ * https://drafts.csswg.org/css-color/#hex-notation
+ */
+.line-highlight {
+  background: #<%- base["05"]["hex"] %>33;
+  background: linear-gradient(to right, #<%- base["05"]["hex"] %>33 70%, #<%- base["05"]["hex"] %>00);
+}

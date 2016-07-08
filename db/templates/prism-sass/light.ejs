@@ -164,3 +164,22 @@ pre > code.highlight {
   outline: .4em solid $base08;
   outline-offset: .4em;
 }
+
+/* overrides color-values for the Line Numbers plugin
+ * http://prismjs.com/plugins/line-numbers/
+ */
+.line-numbers .line-numbers-rows {
+  border-right-color: $base06;
+}
+
+.line-numbers-rows > span:before {
+  color: $base05;
+}
+
+/* overrides color-values for the Line Highlight plugin
+ * http://prismjs.com/plugins/line-highlight/
+ */
+.line-highlight {
+  background: transparentize($base03, 0.8);
+  background: linear-gradient(to right, transparentize($base03, 0.8) 70%, transparentize($base03, 1));
+}
