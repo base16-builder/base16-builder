@@ -16,7 +16,7 @@ Base16 Builder is easy to use. All you have to do is supply a [**color `s`cheme*
 
 Because Base16 Builder writes to stdout, it's possible to pipe the theme anywhere you like. In the above screencast, the theme is piped to a new file called "theme", but this could just as well have been a configuration file like ".Xresources".
 
-You don't have to be savvy with [Unix pipelines](https://en.wikipedia.org/wiki/Pipeline_(Unix)) to enjoy Base16 Builder. If you'd prefer, you can just copy the text with your mouse :relaxed:.
+You don't have to be savvy with [Unix pipelines](https://en.wikipedia.org/wiki/Pipeline_(Unix)) to enjoy Base16 Builder. If you'd prefer, you can just copy the output with your mouse :relaxed:.
 
 ## Features
 
