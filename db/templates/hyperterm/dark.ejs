@@ -1,0 +1,84 @@
+/* Base16 <%- scheme %> Dark colorscheme by <%- author %>
+ * HyperTerm template by Bram de Haan (https://github.com/atelierbram/base16-hyperterm)
+ */
+const backgroundColor = '#<%- base["00"]["hex"] %>';
+const foregroundColor = '#<%- base["04"]["hex"] %>';
+const borderColor = '#<%- base["00"]["hex"] %>'; // same as background-color, might as well say "transparent"
+const cursorColor = '#<%- base["0A"]["hex"] %>'; // yellow, opacity set in .termCSS: see under
+
+const colors = [
+  backgroundColor,
+  '#<%- base["08"]["hex"] %>', // red
+  '#<%- base["0B"]["hex"] %>', // green
+  '#<%- base["0A"]["hex"] %>', // yellow
+  '#<%- base["0D"]["hex"] %>', // blue
+  '#<%- base["0E"]["hex"] %>', // violet
+  '#<%- base["0C"]["hex"] %>', // cyan
+  '#<%- base["06"]["hex"] %>', // light gray
+  '#<%- base["02"]["hex"] %>', // medium gray
+  '#<%- base["08"]["hex"] %>', // red
+  '#<%- base["02"]["hex"] %>', // green
+  '#<%- base["03"]["hex"] %>', // yellow
+  '#<%- base["04"]["hex"] %>', // blue
+  '#<%- base["0E"]["hex"] %>', // violet
+  '#<%- base["0C"]["hex"] %>', // cyan
+  '#<%- base["07"]["hex"] %>', // white
+  foregroundColor
+]
+
+exports.decorateConfig = (config) => {
+  return Object.assign({}, config, {
+    backgroundColor,
+    foregroundColor,
+    borderColor,
+    cursorColor,
+    colors,
+    termCSS: `
+      ${config.termCSS || ''}
+      .cursor-node[focus="true"] {
+         opacity: .5 !important;
+       }
+    `,
+    css: `
+      ${config.css || ''}
+      * {
+         font-weight: 400;
+       }
+       .tabs_title,
+       .tab_tab {
+         color: #<%- base["04"]["hex"] %> !important;
+         letter-spacing: .025em;
+       }
+       .tabs_list {
+         border: 0;
+       }
+       .tab_tab {
+         background-color: #<%- base["00"]["hex"] %> !important;
+         letter-spacing: .025em;
+         border-bottom: 3px solid #<%- base["02"]["hex"] %> !important;
+       }
+       .tab_tab:hover {
+         border-bottom-color: transparent !important;
+       }
+       .tab_tab:before {
+         border: 0;
+       }
+       .tab_tab.tab_active {
+         border-color: transparent !important;
+         color: #<%- base["06"]["hex"] %> !important;
+       }
+       .tab_text {
+         background-color:rgba(0,0,0,.33);
+         border-left: 3px solid #<%- base["00"]["hex"] %> !important;
+         transition: all .3s;
+       }
+       .tab_tab:hover .tab_text {
+         background-color:rgba(0,0,0,0);
+         border-left: 3px solid #<%- base["00"]["hex"] %> !important;
+       }
+       .tab_active .tab_text {
+         background-color: transparent;
+       }
+    `
+  });
+};
