@@ -1,6 +1,6 @@
 {
   "name": "base16-builder",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "Base16 Builder is a nimble command-line tool that generates themes for your favourite programs.",
   "repository": "base16-builder/base16-builder",
   "main": "dist/index.js",
