@@ -1,0 +1,18 @@
+scheme: "Caprice"
+author: "Protesilaos Stavrou (http://www.protesilaos.com)"
+base00: "0A0909" # Dark background
+base01: "1A1919" # Dark highlight
+base02: "4D464A" # Light bg text primary
+base03: "8D868A" # Light bg text secondary
+base04: "9A9999" # Dark bg text primary
+base05: "6A6969" # Dark bg text secondary
+base06: "CDC6CA" # Light highlight
+base07: "DDD6DA" # Light background
+base08: "8C354D" # Red
+base09: "9A5D38" # Orange
+base0A: "837A00" # Yellow
+base0B: "278975" # Green
+base0C: "4783A3" # Cyan
+base0D: "5565A9" # Blue
+base0E: "836AC2" # Violet
+base0F: "994885" # Magenta
