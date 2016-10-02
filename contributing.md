@@ -1,6 +1,6 @@
 # Contribution Guidelines
 
-## Introuction
+## Introduction
 
 Glad to see you here! If your are reading this, you may want to contribute to Base16-builder. Awesome! To help keeping the project as nice as possible, we ask you to following this contribution guidelines. Welcome in the contributor-side of Base16-builder.
 
@@ -51,9 +51,9 @@ Each template MUST follows this table:
 
 | name       | type   | mandatory | note                                 |
 |------------|--------|-----------|--------------------------------------|
-| tool       | string | true      | MUST contain any lowercase alphanumeric character or `.-` | 
-| luminosity | enum   | true      | MUST be `dark` or `light`            | 
-| delimiter  | char   | false     | MUST be use only if palette is used. MUST be a `-` | 
+| tool       | string | true      | MUST contain any lowercase alphanumeric character or `.-` |
+| luminosity | enum   | true      | MUST be `dark` or `light`            |
+| delimiter  | char   | false     | MUST be use only if palette is used. MUST be a `-` |
 | palette    | int    | false     | MUST be 256 if used or nothing if not relevant |
 
 
