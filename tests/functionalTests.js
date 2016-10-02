@@ -188,6 +188,16 @@ test('Given valid arguments & template in uppercase, correct output is emitted',
   t.ok(actual.match(/URxvt\*background:\s{21}#101218/), 'Match not found')
 })
 
+test('Number arguments, should not cause an error', async function (t) {
+  const templName = 'i3'
+  const schemeName = 3024
+  const brightness = 'dark'
+  const commandArgs = ['--template', templName, '--scheme', schemeName, '--brightness', brightness]
+  const {stdout: actual} = await execute(command, commandArgs)
+
+  t.ok(actual.match(/set \$base00 #090300/), 'Match not found')
+})
+
 // This test causes the browser to open and will not finish until the browser
 // has been closed manually. This is way too much friction.
 test.skip('Given ls schemes command, correct output is emitted', async function (t) {
