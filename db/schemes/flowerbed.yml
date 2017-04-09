@@ -1,0 +1,18 @@
+scheme: "Flowerbed"
+author: "Protesilaos Stavrou (http://www.protesilaos.com)"
+base00: "233949" # Dark background
+base01: "334959" # Dark highlight
+base02: "5C6362" # Light bg text primary
+base03: "8C9392" # Light bg text secondary
+base04: "A3B9C9" # Dark bg text primary
+base05: "738999" # Dark bg text secondary
+base06: "DCE3E2" # Light highlight
+base07: "ECF3F2" # Light background
+base08: "D86A87" # Red
+base09: "D89A47" # Orange
+base0A: "CD9A8A" # Yellow
+base0B: "5CBC7D" # Green
+base0C: "1CABA1" # Cyan
+base0D: "4AA7D2" # Blue
+base0E: "7988CA" # Violet
+base0F: "BC74AF" # Magenta

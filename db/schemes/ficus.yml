@@ -1,0 +1,18 @@
+scheme: "Ficus"
+author: "Protesilaos Stavrou (http://www.protesilaos.com)"
+base00: "27152C" # Dark background
+base01: "37253C" # Dark highlight
+base02: "5D6155" # Light bg text primary
+base03: "8D9185" # Light bg text secondary
+base04: "97859C" # Dark bg text primary
+base05: "67556C" # Dark bg text secondary
+base06: "DDE1D5" # Light highlight
+base07: "EDF1E5" # Light background
+base08: "AA3A5A" # Red
+base09: "AC6E00" # Orange
+base0A: "ACA60A" # Yellow
+base0B: "84A33C" # Green
+base0C: "6CACAB" # Cyan
+base0D: "6D75CD" # Blue
+base0E: "A46ACD" # Violet
+base0F: "CB5E9A" # Magenta

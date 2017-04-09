@@ -1,0 +1,18 @@
+scheme: "Bionis"
+author: "Protesilaos Stavrou (http://www.protesilaos.com)"
+base00: "281D2A" # Dark background
+base01: "382D3A" # Dark highlight
+base02: "39353A" # Light bg text primary
+base03: "99959A" # Light bg text secondary
+base04: "A89DAA" # Dark bg text primary
+base05: "786D7A" # Dark bg text secondary
+base06: "E9E5EA" # Light highlight
+base07: "F9F5FA" # Light background
+base08: "C25A5B" # Red
+base09: "CB6832" # Orange
+base0A: "BA8A00" # Yellow
+base0B: "4DA35C" # Green
+base0C: "439B9B" # Cyan
+base0D: "5A8ACD" # Blue
+base0E: "AA6BC5" # Violet
+base0F: "C25783" # Magenta

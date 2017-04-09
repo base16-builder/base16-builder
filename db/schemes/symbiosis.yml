@@ -1,0 +1,18 @@
+scheme: "Symbiosis"
+author: "Protesilaos Stavrou (http://www.protesilaos.com)"
+base00: "212D2C" # Dark background
+base01: "313D3C" # Dark highlight
+base02: "5C5A59" # Light bg text primary
+base03: "9C9A99" # Light bg text secondary
+base04: "919D9C" # Dark bg text primary
+base05: "616D6C" # Dark bg text secondary
+base06: "ECEAE9" # Light highlight
+base07: "FCFAF9" # Light background
+base08: "B95846" # Red
+base09: "A87226" # Orange
+base0A: "A89641" # Yellow
+base0B: "669824" # Green
+base0C: "48A597" # Cyan
+base0D: "3D8CAD" # Blue
+base0E: "9166AB" # Violet
+base0F: "BB7EAA" # Magenta

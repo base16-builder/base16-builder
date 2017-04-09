@@ -1,0 +1,18 @@
+scheme: "Gaia"
+author: "Protesilaos Stavrou (http://www.protesilaos.com)"
+base00: "2D2E2F" # Dark background
+base01: "3D3E3F" # Dark highlight
+base02: "6B6D5F" # Light bg text primary
+base03: "9B9D8F" # Light bg text secondary
+base04: "ADAEAF" # Dark bg text primary
+base05: "7D7E7F" # Dark bg text secondary
+base06: "DBDDCF" # Light highlight
+base07: "EBEDDF" # Light background
+base08: "9D6936" # Red
+base09: "B38121" # Orange
+base0A: "BDAA4A" # Yellow
+base0B: "8B9C3A" # Green
+base0C: "85AF85" # Cyan
+base0D: "6C9CBA" # Blue
+base0E: "8A8DB7" # Violet
+base0F: "BD9198" # Magenta

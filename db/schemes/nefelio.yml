@@ -1,0 +1,18 @@
+scheme: "Nefelio"
+author: "Protesilaos Stavrou (http://www.protesilaos.com)"
+base00: "282326" # Dark background
+base01: "383336" # Dark highlight
+base02: "6A6F72" # Light bg text primary
+base03: "9A9FA2" # Light bg text secondary
+base04: "989396" # Dark bg text primary
+base05: "686366" # Dark bg text secondary
+base06: "DADFE2" # Light highlight
+base07: "EAEFF2" # Light background
+base08: "BA3D5A" # Red
+base09: "CA6F5F" # Orange
+base0A: "CA9E5D" # Yellow
+base0B: "1CB57A" # Green
+base0C: "34B7BD" # Cyan
+base0D: "3F8EDA" # Blue
+base0E: "956CDA" # Violet
+base0F: "C34D95" # Magenta

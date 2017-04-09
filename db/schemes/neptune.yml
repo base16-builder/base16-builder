@@ -1,0 +1,18 @@
+scheme: "Neptune"
+author: "Protesilaos Stavrou (http://www.protesilaos.com)"
+base00: "282C36" # Dark background
+base01: "383C46" # Dark highlight
+base02: "404148" # Light bg text primary
+base03: "808188" # Light bg text secondary
+base04: "A8ACB6" # Dark bg text primary
+base05: "686C76" # Dark bg text secondary
+base06: "E0E1E8" # Light highlight
+base07: "F0F1F8" # Light background
+base08: "A97552" # Red
+base09: "C78956" # Orange
+base0A: "B9A552" # Yellow
+base0B: "48B788" # Green
+base0C: "55AFAF" # Cyan
+base0D: "3C8CBB" # Blue
+base0E: "7A7DCA" # Violet
+base0F: "C789A6" # Magenta

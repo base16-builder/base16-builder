@@ -1,0 +1,18 @@
+scheme: "Sonho"
+author: "Protesilaos Stavrou (http://www.protesilaos.com)"
+base00: "4A3638" # Dark background
+base01: "5A4648" # Dark highlight
+base02: "5F5052" # Light bg text primary
+base03: "8F8082" # Light bg text secondary
+base04: "BAA6A8" # Dark bg text primary
+base05: "8A7678" # Dark bg text secondary
+base06: "EFE0E2" # Light highlight
+base07: "FFF0F2" # Light background
+base08: "CD4679" # Red
+base09: "D9766D" # Orange
+base0A: "D9A652" # Yellow
+base0B: "11BF8C" # Green
+base0C: "5FB8B4" # Cyan
+base0D: "479CB5" # Blue
+base0E: "A77CCF" # Violet
+base0F: "DD619F" # Magenta

@@ -1,0 +1,18 @@
+scheme: "Overgrowth"
+author: "Protesilaos Stavrou (http://www.protesilaos.com)"
+base00: "233F34" # Dark background
+base01: "334F44" # Dark highlight
+base02: "767562" # Light bg text primary
+base03: "A6A592" # Light bg text secondary
+base04: "93AFA4" # Dark bg text primary
+base05: "637F74" # Dark bg text secondary
+base06: "D6D5C2" # Light highlight
+base07: "E6E5D2" # Light background
+base08: "CA6A4A" # Red
+base09: "BB7628" # Orange
+base0A: "A8950D" # Yellow
+base0B: "4BA212" # Green
+base0C: "15B59B" # Cyan
+base0D: "359FCA" # Blue
+base0E: "8A6EBB" # Violet
+base0F: "BB6E8A" # Magenta
